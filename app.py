@@ -251,9 +251,17 @@ st.download_button(
 
 components.html("""
 <script>
-    const target = window.parent.document.getElementById('generated-sql');
-    if (target) {
-        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+    function scrollToSQL() {
+        const target = window.parent.document.getElementById('generated-sql');
+        if (target) {
+            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+        } else {
+            const main = window.parent.document.querySelector('section.main');
+            if (main) {
+                main.scrollTo({top: main.scrollHeight, behavior: 'smooth'});
+            }
+        }
     }
+    setTimeout(scrollToSQL, 300);
 </script>
 """, height=0)
