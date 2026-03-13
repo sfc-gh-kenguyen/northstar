@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 st.set_page_config(page_title="Auto-grader Set Up", page_icon="👋", layout="wide")
@@ -71,7 +72,7 @@ with right:
     * [Snowpipe Streaming](https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/snowpipe-streaming.sql)
     * [Snowflake Intelligence](https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/snowflake-intelligence.sql)
     * [Dynamic Table](https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/dynamic-tables.sql)
-    * [From Zero to Agents](https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/zero-agent.sql)
+    * [From Zero to Agents (Data For Break HOL)](https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/zero-agent.sql)
 6. If you passed the lab, you should see an output in the Snowflake console with a message like "You've successfully completed this lab!". Please allow up to 7 business days to receive your badge.
         """.strip()
     )
@@ -228,6 +229,7 @@ as 'https://awy6hshxy4.execute-api.us-west-2.amazonaws.com/dev/edu_dora/greeting
 """.strip() + "\n"
 
 st.divider()
+st.markdown('<div id="generated-sql"></div>', unsafe_allow_html=True)
 st.subheader("Generated Snowflake SQL")
 st.code(sql_out)
 st.info(
@@ -242,3 +244,12 @@ st.download_button(
     file_name="workshop_greeting.sql",
     mime="text/sql",
 )
+
+components.html("""
+<script>
+    const target = window.parent.document.getElementById('generated-sql');
+    if (target) {
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+</script>
+""", height=0)
