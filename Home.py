@@ -3,10 +3,6 @@ from events import load_events
 
 st.set_page_config(page_title="Snowflake Northstar", page_icon="❄️", layout="wide")
 
-if st.query_params.get("sync") == "true":
-    load_events.clear()
-    st.query_params.pop("sync")
-
 EVENTS = load_events()
 EVENT_OPTIONS = ["None"] + list(EVENTS.keys())
 

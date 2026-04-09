@@ -1,0 +1,10 @@
+[
+  {
+    "Event Name": "Example Event",
+    "Final URL": "https://signup.snowflake.com/?utm_source=example"
+  },
+  {
+    "Event Name": "Event Without Link Yet",
+    "Final URL": null
+  }
+]
