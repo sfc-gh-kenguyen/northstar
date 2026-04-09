@@ -1,10 +1,38 @@
 [
   {
-    "Event Name": "Example Event",
-    "Final URL": "https://signup.snowflake.com/?utm_source=example"
+    "Event Name": "Australia Virtual D4B",
+    "Final URL": "https://signup.snowflake.com/?k=hol-snowflake-1616&t=d063cbe92edcb7508a9543ffb376d582a0ca03ca67c769390766955e45a3f19c&utm_campaign=northstar-d4b"
   },
   {
-    "Event Name": "Event Without Link Yet",
+    "Event Name": "Tokyo (4/21/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026"
+  },
+  {
+    "Event Name": "London (4/23/2026)",
+    "Final URL": null
+  },
+  {
+    "Event Name": "Osaka (4/23/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026"
+  },
+  {
+    "Event Name": "Christchurch (4/23/2026)",
+    "Final URL": null
+  },
+  {
+    "Event Name": "Nagpur (4/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026"
+  },
+  {
+    "Event Name": "Pan-EMEA (4/29/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026"
+  },
+  {
+    "Event Name": "Auckland (4/29/2026)",
+    "Final URL": null
+  },
+  {
+    "Event Name": "Pan-EMEA (5/13/2026)",
     "Final URL": null
   }
 ]
