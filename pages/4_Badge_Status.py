@@ -1,16 +1,12 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 import streamlit as st
 
 from events import load_event_records
 
 st.title("🏅 Badge status")
-
-st.caption(
-    "Only events on the **archive** tab in the roster sheet are listed here (after the next GitHub push from Sheets). "
-    "Optional columns **Event Date** and **Issued Date** on that tab appear in the table when present. "
-    "**Badge status:** **Issued** = emails sent; **Not issued yet** = usual window; **Not published** = not set yet."
-)
 
 
 def _cell(val: str | None) -> str:
@@ -23,6 +19,19 @@ def _status_label(v: bool | None) -> str:
     if v is False:
         return "Not issued yet"
     return "Not published"
+
+
+def _event_date_for_sort(raw: str | None) -> datetime:
+    """Parse common date strings for sorting; missing or invalid sorts last."""
+    if not raw:
+        return datetime.min
+    s = str(raw).strip()
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y", "%m/%d/%y", "%d/%m/%y"):
+        try:
+            return datetime.strptime(s, fmt)
+        except ValueError:
+            continue
+    return datetime.min
 
 
 records = load_event_records()
@@ -38,6 +47,12 @@ if not archived:
     )
     st.stop()
 
+ordered = sorted(
+    archived.items(),
+    key=lambda item: (_event_date_for_sort(item[1].get("event_date")), item[0].lower()),
+    reverse=True,
+)
+
 rows = [
     {
         "Event": name,
@@ -45,7 +60,7 @@ rows = [
         "Issued date": _cell(rec.get("issued_date")),
         "Badge status": _status_label(rec["badges_issued"]),
     }
-    for name, rec in sorted(archived.items(), key=lambda x: x[0].lower())
+    for name, rec in ordered
 ]
 
 st.dataframe(
@@ -62,7 +77,9 @@ st.dataframe(
 
 st.divider()
 st.markdown(
-    "If badges are **issued**, check the email you used for your Snowflake trial (including spam/junk). "
-    "Questions about a missing badge? Email **developer-badges-DL@snowflake.com** "
-    "(preferably within **30 days** of your event)."
+    "Please allow **7 business days** from the day of your event for the badges to be issued. "
+    "If badges are listed as **issued** for your event, check the email you used for your "
+    "Snowflake trial (including spam/junk) for your badge. If your event is listed as **Issued**, "
+    "but you have not received your badge, please reach out to **developer-badges-DL@snowflake.com** "
+    "(within 30 days of your event)."
 )

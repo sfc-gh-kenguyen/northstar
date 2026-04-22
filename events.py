@@ -77,9 +77,13 @@ def load_event_records() -> dict[str, dict[str, Any]]:
 
 
 def load_events() -> dict[str, str | None]:
-    """Read events from events.json.
+    """Active roster events only (excludes archive-tab-only rows).
 
-    Returns {event_name: final_url_or_None}.
-    Falls back to an empty dict if the file is missing or malformed.
+    Used for the sidebar event picker and Trial Sign Up. Archive-only events
+    stay in ``events.json`` for Badge status but are not selectable here.
     """
-    return {name: rec["final_url"] for name, rec in load_event_records().items()}
+    return {
+        name: rec["final_url"]
+        for name, rec in load_event_records().items()
+        if not rec.get("archived")
+    }
