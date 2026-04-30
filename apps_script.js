@@ -6,6 +6,9 @@
 //   3. Reload the sheet — a "GitHub Sync" menu will appear in the menu bar
 //   4. Click "GitHub Sync > Push events & guides to GitHub" whenever you want to update the app
 //
+// REPO_OWNER + REPO_NAME must be the SAME GitHub repo Streamlit Community Cloud deploys from,
+// or pushes will update the wrong place and the app will never see new events.json / workshops.json.
+//
 // Guides & answer keys: set SHEET_GUIDES to your tab name. That tab is exported to workshops.json.
 // Required column: Workshop (or Workshop name). Guide URL / Answer Key URL optional — leave blank
 // for "Coming soon" on the app (optional Guide placeholder / Answer Key placeholder columns override).
@@ -23,7 +26,7 @@ var SHEET_ARCHIVE = "";    // e.g. "Archive" — same columns as main (Event Nam
 var SHEET_GUIDES = ""; // e.g. "Guides & Answer Keys" — tab exported to workshops.json. "" = skip (repo file unchanged).
 
 var REPO_OWNER = "sfc-gh-kenguyen";
-var REPO_NAME  = "northstar";
+var REPO_NAME  = "NorthstarAutograder";
 var FILE_PATH  = "events.json";
 var WORKSHOPS_FILE_PATH = "workshops.json";
 var BRANCH     = "main";
