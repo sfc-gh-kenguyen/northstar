@@ -8,11 +8,6 @@ def _md_cell(text: str) -> str:
     return (text or "").replace("|", "\\|")
 
 st.title("📚 Workshop Guides and Answer Keys")
-st.markdown(
-    "Follow along with the guide for your workshop, then run the answer key script "
-    "in a Snowflake SQL worksheet to grade your work. Rows can appear before links are ready — "
-    "missing URLs show **Coming soon** (or your custom placeholder text from the sheet)."
-)
 
 rows = load_workshop_rows()
 if not rows:
@@ -53,8 +48,3 @@ for r in rows:
     lines.append(f"| {w} | {g} | {a} |")
 
 st.markdown("\n".join(lines))
-st.caption(
-    f"Loaded **{len(rows)}** workshop(s) from `workshops.json`. "
-    "If this does not match GitHub `northstar` / `main`, trigger a Streamlit redeploy or confirm "
-    "`workshops.py` and this page are on the branch Cloud builds from."
-)
