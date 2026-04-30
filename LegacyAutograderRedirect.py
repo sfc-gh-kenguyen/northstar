@@ -1,11 +1,10 @@
-"""Entrypoint ONLY for the northstarautograder.streamlit.app deployment.
+"""Entrypoint ONLY for the legacy Streamlit hostname ``northstarautograder.streamlit.app``.
 
-In Streamlit Community Cloud, set this app's **Main file** to
-``LegacyAutograderRedirect.py``. Keep northstar.streamlit.app on ``Home.py`` so
-the live app never runs redirect logic.
+In Streamlit Community Cloud, set **that** app's main file to ``LegacyAutograderRedirect.py``.
+The canonical app at ``northstar.streamlit.app`` should use ``Home.py`` so visitors never hit
+redirect logic on the primary URL.
 
-If this file is opened on the wrong host, we show a link instead of redirecting
-(to avoid a reload loop).
+If this file runs on the wrong host, we show a link instead of redirecting (avoids a reload loop).
 """
 
 from __future__ import annotations

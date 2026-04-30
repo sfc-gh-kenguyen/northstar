@@ -26,7 +26,8 @@ var SHEET_ARCHIVE = "";    // e.g. "Archive" — same columns as main (Event Nam
 var SHEET_GUIDES = ""; // e.g. "Guides & Answer Keys" — tab exported to workshops.json. "" = skip (repo file unchanged).
 
 var REPO_OWNER = "sfc-gh-kenguyen";
-var REPO_NAME  = "NorthstarAutograder";
+// Sheet pushes JSON here — must match the GitHub repo Streamlit Community Cloud deploys from.
+var REPO_NAME  = "northstar";
 var FILE_PATH  = "events.json";
 var WORKSHOPS_FILE_PATH = "workshops.json";
 var BRANCH     = "main";
@@ -275,7 +276,16 @@ function sheetToWorkshops_(sheet) {
     return [];
   }
   var headers = data[0];
-  var wCol = findHeaderCol_(headers, ["Workshop", "Workshop name", "workshop name"]);
+  var wCol = findHeaderCol_(headers, [
+    "Workshop",
+    "Workshop name",
+    "workshop name",
+    "Course",
+    "Course name",
+    "course name",
+    "Title",
+    "Workshop title"
+  ]);
   var gCol = findHeaderCol_(headers, ["Guide URL", "Guide url", "guide url"]);
   var aCol = findHeaderCol_(headers, [
     "Answer Key URL",
@@ -305,7 +315,9 @@ function sheetToWorkshops_(sheet) {
 
   if (wCol === -1) {
     throw new Error(
-      'Tab "' + sheet.getName() + '" must have a Workshop column (or Workshop name).'
+      'Tab "' +
+        sheet.getName() +
+        '" must have a title column: Workshop, Workshop name, Course name, or Title (header row 1).'
     );
   }
 

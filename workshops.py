@@ -81,7 +81,20 @@ def load_workshop_rows() -> list[dict[str, str]]:
             continue
         workshop = _first(
             r,
-            ("Workshop", "workshop", "Workshop name", "workshop name"),
+            (
+                "Workshop",
+                "workshop",
+                "Workshop name",
+                "workshop name",
+                "Course",
+                "course",
+                "Course name",
+                "course name",
+                "Title",
+                "title",
+                "Workshop title",
+                "workshop title",
+            ),
         )
         guide_url = _first(
             r,

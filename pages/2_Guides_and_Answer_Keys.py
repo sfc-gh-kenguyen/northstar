@@ -28,7 +28,7 @@ if not rows:
 
 | Column | Required |
 |--------|----------|
-| **Workshop** | Yes — full title (must match Auto-Grader once an answer key exists) |
+| **Workshop** (or **Course name** / **Title**) | Yes — full title (must match Auto-Grader once an answer key exists) |
 | **Guide URL** | No — leave blank for **Coming soon** in the Guide column |
 | **Answer Key URL** | No — leave blank until the script is ready (**Coming soon** on the page; row stays out of the Auto-Grader list until filled) |
 | **Guide link text** | No — link label when Guide URL is set (default `View Guide`) |
@@ -53,3 +53,8 @@ for r in rows:
     lines.append(f"| {w} | {g} | {a} |")
 
 st.markdown("\n".join(lines))
+st.caption(
+    f"Loaded **{len(rows)}** workshop(s) from `workshops.json`. "
+    "If this does not match GitHub `northstar` / `main`, trigger a Streamlit redeploy or confirm "
+    "`workshops.py` and this page are on the branch Cloud builds from."
+)
