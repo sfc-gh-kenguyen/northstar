@@ -1,15 +1,34 @@
 import streamlit as st
+
 from events import load_events
 
 EVENTS = load_events()
+EVENT_OPTIONS = ["None"] + list(EVENTS.keys())
 
 st.title("📝 Trial Sign Up")
 
-if "selected_event" not in st.session_state:
-    st.session_state.selected_event = "None"
+
+def _sync_event_query_param() -> None:
+    ev = st.session_state.get("selected_event", "None")
+    if ev and ev != "None":
+        st.query_params["event"] = ev
+    else:
+        try:
+            del st.query_params["event"]
+        except KeyError:
+            pass
+
+
+st.selectbox(
+    "Select your event",
+    EVENT_OPTIONS,
+    key="selected_event",
+    on_change=_sync_event_query_param,
+)
+
 event = st.session_state["selected_event"]
 if not event or event == "None":
-    st.warning("Please select your event from the sidebar to see the trial signup link.", icon="⚠️")
+    st.info("Choose your event above to see your trial signup link.", icon="ℹ️")
     st.stop()
 
 link = EVENTS.get(event)

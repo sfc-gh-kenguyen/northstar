@@ -1,7 +1,7 @@
 import streamlit as st
 
-# Home.py calls init_app() then loads this file via st.navigation — do not init again
-# (duplicate selectbox key "selected_event"). Backup Cloud entry uses home_page.py alone.
+# Home.py calls init_app() then loads this file via st.navigation — do not init again.
+# Backup Cloud entry uses home_page.py alone (init_app runs there once).
 if not st.session_state.get("_northstar_nav_root"):
     from app_bootstrap import init_app
 
@@ -20,7 +20,10 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("📝 Trial Sign Up")
-    st.markdown("Sign up for a Snowflake trial account for your event.")
+    st.markdown(
+        "Sign up for a Snowflake trial account for your event — **select your event on that page**. "
+        "Links that include a `?event=` parameter still pre-select your event."
+    )
     st.page_link("pages/1_Trial_Sign_Up.py", label="Go to Trial Sign Up", icon="➡️")
 
 with col2:

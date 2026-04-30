@@ -106,7 +106,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
 def load_events() -> dict[str, str | None]:
     """Active roster events only (excludes archive-tab-only rows).
 
-    Used for the sidebar event picker and Trial Sign Up. Archive-only events
+    Used for Trial Sign Up (and optional ``?event=`` URL preselection). Archive-only events
     stay in ``events.json`` for Badge status but are not selectable here.
     """
     return {

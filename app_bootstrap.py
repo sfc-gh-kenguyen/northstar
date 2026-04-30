@@ -3,9 +3,14 @@
 Streamlit Cloud may use either file as the main script; this module ensures
 page config, event list, and session state are initialized exactly once per
 session (set_page_config must not run twice).
+
+Event selection lives on **Trial Sign Up**; optional ``?event=`` query (URL-encoded
+name) preselects once per browser session.
 """
 
 from __future__ import annotations
+
+from urllib.parse import unquote_plus
 
 import streamlit as st
 
@@ -19,10 +24,23 @@ def init_app() -> None:
         st.session_state._northstar_page_config = True
 
     events = load_events()
-    event_options = ["None"] + list(events.keys())
 
     if "selected_event" not in st.session_state:
         st.session_state.selected_event = "None"
 
+    if "_northstar_event_query_applied" not in st.session_state:
+        st.session_state._northstar_event_query_applied = True
+        raw = st.query_params.get("event")
+        if raw is not None:
+            val = raw[0] if isinstance(raw, list) else raw
+            val = str(val).strip()
+            if val:
+                name = unquote_plus(val)
+                if name in events:
+                    st.session_state.selected_event = name
+
     with st.sidebar:
-        st.selectbox("Select your event", event_options, key="selected_event")
+        sel = st.session_state.get("selected_event", "None")
+        if sel and sel != "None":
+            st.caption(f"Event: **{sel}**")
+            st.page_link("pages/1_Trial_Sign_Up.py", label="Change event", icon="📝")
