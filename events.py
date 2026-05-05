@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 import json
-import pathlib
 from typing import Any
 
 import streamlit as st
 
-_EVENTS_FILE = pathlib.Path(__file__).parent / "events.json"
+from repo_json import read_repo_json
 
 
 def _optional_str(raw: Any) -> str | None:
@@ -64,7 +63,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
       - ``issued_date``: str | None — optional, from sheet "Issued Date"
     """
     try:
-        data = json.loads(_EVENTS_FILE.read_text())
+        data = json.loads(read_repo_json("events.json"))
         out: dict[str, dict[str, Any]] = {}
         for r in data:
             name = r.get("Event Name")

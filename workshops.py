@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 import json
-import pathlib
 import re
 from typing import Any
 
 import streamlit as st
 
-_WORKSHOPS_FILE = pathlib.Path(__file__).parent / "workshops.json"
+from repo_json import read_repo_json
 
 _GITHUB_BLOB_RE = re.compile(
     r"^https?://github\.com/([^/]+)/([^/]+)/blob/([^/]+)/(.+)$",
@@ -63,7 +62,7 @@ def load_workshop_rows() -> list[dict[str, str]]:
     **Answer Key placeholder** override that text per row.
     """
     try:
-        data = json.loads(_WORKSHOPS_FILE.read_text())
+        data = json.loads(read_repo_json("workshops.json"))
     except FileNotFoundError:
         st.warning("workshops.json not found — add it via GitHub or sheet sync.", icon="⚠️")
         return []
