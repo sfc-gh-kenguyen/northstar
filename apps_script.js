@@ -25,7 +25,7 @@ var SHEET_MAIN = "";       // "" = whichever tab is active when you push (legacy
 var SHEET_ARCHIVE = "";    // e.g. "Archive" — same columns as main (Event Name, Final URL, optional Badges issued). "" = off.
 var SHEET_GUIDES = ""; // e.g. "Guides & Answer Keys" — tab exported to workshops.json. "" = skip (repo file unchanged).
 
-var REPO_OWNER = "Kevinsnowflake";
+var REPO_OWNER = "sfc-gh-kenguyen";
 // Sheet pushes JSON here — must match the GitHub repo Streamlit Community Cloud deploys from (northstar only).
 var REPO_NAME  = "northstar";
 var FILE_PATH  = "events.json";
