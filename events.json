@@ -35,11 +35,6 @@
     "Archived": false
   },
   {
-    "Event Name": "Test",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026",
-    "Archived": false
-  },
-  {
     "Event Name": "Melbourne (04/13/2026)",
     "Final URL": "http://signup.snowflake.com/?k=snowflake-ai-linkedin&t=5a798df87df032d830c164a792c104767dba56c231a2b9bc3f0e434793f629c6",
     "Badges issued": false,
@@ -129,14 +124,6 @@
   },
   {
     "Event Name": "Auckland (4/29/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&k=hol-snowflake-5204&t=3850f137b4b25ad1dee1d89da46f8a3a2efdeacb2eb8e9d95b061104e143b6e2",
-    "Badges issued": true,
-    "Event Date": "2026-04-29",
-    "Issued Date": "2026-04-30",
-    "Archived": true
-  },
-  {
-    "Event Name": "Test Event",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&k=hol-snowflake-5204&t=3850f137b4b25ad1dee1d89da46f8a3a2efdeacb2eb8e9d95b061104e143b6e2",
     "Badges issued": true,
     "Event Date": "2026-04-29",
