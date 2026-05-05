@@ -1,8 +1,7 @@
 """Entrypoint ONLY for the legacy Streamlit hostname ``northstarautograder.streamlit.app``.
 
-In Streamlit Community Cloud, set **that** app's main file to ``LegacyAutograderRedirect.py``.
-The canonical app at ``northstar.streamlit.app`` should use ``Home.py`` so visitors never hit
-redirect logic on the primary URL.
+If you still operate a separate Streamlit app on that hostname, set its main file to
+``LegacyAutograderRedirect.py``. The primary Northstar app should use ``Home.py``.
 
 If this file runs on the wrong host, we show a link instead of redirecting (avoids a reload loop).
 """
@@ -38,7 +37,7 @@ st.set_page_config(page_title="Redirecting…", layout="centered")
 
 host = _request_host()
 if host != _LEGACY_HOST:
-    st.warning("This redirect entrypoint is only used for the legacy autograder URL.")
+    st.warning("This redirect entrypoint is only used for the legacy Streamlit hostname.")
     st.link_button("Open Northstar", _CANONICAL_ORIGIN)
     st.stop()
 
