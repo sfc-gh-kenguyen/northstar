@@ -15,7 +15,6 @@ from urllib.parse import unquote_plus
 import streamlit as st
 
 from events import load_events
-from repo_json import request_refresh_json_cache
 
 
 def init_app() -> None:
@@ -23,14 +22,6 @@ def init_app() -> None:
     if "_northstar_page_config" not in st.session_state:
         st.set_page_config(page_title="Snowflake Northstar", page_icon="❄️", layout="wide")
         st.session_state._northstar_page_config = True
-
-    with st.sidebar:
-        if st.button(
-            "Refresh event & workshop data",
-            help="Use right after **GitHub Sync → Push** from your Google Sheet.",
-        ):
-            request_refresh_json_cache()
-            st.rerun()
 
     events = load_events()
 

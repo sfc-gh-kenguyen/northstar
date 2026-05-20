@@ -25,7 +25,7 @@ After changing entrypoints, confirm each Community Cloud app’s **main file** i
 ## Fresh JSON after sheet sync (no reboot)
 
 - The app loads ``events.json`` / ``workshops.json`` from **raw.githubusercontent.com** whenever it detects Streamlit Community Cloud (host contains ``.streamlit.app`` or ``.streamlit.cloud``), so updates are **not** tied to the container’s git checkout.
-- JSON is **cached per commit SHA**: the app checks branch HEAD occasionally (default every 5 minutes per browser session), not on every widget rerun. After **GitHub Sync → Push**, use sidebar **Refresh event & workshop data** (or wait for the next SHA check) to pick up changes immediately.
+- JSON is **cached per commit SHA**: the app checks branch HEAD occasionally (default every 5 minutes per browser session), not on every widget rerun. After **GitHub Sync → Push**, new data appears automatically once the branch HEAD check runs (or when the user starts a new session).
 - Optional Streamlit secret ``NORTHSTAR_GITHUB_TOKEN`` (or env ``GITHUB_TOKEN``): GitHub PAT with ``public_repo`` (or repo scope) raises API rate limits for SHA checks during busy events.
 - Env ``NORTHSTAR_SHA_CHECK_INTERVAL_SEC`` (default ``300``): seconds between automatic branch HEAD checks.
 - If the app URL is a **custom domain** that does **not** include ``.streamlit.app``, set either:
