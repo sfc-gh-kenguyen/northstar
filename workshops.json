@@ -40,5 +40,10 @@
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/cortex-code-foundations.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
+  },
+  {
+    "Workshop": "Accelerate AI Development: Build and Evaluate a RAG App with Cortex Code",
+    "Guide URL": "",
+    "Answer Key URL": ""
   }
 ]
