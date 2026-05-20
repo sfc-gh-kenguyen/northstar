@@ -7,6 +7,12 @@ EVENT_OPTIONS = ["None"] + list(EVENTS.keys())
 
 st.title("📝 Trial Sign Up")
 
+st.warning(
+    "Create a trial account using **AI Data Cloud**, not **Cortex Code CLI** — "
+    "even if using the CLI in the hands-on lab.",
+    icon="⚠️",
+)
+
 
 def _sync_event_query_param() -> None:
     ev = st.session_state.get("selected_event", "None")
