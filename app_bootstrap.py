@@ -15,13 +15,19 @@ from urllib.parse import unquote_plus
 import streamlit as st
 
 from events import load_events
+from instance_config import get_instance_label, instance_page_title_suffix
 
 
 def init_app() -> None:
     # set_page_config must run at most once per session; this function runs every rerun.
     if "_northstar_page_config" not in st.session_state:
-        st.set_page_config(page_title="Snowflake Northstar", page_icon="❄️", layout="wide")
+        title = "Snowflake Northstar" + instance_page_title_suffix()
+        st.set_page_config(page_title=title, page_icon="❄️", layout="wide")
         st.session_state._northstar_page_config = True
+
+    label = get_instance_label()
+    if label and label != "1":
+        st.sidebar.caption(f"Northstar instance **{label}**")
 
     events = load_events()
 

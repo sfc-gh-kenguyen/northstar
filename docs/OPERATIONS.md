@@ -4,11 +4,17 @@
 
 | Main file | Purpose |
 |-----------|---------|
-| `Home.py` | Primary Northstar app: `st.navigation`, sheet-driven JSON, all features. **Use this** for the main Community Cloud deployment. |
+| `Home.py` | Primary Northstar app (instance 1): `st.navigation`, sheet-driven JSON, all features. **Use this** for the default Community Cloud deployment. |
+| `Instance3.py` | Traffic mirror **instance 3** — same app as `Home.py`; use as **Main file** on a **second** Community Cloud app. See [TRAFFIC_SPLITTING.md](TRAFFIC_SPLITTING.md). |
+| `Instance4.py` | Traffic mirror **instance 4** — same as above. |
 | `LegacyAutograderRedirect.py` | Only for a **separate** Streamlit app still bound to the legacy hostname `northstarautograder.streamlit.app`. It redirects browsers to the canonical `northstar.streamlit.app` (and preserves path/query). **Do not** set this as the main app’s entry if you want the full product. |
 | `home_page.py` | Loaded as a **page** by `Home.py`, not run alone on Community Cloud (except backup / local experiments noted in code comments). |
 
 After changing entrypoints, confirm each Community Cloud app’s **main file** in the deploy UI matches the row above.
+
+## High-traffic events (multiple apps)
+
+Deploy extra Community Cloud apps from the same repo to split sessions across URLs. Full steps: **[TRAFFIC_SPLITTING.md](TRAFFIC_SPLITTING.md)**.
 
 ## GitHub and sheet sync
 
