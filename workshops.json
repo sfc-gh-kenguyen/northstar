@@ -44,7 +44,8 @@
   {
     "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & Cortex Code",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/accelerate-app-dev-cortex-code/",
-    "Answer Key URL": "",
-    "Guide link text": "View Guide"
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/ragapp.sql",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "View Answer Key"
   }
 ]
