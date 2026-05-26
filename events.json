@@ -15,8 +15,13 @@
     "Archived": false
   },
   {
-    "Event Name": "Summit Bootcamp",
-    "Final URL": "signup.snowflake.com/summit2026",
+    "Event Name": "Summit Bootcamp - Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & Cortex Code",
+    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitRAG",
+    "Archived": false
+  },
+  {
+    "Event Name": "Summit Bootcamp - Build an End-to-End AI Application on Snowflake",
+    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitAIApp",
     "Archived": false
   },
   {
@@ -27,6 +32,16 @@
   {
     "Event Name": "Singapore (6/10/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=09a68f022a96b38651167f306b7670f07cc56ae4d156a98206ea143e59261a48",
+    "Archived": false
+  },
+  {
+    "Event Name": "Virtual Dev Day (EMEA)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=emea-vdd&t=095b2dbb83eb857ef6ac3ca201b37de4898245a9b69b074663ff36f3968a6f67",
+    "Archived": false
+  },
+  {
+    "Event Name": "Virtual Dev Day (NOAM)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=noam-vdd&t=5e022e27fb013cf4f80ab576e141cdef658a057df44eca57ef98b7269d52f6dd",
     "Archived": false
   },
   {
