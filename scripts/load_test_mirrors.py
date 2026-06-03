@@ -29,6 +29,8 @@ DEFAULT_MIRRORS = (
     "https://northstar2.streamlit.app",
     "https://northstar3.streamlit.app",
     "https://northstar4.streamlit.app",
+    "https://northstar5.streamlit.app",
+    "https://northstar6.streamlit.app",
 )
 
 FAIL_PATTERNS = (

@@ -7,6 +7,8 @@
 | `Home.py` | Primary Northstar app (instance 1): `st.navigation`, sheet-driven JSON, all features. **Use this** for the default Community Cloud deployment. |
 | `Instance3.py` | Traffic mirror **instance 3** — same app as `Home.py`; use as **Main file** on a **second** Community Cloud app. See [TRAFFIC_SPLITTING.md](TRAFFIC_SPLITTING.md). |
 | `Instance4.py` | Traffic mirror **instance 4** — same as above. |
+| `Instance5.py` | Traffic mirror **instance 5** — optional extra capacity for very large events. |
+| `Instance6.py` | Traffic mirror **instance 6** — optional extra capacity for very large events. |
 | `LegacyAutograderRedirect.py` | Only for a **separate** Streamlit app still bound to the legacy hostname `northstarautograder.streamlit.app`. It redirects browsers to the canonical `northstar.streamlit.app` (and preserves path/query). **Do not** set this as the main app’s entry if you want the full product. |
 | `home_page.py` | Loaded as a **page** by `Home.py`, not run alone on Community Cloud (except backup / local experiments noted in code comments). |
 

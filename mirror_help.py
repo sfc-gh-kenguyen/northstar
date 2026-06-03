@@ -12,6 +12,8 @@ MIRROR_URLS: tuple[tuple[str, str], ...] = (
     ("2", "https://northstar2.streamlit.app"),
     ("3", "https://northstar3.streamlit.app"),
     ("4", "https://northstar4.streamlit.app"),
+    ("5", "https://northstar5.streamlit.app"),
+    ("6", "https://northstar6.streamlit.app"),
 )
 
 SLOW_LOAD_DELAY_MS = 7000

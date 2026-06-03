@@ -13,6 +13,10 @@ _INSTANCE_ENV = "NORTHSTAR_INSTANCE"
 
 # Hostname substrings → instance label (first match wins).
 _HOST_INSTANCE_HINTS: tuple[tuple[str, str], ...] = (
+    ("northstar-6", "6"),
+    ("northstar6", "6"),
+    ("northstar-5", "5"),
+    ("northstar5", "5"),
     ("northstar-4", "4"),
     ("northstar4", "4"),
     ("northstar-3", "3"),
