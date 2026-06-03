@@ -35,17 +35,23 @@
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Cortex Code Foundations: Getting Started with Cortex Code",
+    "Workshop": "Cortex Code Foundations: Getting Started with CoCo",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/cortex-code-foundations/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/cortex-code-foundations.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & Cortex Code",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/accelerate-app-dev-cortex-code/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/ragapp.sql",
     "Guide link text": "View Guide",
+    "Answer Key link text": "View Answer Key"
+  },
+  {
+    "Workshop": "Building an End-to-End AI Application on Snowflake: From Data To Intelligence",
+    "Guide URL": "",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/data-intelligence.sql",
     "Answer Key link text": "View Answer Key"
   }
 ]
