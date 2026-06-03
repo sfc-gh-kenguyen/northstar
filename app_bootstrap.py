@@ -29,7 +29,10 @@ def init_app() -> None:
     label = get_instance_label()
     if "_northstar_slow_load_help" not in st.session_state:
         st.session_state._northstar_slow_load_help = True
-        render_slow_load_mirror_help(current_label=label)
+        raw_test = st.query_params.get("mirror_help_test")
+        test_val = raw_test[0] if isinstance(raw_test, list) else raw_test
+        test_mode = str(test_val or "").strip().lower() in ("1", "true", "yes")
+        render_slow_load_mirror_help(current_label=label, test_mode=test_mode)
 
     if label and label != "1":
         st.sidebar.caption(f"Northstar instance **{label}**")

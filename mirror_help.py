@@ -24,19 +24,29 @@ def alternate_mirror_urls(current_label: str | None) -> list[tuple[str, str]]:
     return list(MIRROR_URLS)
 
 
-def render_slow_load_mirror_help(*, current_label: str | None = None) -> None:
+def render_slow_load_mirror_help(
+    *,
+    current_label: str | None = None,
+    delay_ms: int | None = None,
+    test_mode: bool = False,
+) -> None:
     """If the app is still loading after ~7s, suggest other mirror URLs.
 
-    Runs in the browser (injected into the parent frame). Helps when this mirror
-    is slow or overloaded. Does not run until Streamlit executes Python at least
-    once, so very early cold starts may still show only Streamlit's own spinner.
+    Runs in the browser (injected into the parent frame). The timer uses elapsed
+    time since the browser opened the page (not since this script runs), because
+    Streamlit only renders the component after the first Python pass completes.
+
+    Pass ``test_mode=True`` (or ``?mirror_help_test=1`` in the URL) to force the
+    banner after 1.5s so you can verify deploy without simulating overload.
     """
     alternates = alternate_mirror_urls(current_label)
     if not alternates:
         return
 
     alternates_json = json.dumps([url for _, url in alternates])
-    delay_ms = SLOW_LOAD_DELAY_MS
+    if delay_ms is None:
+        delay_ms = 1500 if test_mode else SLOW_LOAD_DELAY_MS
+    test_mode_js = "true" if test_mode else "false"
     banner_inner_html = json.dumps(
         "<strong>Taking a while to load?</strong>"
         "This link may be busy. Try another Northstar mirror "
@@ -107,6 +117,11 @@ def render_slow_load_mirror_help(*, current_label: str | None = None) -> None:
   const parentDoc = window.parent.document;
   const alternates = {alternates_json};
   const delayMs = {delay_ms};
+  const testMode = {test_mode_js};
+  const perf = window.parent.performance || window.performance;
+  const elapsedMs = function () {{
+    return perf.now ? perf.now() : 0;
+  }};
 
   if (parentDoc.getElementById("northstar-slow-load-banner")) {{
     return;
@@ -135,13 +150,16 @@ def render_slow_load_mirror_help(*, current_label: str | None = None) -> None:
   }});
 
   function appLooksReady() {{
-    const app = parentDoc.querySelector('[data-testid="stApp"]');
-    if (!app) return false;
     const main = parentDoc.querySelector('[data-testid="stMainBlockContainer"]');
-    if (main && main.children && main.children.length > 0) return true;
-    const header = parentDoc.querySelector('[data-testid="stHeader"]');
-    if (header) return true;
-    return app.children.length > 2;
+    if (!main) return false;
+    const text = (main.innerText || "").trim();
+    if (text.length < 20) return false;
+    return (
+      text.indexOf("Snowflake Northstar") >= 0 ||
+      text.indexOf("Trial Sign Up") >= 0 ||
+      text.indexOf("Select your event") >= 0 ||
+      text.indexOf("Auto-Grader") >= 0
+    );
   }}
 
   function hideBanner() {{
@@ -149,23 +167,31 @@ def render_slow_load_mirror_help(*, current_label: str | None = None) -> None:
   }}
 
   function showBannerIfNeeded() {{
-    if (!appLooksReady()) {{
+    if (testMode || !appLooksReady()) {{
       banner.classList.add("visible");
     }}
   }}
 
   let shown = false;
-  const timer = window.setTimeout(function () {{
-    if (!appLooksReady()) {{
+  function maybeShowAfterDelay() {{
+    if (testMode || !appLooksReady()) {{
       showBannerIfNeeded();
       shown = true;
     }}
-  }}, delayMs);
+  }}
+
+  const alreadySlow = elapsedMs() >= delayMs;
+  let timer = null;
+  if (alreadySlow) {{
+    maybeShowAfterDelay();
+  }} else {{
+    timer = window.setTimeout(maybeShowAfterDelay, delayMs - elapsedMs());
+  }}
 
   const observer = new MutationObserver(function () {{
-    if (appLooksReady()) {{
+    if (!testMode && appLooksReady()) {{
       hideBanner();
-      window.clearTimeout(timer);
+      if (timer) window.clearTimeout(timer);
       observer.disconnect();
     }} else if (shown) {{
       showBannerIfNeeded();
@@ -175,9 +201,9 @@ def render_slow_load_mirror_help(*, current_label: str | None = None) -> None:
   observer.observe(parentDoc.body, {{ childList: true, subtree: true }});
 
   window.setInterval(function () {{
-    if (appLooksReady()) {{
+    if (!testMode && appLooksReady()) {{
       hideBanner();
-      window.clearTimeout(timer);
+      if (timer) window.clearTimeout(timer);
       observer.disconnect();
     }}
   }}, 500);
