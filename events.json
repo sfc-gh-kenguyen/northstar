@@ -1,20 +1,5 @@
 [
   {
-    "Event Name": "NYC Coco Lab (5/26/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=5dd5f9e93802c5f3a7e248415101e4767bfe84efd720e8de1cb7b8c09b93e1b4",
-    "Archived": false
-  },
-  {
-    "Event Name": "DFW Coco Lab (5/27/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=74fd7a771f2eb4fafe44698afae2b5be6fbd35a4db2c52a6a2da574c30580bbb",
-    "Archived": false
-  },
-  {
-    "Event Name": "Toronto Coco Lab (5/28/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=0764b3e3662ae900e9438a48b09b2f8ca72b828af9e638dbec5551f3d40e38ea",
-    "Archived": false
-  },
-  {
     "Event Name": "Summit Bootcamp - Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & Cortex Code",
     "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitRAG",
     "Archived": false
@@ -218,6 +203,30 @@
     "Badges issued": true,
     "Event Date": "2026-05-19",
     "Issued Date": "2026-05-20",
+    "Archived": true
+  },
+  {
+    "Event Name": "NYC Coco Lab (5/26/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=5dd5f9e93802c5f3a7e248415101e4767bfe84efd720e8de1cb7b8c09b93e1b4",
+    "Badges issued": false,
+    "Event Date": "2026-05-26",
+    "Issued Date": null,
+    "Archived": true
+  },
+  {
+    "Event Name": "DFW Coco Lab (5/27/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=74fd7a771f2eb4fafe44698afae2b5be6fbd35a4db2c52a6a2da574c30580bbb",
+    "Badges issued": false,
+    "Event Date": "2026-05-27",
+    "Issued Date": null,
+    "Archived": true
+  },
+  {
+    "Event Name": "Toronto Coco Lab (5/28/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=0764b3e3662ae900e9438a48b09b2f8ca72b828af9e638dbec5551f3d40e38ea",
+    "Badges issued": false,
+    "Event Date": "2026-05-28",
+    "Issued Date": null,
     "Archived": true
   }
 ]
