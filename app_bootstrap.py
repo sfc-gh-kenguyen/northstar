@@ -16,6 +16,7 @@ import streamlit as st
 
 from events import load_events
 from instance_config import get_instance_label, instance_page_title_suffix
+from mirror_help import render_slow_load_mirror_help
 
 
 def init_app() -> None:
@@ -26,6 +27,10 @@ def init_app() -> None:
         st.session_state._northstar_page_config = True
 
     label = get_instance_label()
+    if "_northstar_slow_load_help" not in st.session_state:
+        st.session_state._northstar_slow_load_help = True
+        render_slow_load_mirror_help(current_label=label)
+
     if label and label != "1":
         st.sidebar.caption(f"Northstar instance **{label}**")
 
