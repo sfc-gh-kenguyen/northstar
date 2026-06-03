@@ -49,8 +49,8 @@
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Building an End-to-End AI Application on Snowflake: From Data To Intelligence",
-    "Guide URL": "",
+    "Workshop": "Build an End-to-End Application Using CoCo on Snowflake",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/sfguide-build-end-to-end-ai-app-on-snowflake/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/data-intelligence.sql",
     "Answer Key link text": "View Answer Key"
   }
