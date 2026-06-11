@@ -1,20 +1,5 @@
 [
   {
-    "Event Name": "Summit Bootcamp - Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitRAG",
-    "Archived": false
-  },
-  {
-    "Event Name": "Summit Bootcamp - Build an End-to-End Application Using CoCo on Snowflake",
-    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitAIApp",
-    "Archived": false
-  },
-  {
-    "Event Name": "Singapore (6/10/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=09a68f022a96b38651167f306b7670f07cc56ae4d156a98206ea143e59261a48",
-    "Archived": false
-  },
-  {
     "Event Name": "Seoul (6/23/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=d7b4d7d2fee3bc248bb83d76570b7157326786483f0e2987a138f2921ea98244",
     "Archived": false
@@ -47,6 +32,11 @@
   {
     "Event Name": "Auckland (7/3/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=13c6c71c57b05cb5fd9a319659d6ed7eb538693a8e8ee811f5d52b03e6589367",
+    "Archived": false
+  },
+  {
+    "Event Name": "Seoul (7/22/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=b58f958d94d6c174d7b93bbc2d7349da3edf15e4e0dde97aa80a602f1c110ac0",
     "Archived": false
   },
   {
@@ -257,6 +247,30 @@
     "Badges issued": true,
     "Event Date": "2026-05-28",
     "Issued Date": "2026-06-08",
+    "Archived": true
+  },
+  {
+    "Event Name": "Summit Bootcamp - Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitRAG",
+    "Badges issued": true,
+    "Event Date": "2026-06-04",
+    "Issued Date": "2026-06-10",
+    "Archived": true
+  },
+  {
+    "Event Name": "Summit Bootcamp - Build an End-to-End Application Using CoCo on Snowflake",
+    "Final URL": "https://signup.snowflake.com/summit2026/?utm_source=workshop&utm_campaign=SummitAIApp",
+    "Badges issued": true,
+    "Event Date": "2026-06-04",
+    "Issued Date": "2026-06-10",
+    "Archived": true
+  },
+  {
+    "Event Name": "Singapore (6/10/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=workshop&utm_campaign=northstar-2026&t=09a68f022a96b38651167f306b7670f07cc56ae4d156a98206ea143e59261a48",
+    "Badges issued": false,
+    "Event Date": "2026-06-10",
+    "Issued Date": null,
     "Archived": true
   }
 ]
