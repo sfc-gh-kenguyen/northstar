@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from urllib.parse import unquote_plus
 
 import requests
 import streamlit as st
@@ -10,6 +11,24 @@ from workshops import load_answer_key_map
 
 ANSWER_KEYS = load_answer_key_map()
 WORKSHOP_OPTIONS = ["None (auto-grader setup only)"] + list(ANSWER_KEYS.keys())
+
+
+def _workshop_select_index() -> int | None:
+    preset = st.session_state.get("auto_grader_workshop_preset")
+    if preset and preset in WORKSHOP_OPTIONS:
+        del st.session_state["auto_grader_workshop_preset"]
+        return WORKSHOP_OPTIONS.index(preset)
+
+    if "_auto_grader_workshop_query_applied" not in st.session_state:
+        st.session_state._auto_grader_workshop_query_applied = True
+        raw = st.query_params.get("workshop")
+        if raw is not None:
+            val = raw[0] if isinstance(raw, list) else raw
+            name = unquote_plus(str(val).strip())
+            if name in WORKSHOP_OPTIONS:
+                return WORKSHOP_OPTIONS.index(name)
+
+    return None
 
 st.title("⚙️ Auto-Grader/Answer Key")
 
@@ -34,7 +53,11 @@ with left:
     st.caption("Fields marked with * are required.")
 
     with st.form("greeting_form"):
-        workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS)
+        _idx = _workshop_select_index()
+        if _idx is not None:
+            workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS, index=_idx)
+        else:
+            workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS)
         email = st.text_input("Email *", placeholder="name@company.com")
         c1, c2 = st.columns(2)
         with c1:
