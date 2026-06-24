@@ -2,13 +2,13 @@
   {
     "event_name": "Virtual Dev Day (EMEA)",
     "nav_title": "Virtual Dev Day (EMEA)",
-    "workshop": "Cortex Code Foundations: Getting Started with CoCo",
+    "workshop": "CoCo Foundations: Getting Started with CoCo",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
     "event_name": "Virtual Dev Day (NOAM)",
     "nav_title": "Virtual Dev Day (NOAM)",
-    "workshop": "Cortex Code Foundations: Getting Started with CoCo",
+    "workshop": "CoCo Foundations: Getting Started with CoCo",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
 ]

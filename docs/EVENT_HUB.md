@@ -13,13 +13,13 @@ Edit ``event_hubs.json`` in this repo (commit + push — **not** the Google Shee
   {
     "event_name": "Virtual Dev Day (EMEA)",
     "nav_title": "Virtual Dev Day (EMEA)",
-    "workshop": "Cortex Code Foundations: Getting Started with CoCo",
+    "workshop": "CoCo Foundations: Getting Started with CoCo",
     "intro": "Optional note for the room."
   },
   {
     "event_name": "Virtual Dev Day (NOAM)",
     "nav_title": "Virtual Dev Day (NOAM)",
-    "workshop": "Cortex Code Foundations: Getting Started with CoCo",
+    "workshop": "CoCo Foundations: Getting Started with CoCo",
     "intro": "Optional note for the room."
   }
 ]
@@ -33,7 +33,7 @@ Edit ``event_hubs.json`` in this repo (commit + push — **not** the Google Shee
 | ``intro`` | No | Optional text at top of the hub page |
 
 Add guide and answer key URLs for the workshop on your **Guides & Answer Keys** sheet if needed
-(the **Cortex Code Foundations: Getting Started with CoCo** row is already in ``workshops.json``),
+(the **CoCo Foundations: Getting Started with CoCo** row is already in ``workshops.json``),
 
 ## Local preview
 
