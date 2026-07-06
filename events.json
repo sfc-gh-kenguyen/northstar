@@ -40,6 +40,11 @@
     "Archived": false
   },
   {
+    "Event Name": "Sydney (8/12/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=87fe0a3a6e7e01e01a1178e25c0e5ecce86277a48e9aa831a5bd18c1eeb7a675",
+    "Archived": false
+  },
+  {
     "Event Name": "Melbourne (04/13/2026)",
     "Final URL": "http://signup.snowflake.com/?k=snowflake-ai-linkedin&t=5a798df87df032d830c164a792c104767dba56c231a2b9bc3f0e434793f629c6",
     "Badges issued": false,
@@ -258,9 +263,9 @@
   {
     "Event Name": "Singapore (6/10/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=09a68f022a96b38651167f306b7670f07cc56ae4d156a98206ea143e59261a48",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-06-10",
-    "Issued Date": null,
+    "Issued Date": "2026-07-06",
     "Archived": true
   },
   {
@@ -282,9 +287,9 @@
   {
     "Event Name": "Paris (6/25/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=9cf2f909250b5fc0bc563200f38bbfc0569004566e9ad413e9289d4da674a8c9",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-06-25",
-    "Issued Date": null,
+    "Issued Date": "2026-07-06",
     "Archived": true
   },
   {
@@ -306,9 +311,9 @@
   {
     "Event Name": "Wellington (7/01/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=7b3f586e97e5d4bf0cca39fb60beda39b7fd6dc7b6f9dffc9643905c60f974e9",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-07-01",
-    "Issued Date": null,
+    "Issued Date": "2026-07-06",
     "Archived": true
   }
 ]
