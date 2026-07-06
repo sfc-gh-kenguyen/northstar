@@ -1,37 +1,17 @@
 [
   {
-    "Event Name": "Seoul (6/23/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=d7b4d7d2fee3bc248bb83d76570b7157326786483f0e2987a138f2921ea98244",
-    "Archived": false
-  },
-  {
-    "Event Name": "Hamilton (6/24/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=6b9e133dbf3b4d2dce1cfacc7fbb3a37c41a7b741c4940274cbf047cd5930864",
-    "Archived": false
-  },
-  {
-    "Event Name": "Paris (6/25/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=9cf2f909250b5fc0bc563200f38bbfc0569004566e9ad413e9289d4da674a8c9",
-    "Archived": false
-  },
-  {
-    "Event Name": "Virtual Dev Day (EMEA)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=emea-vdd&t=095b2dbb83eb857ef6ac3ca201b37de4898245a9b69b074663ff36f3968a6f67",
-    "Archived": false
-  },
-  {
-    "Event Name": "Virtual Dev Day (NOAM)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=noam-vdd&t=5e022e27fb013cf4f80ab576e141cdef658a057df44eca57ef98b7269d52f6dd",
-    "Archived": false
-  },
-  {
-    "Event Name": "Wellington (7/01/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=7b3f586e97e5d4bf0cca39fb60beda39b7fd6dc7b6f9dffc9643905c60f974e9",
-    "Archived": false
-  },
-  {
     "Event Name": "Raleigh (7/8/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=466aabc5a7ed8ce14600f4133f97f0bd38c50ffbe756f84a12523e16f6ddcc25",
+    "Archived": false
+  },
+  {
+    "Event Name": "APAC Virtual (7/15/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=b0dea797dc2bf610993dc367d8f1f459d3c717874e924e00978ea97baf4901a3",
+    "Archived": false
+  },
+  {
+    "Event Name": "APAC Virtual (7/16/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=3b58f98a5a6e1e8b0b94c1d7a05a72f08349392cd2c486cc70dfab5002ff9368",
     "Archived": false
   },
   {
@@ -57,16 +37,6 @@
   {
     "Event Name": "Christchurch (7/30/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b14624705f889e3a2e144b89b3d5878fb2eff49f9a1d4ed08c3b82dc2c32123",
-    "Archived": false
-  },
-  {
-    "Event Name": "APAC Virtual (7/15/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=b0dea797dc2bf610993dc367d8f1f459d3c717874e924e00978ea97baf4901a3",
-    "Archived": false
-  },
-  {
-    "Event Name": "APAC Virtual (7/16/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=3b58f98a5a6e1e8b0b94c1d7a05a72f08349392cd2c486cc70dfab5002ff9368",
     "Archived": false
   },
   {
@@ -290,6 +260,54 @@
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=09a68f022a96b38651167f306b7670f07cc56ae4d156a98206ea143e59261a48",
     "Badges issued": false,
     "Event Date": "2026-06-10",
+    "Issued Date": null,
+    "Archived": true
+  },
+  {
+    "Event Name": "Seoul (6/23/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=d7b4d7d2fee3bc248bb83d76570b7157326786483f0e2987a138f2921ea98244",
+    "Badges issued": true,
+    "Event Date": "2026-06-23",
+    "Issued Date": "2026-06-26",
+    "Archived": true
+  },
+  {
+    "Event Name": "Hamilton (6/24/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=6b9e133dbf3b4d2dce1cfacc7fbb3a37c41a7b741c4940274cbf047cd5930864",
+    "Badges issued": true,
+    "Event Date": "2026-06-24",
+    "Issued Date": "2026-06-26",
+    "Archived": true
+  },
+  {
+    "Event Name": "Paris (6/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=9cf2f909250b5fc0bc563200f38bbfc0569004566e9ad413e9289d4da674a8c9",
+    "Badges issued": false,
+    "Event Date": "2026-06-25",
+    "Issued Date": null,
+    "Archived": true
+  },
+  {
+    "Event Name": "Virtual Dev Day (EMEA)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=emea-vdd&t=095b2dbb83eb857ef6ac3ca201b37de4898245a9b69b074663ff36f3968a6f67",
+    "Badges issued": true,
+    "Event Date": "2026-06-25",
+    "Issued Date": "2026-06-26",
+    "Archived": true
+  },
+  {
+    "Event Name": "Virtual Dev Day (NOAM)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=noam-vdd&t=5e022e27fb013cf4f80ab576e141cdef658a057df44eca57ef98b7269d52f6dd",
+    "Badges issued": true,
+    "Event Date": "2026-06-25",
+    "Issued Date": "2026-06-26",
+    "Archived": true
+  },
+  {
+    "Event Name": "Wellington (7/01/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=7b3f586e97e5d4bf0cca39fb60beda39b7fd6dc7b6f9dffc9643905c60f974e9",
+    "Badges issued": false,
+    "Event Date": "2026-07-01",
     "Issued Date": null,
     "Archived": true
   }
