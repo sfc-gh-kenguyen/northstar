@@ -13,11 +13,15 @@ ANSWER_KEYS = load_answer_key_map()
 WORKSHOP_OPTIONS = ["None (auto-grader setup only)"] + list(ANSWER_KEYS.keys())
 
 
-def _workshop_select_index() -> int | None:
-    preset = st.session_state.get("auto_grader_workshop_preset")
+def _init_auto_grader_workshop() -> None:
+    """Keep workshop selection across reruns (including after Generate SQL)."""
+    preset = st.session_state.pop("auto_grader_workshop_preset", None)
     if preset and preset in WORKSHOP_OPTIONS:
-        del st.session_state["auto_grader_workshop_preset"]
-        return WORKSHOP_OPTIONS.index(preset)
+        st.session_state.auto_grader_workshop = preset
+        return
+
+    if "auto_grader_workshop" in st.session_state:
+        return
 
     if "_auto_grader_workshop_query_applied" not in st.session_state:
         st.session_state._auto_grader_workshop_query_applied = True
@@ -26,9 +30,10 @@ def _workshop_select_index() -> int | None:
             val = raw[0] if isinstance(raw, list) else raw
             name = unquote_plus(str(val).strip())
             if name in WORKSHOP_OPTIONS:
-                return WORKSHOP_OPTIONS.index(name)
+                st.session_state.auto_grader_workshop = name
+                return
 
-    return None
+    st.session_state.auto_grader_workshop = WORKSHOP_OPTIONS[0]
 
 st.title("⚙️ Auto-Grader/Answer Key")
 
@@ -46,6 +51,8 @@ def normalize_space(value: str) -> str:
 
 st.divider()
 
+_init_auto_grader_workshop()
+
 left, right = st.columns([1.1, 1])
 
 with left:
@@ -53,11 +60,7 @@ with left:
     st.caption("Fields marked with * are required.")
 
     with st.form("greeting_form"):
-        _idx = _workshop_select_index()
-        if _idx is not None:
-            workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS, index=_idx)
-        else:
-            workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS)
+        workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS, key="auto_grader_workshop")
         email = st.text_input("Email *", placeholder="name@company.com")
         c1, c2 = st.columns(2)
         with c1:

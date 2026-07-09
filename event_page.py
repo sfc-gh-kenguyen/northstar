@@ -62,17 +62,10 @@ def resolve_event_config(event_name: str) -> dict[str, Any]:
     }
 
 
-def render_event_checklist(event_name: str, *, sync_selected_event: bool = False) -> None:
-    """Render the full event checklist for ``event_name``.
-
-    Set ``sync_selected_event`` on dedicated hub pages so Badge status and deep links
-    see the right event. Do not set it from Event Page (selectbox owns that key).
-    """
+def render_event_checklist(event_name: str) -> None:
+    """Render the full event checklist for ``event_name``."""
     cfg = resolve_event_config(event_name)
     workshops = cfg["workshops"]
-
-    if sync_selected_event:
-        st.session_state["selected_event"] = cfg["event_name"]
 
     st.header(f"🎯 {cfg['title']}")
 
