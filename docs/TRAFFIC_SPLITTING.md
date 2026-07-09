@@ -50,7 +50,8 @@ Same as above, but:
 
 **One-time setup:** In ``northstar`` repo → **Settings → Secrets → Actions**, add
 ``NORTHSTAR2_MIRROR_TOKEN`` — a fine-grained PAT with **Contents: Read and write** on
-``northstar-2`` only (or classic ``repo`` scope). After the secret exists, push to ``main``
+``northstar-2`` only (or classic ``repo`` scope). Either name works:
+``northstar_mirror`` or ``NORTHSTAR2_MIRROR_TOKEN``. After the secret exists, push to ``main``
 or run **Actions → Sync northstar-2 mirror → Run workflow**.
 
 Verify in incognito: sidebar shows **Event Page** and **APAC Virtual — Day 1/2**, not

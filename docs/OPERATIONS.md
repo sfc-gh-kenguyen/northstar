@@ -28,6 +28,7 @@ Deploy extra Community Cloud apps from the same repo to split sessions across UR
 - **Python / Streamlit:** `deploy_config.py` and `repo_json.py` read `deploy.json` (with sensible defaults if the file is missing).
 - **Google Apps Script (`apps_script.js`):** On each push, the script loads `deploy.json` from **raw GitHub** using `NORTHSTAR_DEPLOY_JSON_URL` (bootstrap URL). If that fetch fails, it falls back to `REPO_FALLBACK_*` constants — **keep those aligned with `deploy.json`** when you fork or rename the repo.
 - When you **fork** or move the repo, update: `deploy.json`, `NORTHSTAR_DEPLOY_JSON_URL` in Apps Script, and the fallback constants in one pass.
+- **northstar2 mirror:** ``northstar2.streamlit.app`` deploys from repo ``northstar-2``. Workflow ``sync-northstar2-mirror.yml`` copies ``main`` there on each push; requires Actions secret ``northstar_mirror`` (or ``NORTHSTAR2_MIRROR_TOKEN``). See [TRAFFIC_SPLITTING.md](TRAFFIC_SPLITTING.md).
 
 ## Data files (`events.json`, `workshops.json`)
 

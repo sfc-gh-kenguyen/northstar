@@ -1,8 +1,8 @@
 # Mirror northstar main → sfc-gh-kenguyen/northstar-2 for Streamlit northstar2.streamlit.app
 # (That Cloud app cannot be repointed to the northstar repo in the UI.)
 #
-# One-time setup: add repo secret NORTHSTAR2_MIRROR_TOKEN — a PAT with Contents write
-# on northstar-2 (fine-grained token scoped to that repo is enough).
+# One-time setup: add repo secret northstar_mirror (or NORTHSTAR2_MIRROR_TOKEN) — a PAT
+# with Contents write on northstar-2 (fine-grained token scoped to that repo is enough).
 
 name: Sync northstar-2 mirror
 
@@ -25,11 +25,13 @@ jobs:
 
       - name: Push to northstar-2
         env:
-          MIRROR_TOKEN: ${{ secrets.NORTHSTAR2_MIRROR_TOKEN }}
+          NORTHSTAR_MIRROR: ${{ secrets.northstar_mirror }}
+          NORTHSTAR2_MIRROR_TOKEN: ${{ secrets.NORTHSTAR2_MIRROR_TOKEN }}
         run: |
           set -euo pipefail
+          MIRROR_TOKEN="${NORTHSTAR_MIRROR:-${NORTHSTAR2_MIRROR_TOKEN:-}}"
           if [ -z "${MIRROR_TOKEN}" ]; then
-            echo "::error::Missing repo secret NORTHSTAR2_MIRROR_TOKEN (PAT with write access to northstar-2)."
+            echo "::error::Missing repo secret northstar_mirror (or NORTHSTAR2_MIRROR_TOKEN) — PAT with write access to northstar-2."
             exit 1
           fi
           git remote add mirror "https://x-access-token:${MIRROR_TOKEN}@github.com/sfc-gh-kenguyen/northstar-2.git"
