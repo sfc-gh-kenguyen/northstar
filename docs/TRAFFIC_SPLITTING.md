@@ -44,6 +44,12 @@ Same as above, but:
 - **Main file path:** ``Instance2.py`` (recommended — sets instance label in sidebar) or ``Home.py``
 - **App URL:** ``northstar2`` (dashboard may show app name ``northstar-2``)
 
+**Important:** If Streamlit Cloud shows repository ``northstar-2`` (not ``northstar``), that app
+does **not** auto-update when you push to ``northstar``. After each deploy to ``northstar``,
+sync ``northstar-2`` (merge ``main`` from ``northstar`` into ``northstar-2`` and push), or
+reconnect the app to ``sfc-gh-kenguyen/northstar`` in Settings. Verify with incognito:
+sidebar should show **Event Page** and **APAC Virtual — Day 1/2**, not **Trial Sign Up**.
+
 ## Before a high-traffic event
 
 1. **Push repo changes** — ``Instance5.py``, ``Instance6.py``, etc. must be on ``main`` so Cloud can deploy them.
