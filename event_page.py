@@ -160,11 +160,9 @@ def render_event_checklist(event_name: str) -> None:
     )
     if not workshops:
         nav_button("pages/3_Auto-Grader.py", "Go to Auto-Grader", icon="⚙️")
-    elif len(workshops) == 1:
-        if st.button("Go to Auto-Grader", type="primary", icon="⚙️"):
-            _go_to_auto_grader(workshops[0])
     else:
-        st.markdown("Open the auto-grader for the lab you completed:")
+        if len(workshops) > 1:
+            st.markdown("Open the auto-grader for the lab you completed:")
         for i, workshop in enumerate(workshops):
             if st.button(
                 f"Auto-Grader — {workshop}",
