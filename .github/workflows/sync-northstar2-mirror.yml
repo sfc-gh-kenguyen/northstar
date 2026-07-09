@@ -38,5 +38,4 @@ jobs:
           git config --global credential.helper ""
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -c http.extraHeader="Authorization: bearer ${MIRROR_TOKEN}" \
-            push https://github.com/sfc-gh-kenguyen/northstar-2.git HEAD:main
+          git push "https://x-access-token:${MIRROR_TOKEN}@github.com/sfc-gh-kenguyen/northstar-2.git" HEAD:main
