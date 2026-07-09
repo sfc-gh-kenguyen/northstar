@@ -44,11 +44,17 @@ Same as above, but:
 - **Main file path:** ``Instance2.py`` (recommended — sets instance label in sidebar) or ``Home.py``
 - **App URL:** ``northstar2`` (dashboard may show app name ``northstar-2``)
 
-**Important:** If Streamlit Cloud shows repository ``northstar-2`` (not ``northstar``), that app
-does **not** auto-update when you push to ``northstar``. After each deploy to ``northstar``,
-sync ``northstar-2`` (merge ``main`` from ``northstar`` into ``northstar-2`` and push), or
-reconnect the app to ``sfc-gh-kenguyen/northstar`` in Settings. Verify with incognito:
-sidebar should show **Event Page** and **APAC Virtual — Day 1/2**, not **Trial Sign Up**.
+**Important:** Streamlit Cloud deploys ``northstar2`` from GitHub repo ``northstar-2``, not
+``northstar``. A GitHub Action (``.github/workflows/sync-northstar2-mirror.yml``) mirrors
+``main`` to ``northstar-2`` on every push.
+
+**One-time setup:** In ``northstar`` repo → **Settings → Secrets → Actions**, add
+``NORTHSTAR2_MIRROR_TOKEN`` — a fine-grained PAT with **Contents: Read and write** on
+``northstar-2`` only (or classic ``repo`` scope). After the secret exists, push to ``main``
+or run **Actions → Sync northstar-2 mirror → Run workflow**.
+
+Verify in incognito: sidebar shows **Event Page** and **APAC Virtual — Day 1/2**, not
+**Trial Sign Up**.
 
 ## Before a high-traffic event
 
