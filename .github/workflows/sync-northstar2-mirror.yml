@@ -34,10 +34,6 @@ jobs:
             echo "::error::Missing repo secret northstar_mirror (or NORTHSTAR2_MIRROR_TOKEN) — PAT with write access to northstar-2."
             exit 1
           fi
-          git remote add mirror "https://x-access-token:${MIRROR_TOKEN}@github.com/sfc-gh-kenguyen/northstar-2.git"
-          git fetch mirror main 2>/dev/null || true
-          if git rev-parse --verify mirror/main >/dev/null 2>&1; then
-            git push --force-with-lease=mirror/main mirror HEAD:main
-          else
-            git push mirror HEAD:main
-          fi
+          git config --global credential.helper ""
+          MIRROR_URL="https://x-access-token:${MIRROR_TOKEN}@github.com/sfc-gh-kenguyen/northstar-2.git"
+          git push "${MIRROR_URL}" HEAD:main
