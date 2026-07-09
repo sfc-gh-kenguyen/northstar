@@ -1,5 +1,7 @@
 import streamlit as st
 
+from nav_helpers import nav_button
+
 # Home.py calls init_app() then loads this file via st.navigation — do not init again.
 # Backup Cloud entry uses home_page.py alone (init_app runs there once).
 if not st.session_state.get("_northstar_nav_root"):
@@ -21,12 +23,12 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📝 Event Page")
     st.markdown("Select your event for trial signup, lab guide, and auto-grader steps.")
-    st.page_link("pages/1_Event_Page.py", label="Go to Event Page", icon="➡️")
+    nav_button("pages/1_Event_Page.py", "Go to Event Page", primary=True, icon="➡️")
 
 with col2:
     st.subheader("⚙️ Auto-Grader")
     st.markdown("Generate your auto-grader SQL script.")
-    st.page_link("pages/3_Auto-Grader.py", label="Go to Auto-Grader", icon="➡️")
+    nav_button("pages/3_Auto-Grader.py", "Go to Auto-Grader", icon="➡️", key="home_nav_grader")
 
 st.divider()
 
@@ -34,11 +36,11 @@ c3, c4 = st.columns(2)
 with c3:
     st.subheader("🏅 Badge status")
     st.markdown("Check the badging status of your event.")
-    st.page_link("pages/4_Badge_Status.py", label="Go to Badge status", icon="➡️")
+    nav_button("pages/4_Badge_Status.py", "Go to Badge status", icon="➡️")
 with c4:
     st.subheader("📚 Guides & answer keys")
     st.markdown("Workshop guides and answer key scripts.")
-    st.page_link("pages/2_Guides_and_Answer_Keys.py", label="Go to Guides & Answer Keys", icon="➡️")
+    nav_button("pages/2_Guides_and_Answer_Keys.py", "Go to Guides & Answer Keys", icon="➡️")
 
 st.divider()
 
@@ -57,11 +59,7 @@ st.markdown(
     "that includes both the auto-grader setup and the answer key for your workshop. "
     "Paste the generated script into a Snowflake SQL worksheet and run it in full."
 )
-st.page_link(
-    "pages/3_Auto-Grader.py",
-    label="Go to Auto-Grader",
-    icon="⚙️",
-)
+nav_button("pages/3_Auto-Grader.py", "Go to Auto-Grader", icon="⚙️", key="home_steps_grader")
 
 st.divider()
 

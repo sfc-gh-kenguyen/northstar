@@ -8,6 +8,7 @@ import streamlit as st
 
 from events import load_events, load_event_workshops
 from event_hubs import get_event_hub
+from nav_helpers import external_link_button, nav_button
 from workshops import load_workshop_rows
 
 _DEFAULT_INTRO = (
@@ -105,14 +106,13 @@ def render_event_checklist(event_name: str) -> None:
         if len(found) == 1:
             name, url = found[0]
             st.markdown(f"Sign up for a Snowflake trial account for **{name}**.")
-            st.link_button("Open Trial Signup", url, type="primary")
+            external_link_button("Open Trial Signup", url)
         else:
             st.markdown("Sign up for a Snowflake trial account for this event.")
             for i, (name, url) in enumerate(found):
-                st.link_button(
+                external_link_button(
                     f"Open Trial Signup — {name}",
                     url,
-                    type="primary",
                     key=f"trial_{i}",
                 )
     else:
@@ -125,25 +125,25 @@ def render_event_checklist(event_name: str) -> None:
         st.markdown(
             "Open **Guides & Answer Keys** and select the workshop you are attending."
         )
-        st.page_link("pages/2_Guides_and_Answer_Keys.py", label="Guides & Answer Keys", icon="📚")
+        nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
     elif len(workshops) == 1:
         workshop_row = _workshop_row(workshops[0])
         st.markdown(f"Workshop: **{workshops[0]}**")
         if workshop_row and (workshop_row.get("guide_url") or "").strip():
-            st.link_button(
+            external_link_button(
                 workshop_row.get("guide_label") or "View Guide",
                 workshop_row["guide_url"],
             )
         else:
             st.info("Guide link coming soon.", icon="🔜")
-            st.page_link("pages/2_Guides_and_Answer_Keys.py", label="Guides & Answer Keys", icon="📚")
+            nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
     else:
         st.markdown("Choose the guide for the lab you are attending:")
         for i, workshop in enumerate(workshops):
             workshop_row = _workshop_row(workshop)
             st.markdown(f"**{workshop}**")
             if workshop_row and (workshop_row.get("guide_url") or "").strip():
-                st.link_button(
+                external_link_button(
                     workshop_row.get("guide_label") or "View Guide",
                     workshop_row["guide_url"],
                     key=f"guide_{i}",
@@ -159,7 +159,7 @@ def render_event_checklist(event_name: str) -> None:
         "paste it into a Snowflake worksheet, and run it in full."
     )
     if not workshops:
-        st.page_link("pages/3_Auto-Grader.py", label="Go to Auto-Grader", icon="⚙️")
+        nav_button("pages/3_Auto-Grader.py", "Go to Auto-Grader", icon="⚙️")
     elif len(workshops) == 1:
         if st.button("Go to Auto-Grader", type="primary", icon="⚙️"):
             _go_to_auto_grader(workshops[0])
@@ -181,4 +181,4 @@ def render_event_checklist(event_name: str) -> None:
         "Complete the lab and run the auto-grader script to qualify for your badge. "
         "Allow **7 business days** after the event; check **Badge status** for updates."
     )
-    st.page_link("pages/4_Badge_Status.py", label="Badge status", icon="🏅")
+    nav_button("pages/4_Badge_Status.py", "Badge status", icon="🏅")

@@ -1,11 +1,8 @@
 import streamlit as st
 
+from nav_helpers import external_link_button
 from workshops import load_workshop_rows
 
-
-def _md_cell(text: str) -> str:
-    """Escape pipe characters so markdown table cells stay valid."""
-    return (text or "").replace("|", "\\|")
 
 st.title("📚 Workshop Guides and Answer Keys")
 
@@ -34,17 +31,29 @@ if not rows:
     )
     st.stop()
 
-lines = ["| Workshop | Guide | Answer Key |", "|----------|-------|------------|"]
-for r in rows:
-    w = _md_cell(r["workshop"])
-    if (r.get("guide_url") or "").strip():
-        g = f"[{r['guide_label']}]({r['guide_url']})"
-    else:
-        g = _md_cell(r.get("guide_pending_text") or "Coming soon")
-    if (r.get("answer_key_url") or "").strip():
-        a = f"[{r['answer_key_label']}]({r['answer_key_url']})"
-    else:
-        a = _md_cell(r.get("answer_key_pending_text") or "Coming soon")
-    lines.append(f"| {w} | {g} | {a} |")
-
-st.markdown("\n".join(lines))
+for i, r in enumerate(rows):
+    st.markdown(f"**{r['workshop']}**")
+    guide_col, key_col = st.columns(2)
+    with guide_col:
+        guide_url = (r.get("guide_url") or "").strip()
+        if guide_url:
+            external_link_button(
+                r.get("guide_label") or "View Guide",
+                guide_url,
+                key=f"guide_{i}",
+            )
+        else:
+            st.caption(r.get("guide_pending_text") or "Coming soon")
+    with key_col:
+        answer_url = (r.get("answer_key_url") or "").strip()
+        if answer_url:
+            external_link_button(
+                r.get("answer_key_label") or "View Answer Key",
+                answer_url,
+                primary=False,
+                key=f"answer_{i}",
+            )
+        else:
+            st.caption(r.get("answer_key_pending_text") or "Coming soon")
+    if i < len(rows) - 1:
+        st.divider()

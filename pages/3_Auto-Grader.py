@@ -233,6 +233,7 @@ st.download_button(
     data=sql_out.encode("utf-8"),
     file_name="workshop_greeting.sql",
     mime="text/sql",
+    type="secondary",
 )
 
 components.html("""
