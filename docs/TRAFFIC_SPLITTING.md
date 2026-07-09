@@ -9,7 +9,7 @@ All mirrors share the same ``events.json``, ``workshops.json``, and code (via Gi
 | Instance | Main file | App name in Streamlit Cloud | URL |
 |----------|-----------|----------------------------|-----|
 | 1 (primary) | ``Home.py`` | ``northstar`` (existing) | ``https://northstar.streamlit.app`` |
-| 2 | ``Home.py`` | ``northstar2`` | ``https://northstar2.streamlit.app`` |
+| 2 | ``Instance2.py`` (or ``Home.py``) | ``northstar2`` | ``https://northstar2.streamlit.app`` |
 | 3 | ``Instance3.py`` | ``northstar3`` | ``https://northstar3.streamlit.app`` |
 | 4 | ``Instance4.py`` | ``northstar4`` | ``https://northstar4.streamlit.app`` |
 | 5 | ``Instance5.py`` | ``northstar5`` | ``https://northstar5.streamlit.app`` |
@@ -34,15 +34,15 @@ Do the following for each new instance (3–6). Steps below use **instance 5** a
 7. Reboot **northstar5** if prompted (or wait for secrets to apply).
 8. Open ``https://northstar5.streamlit.app`` and confirm:
    - Sidebar shows **Northstar instance 5**
-   - Trial Sign Up lists events
+   - Event Page lists events and shows the full checklist
    - Auto-Grader loads
 
 ### Instance 2 (if you do not have it yet)
 
 Same as above, but:
 
-- **Main file path:** ``Home.py`` (not ``Instance2.py``)
-- **App URL:** ``northstar2``
+- **Main file path:** ``Instance2.py`` (recommended — sets instance label in sidebar) or ``Home.py``
+- **App URL:** ``northstar2`` (dashboard may show app name ``northstar-2``)
 
 ## Before a high-traffic event
 
@@ -99,7 +99,7 @@ NORTHSTAR_INSTANCE = "5"
 
 - [ ] ``northstar5`` and ``northstar6`` deployed and **Running**
 - [ ] Secrets copied from primary to each new app
-- [ ] Smoke-tested Trial Sign Up + Auto-Grader on each URL
+- [ ] Smoke-tested Event Page + Auto-Grader on each URL
 - [ ] All six URLs on slides (or four if not using 5–6)
 - [ ] Optional: ``NORTHSTAR_GITHUB_TOKEN`` in secrets on **each** app for busy events
 

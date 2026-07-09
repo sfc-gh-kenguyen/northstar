@@ -19,9 +19,9 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📝 Trial Sign Up")
-    st.markdown("Sign up for a Snowflake trial account for your event.")
-    st.page_link("pages/1_Trial_Sign_Up.py", label="Go to Trial Sign Up", icon="➡️")
+    st.subheader("📝 Event Page")
+    st.markdown("Select your event for trial signup, lab guide, and auto-grader steps.")
+    st.page_link("pages/1_Event_Page.py", label="Go to Event Page", icon="➡️")
 
 with col2:
     st.subheader("⚙️ Auto-Grader")

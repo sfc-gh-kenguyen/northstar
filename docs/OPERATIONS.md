@@ -5,12 +5,14 @@
 | Main file | Purpose |
 |-----------|---------|
 | `Home.py` | Primary Northstar app (instance 1): `st.navigation`, sheet-driven JSON, all features. **Use this** for the default Community Cloud deployment. |
+| `Instance2.py` | Traffic mirror **instance 2** — for the `northstar-2` app (`northstar2.streamlit.app`). Same as `Home.py` with sidebar instance label. |
 | `Instance3.py` | Traffic mirror **instance 3** — same app as `Home.py`; use as **Main file** on a **second** Community Cloud app. See [TRAFFIC_SPLITTING.md](TRAFFIC_SPLITTING.md). |
 | `Instance4.py` | Traffic mirror **instance 4** — same as above. |
 | `Instance5.py` | Traffic mirror **instance 5** — optional extra capacity for very large events. |
 | `Instance6.py` | Traffic mirror **instance 6** — optional extra capacity for very large events. |
-| `pages/5_Virtual_Dev_Day_EMEA.py` | Event hub for Virtual Dev Day (EMEA). See [EVENT_HUB.md](EVENT_HUB.md). |
-| `pages/6_Virtual_Dev_Day_NOAM.py` | Event hub for Virtual Dev Day (NOAM). |
+| `pages/1_Event_Page.py` | **Event Page** — select any event for the full checklist. |
+| `pages/5_APAC_Virtual_Day_1.py` | Dedicated sidebar hub for APAC Virtual Day 1. See [EVENT_HUB.md](EVENT_HUB.md). |
+| `pages/6_APAC_Virtual_Day_2.py` | Dedicated sidebar hub for APAC Virtual Day 2. |
 | `LegacyAutograderRedirect.py` | Only for a **separate** Streamlit app still bound to the legacy hostname `northstarautograder.streamlit.app`. It redirects browsers to the canonical `northstar.streamlit.app` (and preserves path/query). **Do not** set this as the main app’s entry if you want the full product. |
 | `home_page.py` | Loaded as a **page** by `Home.py`, not run alone on Community Cloud (except backup / local experiments noted in code comments). |
 
@@ -30,6 +32,7 @@ Deploy extra Community Cloud apps from the same repo to split sessions across UR
 ## Data files (`events.json`, `workshops.json`)
 
 - Updated by **Apps Script → GitHub Contents API** (see `apps_script.js`).
+- **Events sheet columns:** `Event Name`, `Final URL` (required). Optional: `Workshop` (lab name for Event Page — must match **Workshop** on the Guides tab exactly), `Badges issued`, `Event Date`, `Issued Date`. Use `;` in **Workshop** for two parallel labs on the same day (workshop titles may contain commas).
 - The hosted app prefers **raw.githubusercontent.com** (see `repo_json.py`) so JSON changes do not depend on the container’s git checkout staying fresh.
 
 ## Fresh JSON after sheet sync (no reboot)

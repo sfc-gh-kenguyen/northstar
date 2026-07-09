@@ -52,11 +52,26 @@ def _parse_badges_issued(raw: Any) -> bool | None:
     return None
 
 
+def _workshops_from_value(raw: Any) -> list[str]:
+    """Parse workshop name(s) from a sheet cell.
+
+    Workshop titles often contain commas, so use ``;`` to separate multiple labs
+    in one cell (e.g. two parallel tracks on the same day).
+    """
+    text = _optional_str(raw)
+    if not text:
+        return []
+    if ";" in text:
+        return [part.strip() for part in text.split(";") if part.strip()]
+    return [text]
+
+
 def load_event_records() -> dict[str, dict[str, Any]]:
     """Read events from events.json.
 
     Each value includes:
       - ``final_url``: str | None (trial signup link)
+      - ``workshops``: list[str] — from optional sheet **Workshop** column
       - ``badges_issued``: bool | None — True if badges sent, False if not yet, None if unset
       - ``archived``: bool — True if row came from the archive tab only (see Apps Script merge)
       - ``event_date``: str | None — optional, from sheet "Event Date"
@@ -76,6 +91,12 @@ def load_event_records() -> dict[str, dict[str, Any]]:
             archived = archived_raw is True or str(archived_raw).lower() in ("true", "1", "yes")
             out[name] = {
                 "final_url": r.get("Final URL") or None,
+                "workshops": _workshops_from_value(
+                    _first_header_str(
+                        r,
+                        ("Workshop", "workshop", "Workshop name", "workshop name", "Lab", "Lab name"),
+                    )
+                ),
                 "badges_issued": _parse_badges_issued(r.get("Badges issued")),
                 "archived": archived,
                 "event_date": _first_header_str(
@@ -105,7 +126,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
 def load_events() -> dict[str, str | None]:
     """Active roster events only (excludes archive-tab-only rows).
 
-    Used for Trial Sign Up (and optional ``?event=`` URL preselection). Archive-only events
+    Used for Event Page (and optional ``?event=`` URL preselection). Archive-only events
     stay in ``events.json`` for Badge status but are not selectable here.
     """
     return {
@@ -113,3 +134,16 @@ def load_events() -> dict[str, str | None]:
         for name, rec in load_event_records().items()
         if not rec.get("archived")
     }
+
+
+def load_event_workshops(event_name: str | None) -> list[str]:
+    """Workshop name(s) from the Events sheet for ``event_name`` (may be empty)."""
+    if not event_name or event_name == "None":
+        return []
+    rec = load_event_records().get(str(event_name).strip())
+    if not rec:
+        return []
+    workshops = rec.get("workshops")
+    if isinstance(workshops, list):
+        return [str(w).strip() for w in workshops if str(w).strip()]
+    return []

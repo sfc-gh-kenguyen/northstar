@@ -158,7 +158,7 @@ def render_slow_load_mirror_help(
     if (text.length < 20) return false;
     return (
       text.indexOf("Snowflake Northstar") >= 0 ||
-      text.indexOf("Trial Sign Up") >= 0 ||
+      text.indexOf("Event Page") >= 0 ||
       text.indexOf("Select your event") >= 0 ||
       text.indexOf("Auto-Grader") >= 0
     );

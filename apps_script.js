@@ -290,6 +290,14 @@ function sheetToEvents_(sheet) {
     "Badge Issued Date",
     "Badge issue date",
   ]);
+  var workshopCol = findHeaderCol_(headers, [
+    "Workshop",
+    "Workshop name",
+    "workshop",
+    "workshop name",
+    "Lab",
+    "Lab name",
+  ]);
 
   if (nameCol === -1 || urlCol === -1) {
     throw new Error("Tab \"" + sheet.getName() + "\" must have columns: Event Name, Final URL");
@@ -312,6 +320,12 @@ function sheetToEvents_(sheet) {
     }
     if (issuedDateCol !== -1) {
       row["Issued Date"] = formatDateCell_(data[i][issuedDateCol]);
+    }
+    if (workshopCol !== -1) {
+      var workshop = String(data[i][workshopCol]).trim();
+      if (workshop) {
+        row["Workshop"] = workshop;
+      }
     }
     events.push(row);
   }

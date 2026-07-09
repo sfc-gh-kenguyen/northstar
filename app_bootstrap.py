@@ -4,7 +4,7 @@ Streamlit Cloud may use either file as the main script; this module ensures
 page config, event list, and session state are initialized exactly once per
 session (set_page_config must not run twice).
 
-Event selection lives on **Trial Sign Up**; optional ``?event=`` query (URL-encoded
+Event selection lives on **Event Page**; optional ``?event=`` query (URL-encoded
 name) preselects once per browser session.
 """
 

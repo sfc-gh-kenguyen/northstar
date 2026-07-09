@@ -1,14 +1,20 @@
 [
   {
-    "event_name": "Virtual Dev Day (EMEA)",
-    "nav_title": "Virtual Dev Day (EMEA)",
-    "workshop": "CoCo Foundations: Getting Started with CoCo",
+    "event_name": "APAC Virtual (7/15/2026)",
+    "nav_title": "APAC Virtual — Day 1",
+    "workshops": [
+      "Data Ingestion, Transformation, and Delivery with Snowflake",
+      "Creating Declarative Data Pipelines with Dynamic Tables"
+    ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "Virtual Dev Day (NOAM)",
-    "nav_title": "Virtual Dev Day (NOAM)",
-    "workshop": "CoCo Foundations: Getting Started with CoCo",
+    "event_name": "APAC Virtual (7/16/2026)",
+    "nav_title": "APAC Virtual — Day 2",
+    "workshops": [
+      "CoCo Foundations: Getting Started with CoCo",
+      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent"
+    ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
 ]

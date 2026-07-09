@@ -1,17 +1,12 @@
 import streamlit as st
 
+from event_page import render_event_checklist
 from events import load_events
 
 EVENTS = load_events()
 EVENT_OPTIONS = ["None"] + list(EVENTS.keys())
 
-st.title("📝 Trial Sign Up")
-
-st.warning(
-    "Create a trial account using **AI Data Cloud**, not **Cortex Code CLI** — "
-    "even if using the CLI in the hands-on lab.",
-    icon="⚠️",
-)
+st.title("📝 Event Page")
 
 
 def _sync_event_query_param() -> None:
@@ -34,13 +29,7 @@ st.selectbox(
 
 event = st.session_state["selected_event"]
 if not event or event == "None":
-    st.info("Choose your event above to see your trial signup link.", icon="ℹ️")
+    st.info("Choose your event above to see your trial link, lab guide, and auto-grader steps.", icon="ℹ️")
     st.stop()
 
-link = EVENTS.get(event)
-if link:
-    st.markdown(f"Sign up for a Snowflake trial account for **{event}**:")
-    st.link_button("Open Trial Signup", link)
-else:
-    st.markdown(f"**{event}**")
-    st.info("Link coming soon.", icon="🔜")
+render_event_checklist(event)
