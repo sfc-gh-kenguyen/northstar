@@ -16,8 +16,16 @@ _DEFAULT_INTRO = (
 
 
 def _workshop_row(workshop_title: str) -> dict[str, str] | None:
-    for row in load_workshop_rows():
-        if row.get("workshop") == workshop_title:
+    title = workshop_title.strip()
+    if not title:
+        return None
+    rows = load_workshop_rows()
+    for row in rows:
+        if row.get("workshop") == title:
+            return row
+    lower = title.lower()
+    for row in rows:
+        if row.get("workshop", "").strip().lower() == lower:
             return row
     return None
 

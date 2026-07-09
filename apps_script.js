@@ -184,8 +184,11 @@ function pushEventsToGitHub() {
     }
   }
 
+  var workshopMsg = buildWorkshopSyncMessage_(mainSheet, mainEvents);
   SpreadsheetApp.getUi().alert(
-    "Pushed to GitHub successfully! The app will redeploy in ~1-2 minutes." + guidesMsg
+    "Pushed to GitHub successfully! The app will redeploy in ~1-2 minutes." +
+      workshopMsg +
+      guidesMsg
   );
 }
 
@@ -267,6 +270,67 @@ function findHeaderCol_(headers, candidates) {
   return -1;
 }
 
+var WORKSHOP_HEADER_CANDIDATES = [
+  "Workshop",
+  "Workshops",
+  "Workshop name",
+  "workshop",
+  "workshops",
+  "workshop name",
+  "Lab",
+  "Lab name",
+  "Labs",
+  "Course",
+  "Course name",
+];
+
+/**
+ * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+ * @returns {number}
+ */
+function findWorkshopCol_(headers) {
+  return findHeaderCol_(headers, WORKSHOP_HEADER_CANDIDATES);
+}
+
+/**
+ * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+ * @param {Object[]} events
+ * @returns {string}
+ */
+function buildWorkshopSyncMessage_(sheet, events) {
+  var data = sheet.getDataRange().getValues();
+  if (!data || data.length < 1) {
+    return "";
+  }
+  var workshopCol = findWorkshopCol_(data[0]);
+  var count = 0;
+  var i;
+  for (i = 0; i < events.length; i++) {
+    if (events[i]["Workshop"]) {
+      count++;
+    }
+  }
+  if (workshopCol === -1) {
+    return (
+      "\n\nNo Workshop column found on \"" +
+      sheet.getName() +
+      "\" — Event Page will show generic guide/auto-grader links. " +
+      "Add a **Workshop** column (exact titles from the Guides tab) and push again."
+    );
+  }
+  if (count === 0) {
+    return (
+      "\n\nWorkshop column found, but no rows have a value yet — " +
+      "fill in lab names on the Events tab and push again for per-event links."
+    );
+  }
+  return (
+    "\n\n" +
+    count +
+    " event(s) exported with a Workshop for Event Page guide/auto-grader links."
+  );
+}
+
 /**
  * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
  * @returns {Object[]} event rows for JSON
@@ -290,14 +354,7 @@ function sheetToEvents_(sheet) {
     "Badge Issued Date",
     "Badge issue date",
   ]);
-  var workshopCol = findHeaderCol_(headers, [
-    "Workshop",
-    "Workshop name",
-    "workshop",
-    "workshop name",
-    "Lab",
-    "Lab name",
-  ]);
+  var workshopCol = findWorkshopCol_(headers);
 
   if (nameCol === -1 || urlCol === -1) {
     throw new Error("Tab \"" + sheet.getName() + "\" must have columns: Event Name, Final URL");

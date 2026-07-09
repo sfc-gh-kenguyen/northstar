@@ -94,7 +94,19 @@ def load_event_records() -> dict[str, dict[str, Any]]:
                 "workshops": _workshops_from_value(
                     _first_header_str(
                         r,
-                        ("Workshop", "workshop", "Workshop name", "workshop name", "Lab", "Lab name"),
+                        (
+                            "Workshop",
+                            "Workshops",
+                            "workshop",
+                            "workshops",
+                            "Workshop name",
+                            "workshop name",
+                            "Lab",
+                            "Lab name",
+                            "Labs",
+                            "Course",
+                            "Course name",
+                        ),
                     )
                 ),
                 "badges_issued": _parse_badges_issued(r.get("Badges issued")),
