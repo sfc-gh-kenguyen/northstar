@@ -7,7 +7,7 @@ import requests
 import streamlit as st
 import streamlit.components.v1 as components
 
-from workshops import load_answer_key_map
+from workshops import load_answer_key_map, resolve_workshop_option
 
 ANSWER_KEYS = load_answer_key_map()
 WORKSHOP_OPTIONS = ["None (auto-grader setup only)"] + list(ANSWER_KEYS.keys())
@@ -16,22 +16,23 @@ WORKSHOP_OPTIONS = ["None (auto-grader setup only)"] + list(ANSWER_KEYS.keys())
 def _init_auto_grader_workshop() -> None:
     """Keep workshop selection across reruns (including after Generate SQL)."""
     preset = st.session_state.pop("auto_grader_workshop_preset", None)
-    if preset and preset in WORKSHOP_OPTIONS:
-        st.session_state.auto_grader_workshop = preset
-        return
+    if preset:
+        resolved = resolve_workshop_option(preset, WORKSHOP_OPTIONS)
+        if resolved:
+            st.session_state.auto_grader_workshop = resolved
+            return
 
     if "auto_grader_workshop" in st.session_state:
         return
 
-    if "_auto_grader_workshop_query_applied" not in st.session_state:
-        st.session_state._auto_grader_workshop_query_applied = True
-        raw = st.query_params.get("workshop")
-        if raw is not None:
-            val = raw[0] if isinstance(raw, list) else raw
-            name = unquote_plus(str(val).strip())
-            if name in WORKSHOP_OPTIONS:
-                st.session_state.auto_grader_workshop = name
-                return
+    raw = st.query_params.get("workshop")
+    if raw is not None:
+        val = raw[0] if isinstance(raw, list) else raw
+        name = unquote_plus(str(val).strip())
+        resolved = resolve_workshop_option(name, WORKSHOP_OPTIONS)
+        if resolved:
+            st.session_state.auto_grader_workshop = resolved
+            return
 
     st.session_state.auto_grader_workshop = WORKSHOP_OPTIONS[0]
 
@@ -59,8 +60,10 @@ with left:
     st.subheader("Attendee Information")
     st.caption("Fields marked with * are required.")
 
+    # Outside the form so preset / session state survives form submission.
+    workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS, key="auto_grader_workshop")
+
     with st.form("greeting_form"):
-        workshop = st.selectbox("Workshop *", WORKSHOP_OPTIONS, key="auto_grader_workshop")
         email = st.text_input("Email *", placeholder="name@company.com")
         c1, c2 = st.columns(2)
         with c1:
@@ -95,6 +98,8 @@ with right:
 if not submitted:
     st.info("Fill out the form and click **Generate SQL**.", icon="ℹ️")
     st.stop()
+
+workshop = st.session_state.get("auto_grader_workshop", WORKSHOP_OPTIONS[0])
 
 email = normalize_space(email)
 

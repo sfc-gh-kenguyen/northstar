@@ -30,6 +30,12 @@ def _workshop_row(workshop_title: str) -> dict[str, str] | None:
     return None
 
 
+def _go_to_auto_grader(workshop: str) -> None:
+    st.session_state["auto_grader_workshop_preset"] = workshop
+    st.query_params["workshop"] = workshop
+    st.switch_page("pages/3_Auto-Grader.py")
+
+
 def _hub_workshops(hub: dict[str, Any]) -> list[str]:
     workshops = hub.get("workshops")
     if isinstance(workshops, list) and workshops:
@@ -156,8 +162,7 @@ def render_event_checklist(event_name: str) -> None:
         st.page_link("pages/3_Auto-Grader.py", label="Go to Auto-Grader", icon="⚙️")
     elif len(workshops) == 1:
         if st.button("Go to Auto-Grader", type="primary", icon="⚙️"):
-            st.session_state["auto_grader_workshop_preset"] = workshops[0]
-            st.switch_page("pages/3_Auto-Grader.py")
+            _go_to_auto_grader(workshops[0])
     else:
         st.markdown("Open the auto-grader for the lab you completed:")
         for i, workshop in enumerate(workshops):
@@ -167,8 +172,7 @@ def render_event_checklist(event_name: str) -> None:
                 icon="⚙️",
                 key=f"grader_{i}",
             ):
-                st.session_state["auto_grader_workshop_preset"] = workshop
-                st.switch_page("pages/3_Auto-Grader.py")
+                _go_to_auto_grader(workshop)
 
     st.divider()
 

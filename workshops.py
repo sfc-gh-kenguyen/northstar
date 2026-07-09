@@ -52,6 +52,20 @@ def _first(row: dict[str, Any], keys: tuple[str, ...]) -> str | None:
 _DEFAULT_PENDING = "Coming soon"
 
 
+def resolve_workshop_option(name: str, options: list[str]) -> str | None:
+    """Match ``name`` to a dropdown option (exact, then case-insensitive)."""
+    title = (name or "").strip()
+    if not title:
+        return None
+    if title in options:
+        return title
+    lower = title.lower()
+    for opt in options:
+        if opt.strip().lower() == lower:
+            return opt
+    return None
+
+
 def load_workshop_rows() -> list[dict[str, str]]:
     """Load workshop rows from ``workshops.json`` (sheet → Apps Script → repo).
 
