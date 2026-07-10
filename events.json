@@ -20,7 +20,7 @@
   {
     "Event Name": "Menlo Park (7/16/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=77d511cecd0bf6d4b11b4f9a87e53dd245e34416a2358be61c135118c7448bfa",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Workshop": "Build an End-to-End Application Using CoCo on Snowflake",
     "Archived": false
   },
   {
@@ -63,6 +63,16 @@
     "Event Name": "Sydney (8/12/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=87fe0a3a6e7e01e01a1178e25c0e5ecce86277a48e9aa831a5bd18c1eeb7a675",
     "Workshop": "(multi event)",
+    "Archived": false
+  },
+  {
+    "Event Name": "Chennai (8/5/2026)",
+    "Final URL": null,
+    "Archived": false
+  },
+  {
+    "Event Name": "Hyderabad (10/24/2026)",
+    "Final URL": null,
     "Archived": false
   }
 ]
