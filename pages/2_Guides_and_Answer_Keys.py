@@ -1,5 +1,6 @@
 import streamlit as st
 
+from lab_resources_ui import render_lab_resources_for_workshop
 from nav_helpers import external_link_button
 from workshops import load_workshop_rows
 
@@ -55,5 +56,6 @@ for i, r in enumerate(rows):
             )
         else:
             st.caption(r.get("answer_key_pending_text") or "Coming soon")
+    render_lab_resources_for_workshop(r["workshop"], key_prefix=f"guides_{i}")
     if i < len(rows) - 1:
         st.divider()

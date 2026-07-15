@@ -1,0 +1,73 @@
+{
+  "bundles": [
+    {
+      "workshop_match": "CoCo Foundations",
+      "title": "CoCo Foundations lab files",
+      "note": "The Snowflake guide links to GitHub assets in Snowflake-Labs/sfquickstarts that are temporarily unavailable. Download these files here instead of the guide's repo links.",
+      "groups": [
+        {
+          "title": "Lab setup (run in Snowsight before demos)",
+          "files": [
+            {
+              "name": "00_snowday_setup.sql",
+              "path": "lab_assets/coco-foundations/00_snowday_setup.sql",
+              "help": "Run first as SYSADMIN — creates COCO_WORKSHOP database, schemas, and warehouse."
+            },
+            {
+              "name": "00_sample_data.sql",
+              "path": "lab_assets/coco-foundations/00_sample_data.sql",
+              "help": "Run after setup — loads AP invoice source tables and evaluation data."
+            },
+            {
+              "name": "01_demo_reset.sql",
+              "path": "lab_assets/coco-foundations/01_demo_reset.sql",
+              "help": "Optional — drop demo objects and re-run the setup scripts above."
+            }
+          ]
+        },
+        {
+          "title": "Demo 2 — PRD sample files (save locally for CoCo)",
+          "files": [
+            {
+              "name": "sample_business_requirements_source_onboarding.csv",
+              "path": "lab_assets/coco-foundations/sample_business_requirements_source_onboarding.csv",
+              "help": "New source systems, owners, and go-live targets."
+            },
+            {
+              "name": "sample_business_requirements_column_mapping.csv",
+              "path": "lab_assets/coco-foundations/sample_business_requirements_column_mapping.csv",
+              "help": "Field-level mappings for new sources into the Silver schema."
+            },
+            {
+              "name": "sample_business_requirements_business_rules.csv",
+              "path": "lab_assets/coco-foundations/sample_business_requirements_business_rules.csv",
+              "help": "Business rules BR-001 through BR-010 for the PRD workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workshop_match": "From Zero to Agents",
+      "title": "From Zero to Agents lab files",
+      "note": "The Snowflake guide links to setup.sql and marketing_data.csv in Snowflake-Labs/sfquickstarts that are temporarily unavailable. Download them here instead.",
+      "groups": [
+        {
+          "title": "Environment setup",
+          "files": [
+            {
+              "name": "setup.sql",
+              "path": "lab_assets/from-zero-to-agents/setup.sql",
+              "help": "Run in a Snowsight SQL worksheet — creates roles, warehouse, database, and loads sample data."
+            },
+            {
+              "name": "marketing_data.csv",
+              "path": "lab_assets/from-zero-to-agents/marketing_data.csv",
+              "help": "Upload via Database Explorer when the guide reaches the Updating Marketing Data step."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
