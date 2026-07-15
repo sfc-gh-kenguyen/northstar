@@ -25,7 +25,7 @@
   },
   {
     "Event Name": "Pune (7/25/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
     "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": false
   },
