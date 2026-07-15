@@ -8,6 +8,7 @@ import streamlit as st
 
 from events import load_events, load_event_workshops
 from event_hubs import get_event_hub
+from lab_resources_ui import render_lab_resources_for_workshop
 from nav_helpers import external_link_button, nav_button
 from workshops import load_workshop_rows
 
@@ -137,6 +138,7 @@ def render_event_checklist(event_name: str) -> None:
         else:
             st.info("Guide link coming soon.", icon="🔜")
             nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
+        render_lab_resources_for_workshop(workshops[0], key_prefix="event_lab_0")
     else:
         st.markdown("Choose the guide for the lab you are attending:")
         for i, workshop in enumerate(workshops):
@@ -150,6 +152,7 @@ def render_event_checklist(event_name: str) -> None:
                 )
             else:
                 st.info("Guide link coming soon.", icon="🔜")
+            render_lab_resources_for_workshop(workshop, key_prefix=f"event_lab_{i}")
 
     st.divider()
 
