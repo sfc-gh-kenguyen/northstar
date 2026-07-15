@@ -1,13 +1,13 @@
 [
   {
     "Event Name": "APAC Virtual (7/15/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=b0dea797dc2bf610993dc367d8f1f459d3c717874e924e00978ea97baf4901a3",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=b0dea797dc2bf610993dc367d8f1f459d3c717874e924e00978ea97baf4901a3",
     "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": false
   },
   {
     "Event Name": "APAC Virtual (7/16/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=3b58f98a5a6e1e8b0b94c1d7a05a72f08349392cd2c486cc70dfab5002ff9368",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b58f98a5a6e1e8b0b94c1d7a05a72f08349392cd2c486cc70dfab5002ff9368",
     "Workshop": "CoCo Foundations: Getting Started with CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": false
   },
