@@ -56,6 +56,15 @@ def read_lab_file_bytes(relative_path: str, *, root: pathlib.Path | None = None)
     return path.read_bytes()
 
 
+def read_lab_file_text(relative_path: str, *, root: pathlib.Path | None = None) -> str:
+    """Read a bundled lab asset as UTF-8 text."""
+    return read_lab_file_bytes(relative_path, root=root).decode("utf-8")
+
+
+def is_sql_lab_file(filename: str) -> bool:
+    return filename.lower().endswith(".sql")
+
+
 def mime_type_for_filename(filename: str) -> str:
     if filename.endswith(".sql"):
         return "text/sql"

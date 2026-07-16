@@ -2,12 +2,27 @@
 
 from __future__ import annotations
 
-from typing import Any
-
 import streamlit as st
 
-from lab_resources import find_lab_resource_bundle, mime_type_for_filename, read_lab_file_bytes
+from lab_resources import (
+    find_lab_resource_bundle,
+    is_sql_lab_file,
+    mime_type_for_filename,
+    read_lab_file_bytes,
+    read_lab_file_text,
+)
 from nav_helpers import external_link_button
+
+
+def _render_sql_preview(name: str, rel_path: str, *, key_prefix: str, file_index: int) -> None:
+    try:
+        sql_text = read_lab_file_text(rel_path)
+    except (FileNotFoundError, ValueError, OSError, UnicodeDecodeError):
+        return
+
+    with st.expander(f"View & copy {name}", expanded=False):
+        st.caption("Copy this script into a Snowsight SQL worksheet and run it.")
+        st.code(sql_text, language="sql")
 
 
 def render_lab_resources_for_workshop(workshop_title: str, *, key_prefix: str) -> None:
@@ -53,6 +68,7 @@ def render_lab_resources_for_workshop(workshop_title: str, *, key_prefix: str) -
                 name = (entry.get("name") or "").strip()
                 rel_path = (entry.get("path") or "").strip()
                 help_text = (entry.get("help") or "").strip()
+                preview_sql = entry.get("preview_sql", True)
                 if not name or not rel_path:
                     continue
 
@@ -62,16 +78,22 @@ def render_lab_resources_for_workshop(workshop_title: str, *, key_prefix: str) -
                     st.warning(f"Lab file unavailable: {name}", icon="⚠️")
                     continue
 
-                col1, col2 = st.columns([1.4, 2])
-                with col1:
-                    st.download_button(
-                        f"Download {name}",
-                        data=data,
-                        file_name=name,
-                        mime=mime_type_for_filename(name),
-                        type="secondary",
-                        key=f"{key_prefix}_lab_{group_index}_{file_index}",
+                if help_text:
+                    st.caption(help_text)
+
+                st.download_button(
+                    f"Download {name}",
+                    data=data,
+                    file_name=name,
+                    mime=mime_type_for_filename(name),
+                    type="secondary",
+                    key=f"{key_prefix}_lab_{group_index}_{file_index}",
+                )
+
+                if preview_sql and is_sql_lab_file(name):
+                    _render_sql_preview(
+                        name,
+                        rel_path,
+                        key_prefix=f"{key_prefix}_{group_index}",
+                        file_index=file_index,
                     )
-                with col2:
-                    if help_text:
-                        st.caption(help_text)

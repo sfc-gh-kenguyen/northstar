@@ -68,6 +68,41 @@
           ]
         }
       ]
+    },
+    {
+      "workshop_match": "Dynamic Tables",
+      "title": "Dynamic Tables lab files",
+      "note": "The Snowflake guide links to setup.sql in Snowflake-Labs/sfquickstarts that is temporarily unavailable. Copy the script below into Snowsight or download it here.",
+      "groups": [
+        {
+          "title": "Lab setup (run in Snowsight before the pipeline steps)",
+          "files": [
+            {
+              "name": "setup.sql",
+              "path": "lab_assets/dynamic-tables/setup.sql",
+              "help": "Run as ACCOUNTADMIN — creates warehouses, databases, UDTFs, and sample CUSTOMERS / PRODUCTS / ORDERS tables."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workshop_match": "Building AI Applications with Snowflake Cortex",
+      "title": "RAG, Text-to-SQL & CoCo lab files",
+      "note": "The Snowflake guide links to a workshop notebook in Snowflake-Labs/sfquickstarts that is temporarily unavailable. Download the notebook here and upload it in Snowsight under Projects > Workspaces.",
+      "groups": [
+        {
+          "title": "Workshop notebook",
+          "files": [
+            {
+              "name": "accelerate-app-dev-cortex-code.ipynb",
+              "path": "lab_assets/accelerate-app-dev-cortex-code/accelerate-app-dev-cortex-code.ipynb",
+              "help": "Upload in Snowsight: Projects > Workspaces > + Add new > Upload files.",
+              "preview_sql": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
