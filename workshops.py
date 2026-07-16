@@ -189,3 +189,12 @@ def load_answer_key_map() -> dict[str, str]:
         if raw:
             out[row["workshop"]] = raw
     return out
+
+
+def workshop_has_answer_key(workshop_title: str) -> bool:
+    """True when ``workshop_title`` has an answer key (Auto-Grader eligible)."""
+    title = (workshop_title or "").strip()
+    if not title:
+        return False
+    options = list(load_answer_key_map().keys())
+    return resolve_workshop_option(title, options) is not None

@@ -10,7 +10,7 @@ from events import load_events, load_event_workshops
 from event_hubs import get_event_hub
 from lab_resources_ui import render_lab_resources_for_workshop
 from nav_helpers import external_link_button, nav_button
-from workshops import load_workshop_rows
+from workshops import load_workshop_rows, workshop_has_answer_key
 
 _DEFAULT_INTRO = (
     "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
@@ -30,6 +30,27 @@ def _workshop_row(workshop_title: str) -> dict[str, str] | None:
         if row.get("workshop", "").strip().lower() == lower:
             return row
     return None
+
+
+def _render_workshop_guide(workshop: str, *, key_prefix: str) -> None:
+    """Guide link (and optional lab resources) for one workshop on the event checklist."""
+    workshop_row = _workshop_row(workshop)
+    st.markdown(f"**{workshop}**")
+    if not workshop_has_answer_key(workshop):
+        st.caption("Prerequisite — no auto-grader for this guide.")
+    if workshop_row and (workshop_row.get("guide_url") or "").strip():
+        external_link_button(
+            workshop_row.get("guide_label") or "View Guide",
+            workshop_row["guide_url"],
+            key=f"{key_prefix}_guide",
+        )
+    else:
+        st.info("Guide link coming soon.", icon="🔜")
+    render_lab_resources_for_workshop(workshop, key_prefix=key_prefix)
+
+
+def _grader_workshops(workshops: list[str]) -> list[str]:
+    return [w for w in workshops if workshop_has_answer_key(w)]
 
 
 def _go_to_auto_grader(workshop: str) -> None:
@@ -128,52 +149,41 @@ def render_event_checklist(event_name: str) -> None:
         )
         nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
     elif len(workshops) == 1:
-        workshop_row = _workshop_row(workshops[0])
-        st.markdown(f"Workshop: **{workshops[0]}**")
-        if workshop_row and (workshop_row.get("guide_url") or "").strip():
-            external_link_button(
-                workshop_row.get("guide_label") or "View Guide",
-                workshop_row["guide_url"],
-            )
-        else:
-            st.info("Guide link coming soon.", icon="🔜")
-            nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
-        render_lab_resources_for_workshop(workshops[0], key_prefix="event_lab_0")
+        _render_workshop_guide(workshops[0], key_prefix="event_lab_0")
     else:
-        st.markdown("Choose the guide for the lab you are attending:")
+        st.markdown("Complete the guides for this event (prerequisites first, then the main lab):")
         for i, workshop in enumerate(workshops):
-            workshop_row = _workshop_row(workshop)
-            st.markdown(f"**{workshop}**")
-            if workshop_row and (workshop_row.get("guide_url") or "").strip():
-                external_link_button(
-                    workshop_row.get("guide_label") or "View Guide",
-                    workshop_row["guide_url"],
-                    key=f"guide_{i}",
-                )
-            else:
-                st.info("Guide link coming soon.", icon="🔜")
-            render_lab_resources_for_workshop(workshop, key_prefix=f"event_lab_{i}")
+            _render_workshop_guide(workshop, key_prefix=f"event_lab_{i}")
 
     st.divider()
 
     st.subheader("Step 3 — Auto-grader & answer key")
-    st.markdown(
-        "Generate your auto-grader SQL script (same email you used to register), "
-        "paste it into a Snowflake worksheet, and run it in full."
-    )
     if not workshops:
         nav_button("pages/3_Auto-Grader.py", "Go to Auto-Grader", icon="⚙️")
     else:
-        if len(workshops) > 1:
-            st.markdown("Open the auto-grader for the lab you completed:")
-        for i, workshop in enumerate(workshops):
-            if st.button(
-                f"Auto-Grader — {workshop}",
-                type="primary",
-                icon="⚙️",
-                key=f"grader_{i}",
-            ):
-                _go_to_auto_grader(workshop)
+        grader_workshops = _grader_workshops(workshops)
+        if not grader_workshops:
+            st.info(
+                "No auto-grader for the workshop(s) at this event — complete the guide(s) above.",
+                icon="ℹ️",
+            )
+        else:
+            st.markdown(
+                "Generate your auto-grader SQL script (same email you used to register), "
+                "paste it into a Snowflake worksheet, and run it in full."
+            )
+            if len(grader_workshops) > 1:
+                st.markdown("Open the auto-grader for the main lab you completed:")
+            elif len(workshops) > len(grader_workshops):
+                st.caption("Prerequisite guides at this event do not use the auto-grader.")
+            for i, workshop in enumerate(grader_workshops):
+                if st.button(
+                    f"Auto-Grader — {workshop}",
+                    type="primary",
+                    icon="⚙️",
+                    key=f"grader_{i}",
+                ):
+                    _go_to_auto_grader(workshop)
 
     st.divider()
 
