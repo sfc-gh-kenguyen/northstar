@@ -42,6 +42,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Raleigh (7/29/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&?t=eec2ae6e5071151d5d4d62659937c4b280ef47cb757fc55442624a98b977db31",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "Christchurch (7/30/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b14624705f889e3a2e144b89b3d5878fb2eff49f9a1d4ed08c3b82dc2c32123",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
