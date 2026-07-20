@@ -55,8 +55,14 @@ def test_load_event_hub_configs_parses_multi_workshop(monkeypatch: pytest.Monkey
 
 
 def test_hub_page_path_default() -> None:
-    cfg = {"event_name": "APAC Virtual (7/15/2026)", "page": ""}
-    assert event_hubs.hub_page_path(cfg) == "pages/5_APAC_Virtual_Day_1.py"
+    cfg = {"event_name": "Pune (7/25/2026)", "page": ""}
+    assert event_hubs.hub_page_path(cfg) == "pages/5_Pune.py"
+
+    cfg_explicit = {
+        "event_name": "Pune (7/25/2026)",
+        "page": "pages/5_Pune.py",
+    }
+    assert event_hubs.hub_page_path(cfg_explicit) == "pages/5_Pune.py"
 
 
 def test_get_event_hub_match(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -85,18 +91,18 @@ def test_resolve_event_config_uses_hub_overlay(monkeypatch: pytest.MonkeyPatch) 
         "get_event_hub",
         lambda name: {
             "event_name": name,
-            "nav_title": "APAC Virtual — Day 1",
-            "intro": "Hello APAC",
+            "nav_title": "Pune (7/25/2026)",
+            "intro": "Hello Pune",
             "workshops": ["Lab A", "Lab B"],
             "trial_events": [name],
         }
-        if name == "APAC Virtual (7/15/2026)"
+        if name == "Pune (7/25/2026)"
         else None,
     )
-    cfg = event_page.resolve_event_config("APAC Virtual (7/15/2026)")
-    assert cfg["title"] == "APAC Virtual — Day 1"
+    cfg = event_page.resolve_event_config("Pune (7/25/2026)")
+    assert cfg["title"] == "Pune (7/25/2026)"
     assert cfg["workshops"] == ["Lab A", "Lab B"]
-    assert cfg["intro"] == "Hello APAC"
+    assert cfg["intro"] == "Hello Pune"
 
 
 def test_resolve_event_config_defaults_without_hub(monkeypatch: pytest.MonkeyPatch) -> None:

@@ -1,19 +1,16 @@
 [
   {
-    "event_name": "APAC Virtual (7/15/2026)",
-    "nav_title": "APAC Virtual — Day 1",
-    "workshops": [
-      "Data Ingestion, Transformation, and Delivery with Snowflake",
-      "Creating Declarative Data Pipelines with Dynamic Tables"
-    ],
-    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
-  },
-  {
-    "event_name": "APAC Virtual (7/16/2026)",
-    "nav_title": "APAC Virtual — Day 2",
+    "event_name": "Pune (7/25/2026)",
+    "nav_title": "Pune (7/25/2026)",
+    "page": "pages/5_Pune.py",
     "workshops": [
       "CoCo Foundations: Getting Started with CoCo",
-      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent"
+      "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+      "Build an End-to-End Application Using CoCo on Snowflake",
+      "Building Intelligence Data Application with Snowflake CoWork",
+      "Data Ingestion, Transformation, and Delivery with Snowflake",
+      "Creating Declarative Data Pipelines with Dynamic Tables"
     ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }

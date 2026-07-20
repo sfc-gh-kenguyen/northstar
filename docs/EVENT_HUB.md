@@ -1,7 +1,7 @@
 # Event Hub (large events only)
 
 Configured events get **richer content on Event Page** and may also appear as **dedicated
-sidebar items** for large events (e.g. APAC Virtual — Day 1 / Day 2). Add entries to
+sidebar items** for large events (e.g. Pune multi-track day). Add entries to
 ``event_hubs.json`` (commit + push — **not** the Google Sheet) before a big event.
 Remove entries (or set the file to ``[]``) after the event.
 
@@ -17,25 +17,22 @@ Remove entries (or set the file to ``[]``) after the event.
 Most events only need the **Workshop** column on the Events sheet. Use ``event_hubs.json`` for
 large virtual events that need dedicated sidebar pages or custom intro text.
 
-## Configure APAC Virtual (July 2026)
+## Configure Pune (July 2026)
 
 ```json
 [
   {
-    "event_name": "APAC Virtual (7/15/2026)",
-    "nav_title": "APAC Virtual — Day 1",
-    "workshops": [
-      "Data Ingestion, Transformation, and Delivery with Snowflake",
-      "Creating Declarative Data Pipelines with Dynamic Tables"
-    ],
-    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
-  },
-  {
-    "event_name": "APAC Virtual (7/16/2026)",
-    "nav_title": "APAC Virtual — Day 2",
+    "event_name": "Pune (7/25/2026)",
+    "nav_title": "Pune (7/25/2026)",
+    "page": "pages/5_Pune.py",
     "workshops": [
       "CoCo Foundations: Getting Started with CoCo",
-      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent"
+      "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+      "Build an End-to-End Application Using CoCo on Snowflake",
+      "Building Intelligence Data Application with Snowflake CoWork",
+      "Data Ingestion, Transformation, and Delivery with Snowflake",
+      "Creating Declarative Data Pipelines with Dynamic Tables"
     ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
@@ -55,12 +52,12 @@ Guide and answer key URLs come from ``workshops.json`` (Guides & Answer Keys she
 
 ## Attendee flow
 
-**Large events (APAC Virtual):** open **APAC Virtual — Day 1** or **Day 2** in the sidebar,
+**Large events (Pune):** open **Pune (7/25/2026)** in the sidebar,
 or use **Event Page** and pick the same event from the dropdown.
 
 **Other events:** open **Event Page**, select the event, follow the checklist.
 
-Deep links still work: ``?event=APAC%20Virtual%20(7%2F15%2F2026)``
+Deep links still work: ``?event=Pune%20(7%2F25%2F2026)``
 
 ## All mirrors must redeploy
 
@@ -74,7 +71,7 @@ git pull origin main   # pick up sheet-synced events.json if needed
 NORTHSTAR_READ_JSON_FROM_DISK=1 python3 -m streamlit run Home.py
 ```
 
-Open **Event Page** and select **APAC Virtual (7/15/2026)** or **APAC Virtual (7/16/2026)**.
+Open **Event Page** and select **Pune (7/25/2026)**.
 
 ## After the event
 
