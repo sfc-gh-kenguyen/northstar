@@ -1,14 +1,14 @@
 [
   {
-    "Event Name": "Pune (7/25/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
-    "Archived": false
-  },
-  {
     "Event Name": "Seoul (7/22/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=b58f958d94d6c174d7b93bbc2d7349da3edf15e4e0dde97aa80a602f1c110ac0",
     "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
+    "Event Name": "Pune (7/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": false
   },
   {
@@ -350,9 +350,9 @@
   {
     "Event Name": "Menlo Park (7/16/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=77d511cecd0bf6d4b11b4f9a87e53dd245e34416a2358be61c135118c7448bfa",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-07-16",
-    "Issued Date": null,
+    "Issued Date": "2026-07-20",
     "Archived": true
   },
   {
