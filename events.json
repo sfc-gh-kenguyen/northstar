@@ -285,7 +285,8 @@
     "Badges issued": false,
     "Event Date": "2026-07-15",
     "Issued Date": null,
-    "Archived": false
+    "Archived": false,
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables"
   },
   {
     "Event Name": "APAC Virtual (7/16/2026)",
@@ -293,7 +294,8 @@
     "Badges issued": false,
     "Event Date": "2026-07-16",
     "Issued Date": null,
-    "Archived": false
+    "Archived": false,
+    "Workshop": "CoCo Foundations: Getting Started with CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent"
   },
   {
     "Event Name": "Menlo Park (7/16/2026)",
@@ -301,7 +303,8 @@
     "Badges issued": false,
     "Event Date": "2026-07-16",
     "Issued Date": null,
-    "Archived": false
+    "Archived": false,
+    "Workshop": "Get Started with Snowflake CoCo Desktop; Build an End-to-End Application Using CoCo on Snowflake"
   },
   {
     "Event Name": "Bhubaneswar (7/18/2026)",
@@ -309,6 +312,59 @@
     "Badges issued": true,
     "Event Date": "2026-07-18",
     "Issued Date": "2026-07-20",
+    "Archived": false,
+    "Workshop": "CoCo Foundations: Getting Started with CoCo"
+  },
+  {
+    "Event Name": "Pune (7/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
+    "Archived": false
+  },
+  {
+    "Event Name": "Seoul (7/22/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=b58f958d94d6c174d7b93bbc2d7349da3edf15e4e0dde97aa80a602f1c110ac0",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
+    "Event Name": "Auckland (7/28/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=2ac307775bc5725ededa9a48569a645a65864fab9cf4be0cf9f289226ee22985",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Charlotte (7/29/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&?t=eec2ae6e5071151d5d4d62659937c4b280ef47cb757fc55442624a98b977db31",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Christchurch (7/30/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b14624705f889e3a2e144b89b3d5878fb2eff49f9a1d4ed08c3b82dc2c32123",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Nagpur (8/1/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=b89f77e683c6299a5802a9f5d4041b3f84f2932c5e8c01d385c473dacc137841",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Sydney (8/12/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=87fe0a3a6e7e01e01a1178e25c0e5ecce86277a48e9aa831a5bd18c1eeb7a675",
+    "Workshop": "(multi event)",
+    "Archived": false
+  },
+  {
+    "Event Name": "Chennai (8/5/2026)",
+    "Final URL": null,
+    "Archived": false
+  },
+  {
+    "Event Name": "Hyderabad (10/24/2026)",
+    "Final URL": null,
     "Archived": false
   }
 ]

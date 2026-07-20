@@ -21,8 +21,9 @@
 // Main tab order is preserved; archived events appear after, only if not already on the main tab.
 // Each row gets JSON "Archived": false (main tab) or true (archive tab only) — Badge status page lists archived only.
 
-var SHEET_MAIN = "";       // "" = whichever tab is active when you push (legacy). Or e.g. "Events" to always use that tab.
-var SHEET_ARCHIVE = "";    // e.g. "Archive" — same columns as main (Event Name, Final URL, optional Badges issued). "" = off.
+// Set these to your tab names in Apps Script (Extensions → Apps Script). Do not paste the variable names as tab names.
+var SHEET_MAIN = ""; // e.g. "Events" — live/upcoming events. Strongly recommended; if "", the active tab is used (error-prone).
+var SHEET_ARCHIVE = ""; // e.g. "Archive" — past events for badge status only. Merged after main; never use as SHEET_MAIN.
 var SHEET_GUIDES = ""; // e.g. "Guides & Answer Keys" — tab exported to workshops.json. "" = skip (repo file unchanged).
 
 // Bootstrap: raw URL to deploy.json on the branch that contains it (edit when renaming org/repo).
@@ -187,6 +188,9 @@ function pushEventsToGitHub() {
   var workshopMsg = buildWorkshopSyncMessage_(mainSheet, mainEvents);
   SpreadsheetApp.getUi().alert(
     "Pushed to GitHub successfully! The app will redeploy in ~1-2 minutes." +
+      "\n\nEvents exported from tab: \"" +
+      mainSheet.getName() +
+      "\"." +
       workshopMsg +
       guidesMsg
   );
@@ -227,13 +231,44 @@ function putRepoFile_(token, repoPath, bodyText, commitMessage) {
  * @returns {GoogleAppsScript.Spreadsheet.Sheet|null}
  */
 function getMainSheet_(ss) {
+  var archiveName = String(SHEET_ARCHIVE || "").trim();
   var name = String(SHEET_MAIN || "").trim();
   if (!name) {
-    return ss.getActiveSheet();
+    var active = ss.getActiveSheet();
+    if (archiveName && active.getName() === archiveName) {
+      SpreadsheetApp.getUi().alert(
+        "Cannot push from the archive tab.\n\n" +
+          "You had \"" +
+          archiveName +
+          "\" selected, but SHEET_MAIN is empty so the script would use the active tab.\n\n" +
+          "Set SHEET_MAIN to your Events tab name (e.g. \"Events\"), open that tab, and push again.\n\n" +
+          "Archive is merged automatically for badge status — it is not the Event Page source."
+      );
+      return null;
+    }
+    return active;
+  }
+  if (archiveName && name === archiveName) {
+    SpreadsheetApp.getUi().alert(
+      "SHEET_MAIN and SHEET_ARCHIVE both point to \"" +
+        name +
+        "\".\n\nSet SHEET_MAIN to your Events tab and SHEET_ARCHIVE to your Archive tab."
+    );
+    return null;
   }
   var sh = ss.getSheetByName(name);
   if (!sh) {
-    SpreadsheetApp.getUi().alert("Main tab not found: \"" + SHEET_MAIN + "\". Fix SHEET_MAIN or set it to \"\" to use the active tab.");
+    SpreadsheetApp.getUi().alert(
+      "Main tab not found: \"" +
+        name +
+        "\". Fix SHEET_MAIN to match your Events tab name, or set it to \"\" to use the active tab."
+    );
+    return null;
+  }
+  if (archiveName && sh.getName() === archiveName) {
+    SpreadsheetApp.getUi().alert(
+      "SHEET_MAIN must be your Events tab, not the archive tab (\"" + archiveName + "\")."
+    );
     return null;
   }
   return sh;
@@ -302,6 +337,14 @@ function buildWorkshopSyncMessage_(sheet, events) {
   if (!data || data.length < 1) {
     return "";
   }
+  var archiveName = String(SHEET_ARCHIVE || "").trim();
+  var sheetName = sheet.getName();
+  if (archiveName && sheetName === archiveName) {
+    return (
+      "\n\n⚠ Event Page workshops were NOT updated — export came from the archive tab. " +
+      "Set SHEET_MAIN to your Events tab and push again."
+    );
+  }
   var workshopCol = findWorkshopCol_(data[0]);
   var count = 0;
   var i;
@@ -312,8 +355,8 @@ function buildWorkshopSyncMessage_(sheet, events) {
   }
   if (workshopCol === -1) {
     return (
-      "\n\nNo Workshop column found on \"" +
-      sheet.getName() +
+      "\n\nNo Workshop column on Events tab \"" +
+      sheetName +
       "\" — Event Page will show generic guide/auto-grader links. " +
       "Add a **Workshop** column (exact titles from the Guides tab) and push again."
     );
