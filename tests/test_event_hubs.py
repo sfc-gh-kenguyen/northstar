@@ -65,6 +65,11 @@ def test_hub_page_path_default() -> None:
     assert event_hubs.hub_page_path(cfg_explicit) == "pages/5_Pune.py"
 
 
+def test_hub_page_path_sydney() -> None:
+    cfg = {"event_name": "Sydney (8/12/2026)", "page": ""}
+    assert event_hubs.hub_page_path(cfg) == "pages/6_Sydney.py"
+
+
 def test_get_event_hub_match(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(
         event_hubs,

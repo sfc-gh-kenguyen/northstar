@@ -13,5 +13,19 @@
       "Creating Declarative Data Pipelines with Dynamic Tables"
     ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
+  },
+  {
+    "event_name": "Sydney (8/12/2026)",
+    "nav_title": "Sydney (8/12/2026)",
+    "page": "pages/6_Sydney.py",
+    "workshops": [
+      "Data Ingestion, Transformation, and Delivery with Snowflake",
+      "Creating Declarative Data Pipelines with Dynamic Tables",
+      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+      "CoCo Foundations: Getting Started with CoCo",
+      "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+      "Build an End-to-End Application Using CoCo on Snowflake"
+    ],
+    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
 ]
