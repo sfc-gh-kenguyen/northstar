@@ -1,11 +1,5 @@
 [
   {
-    "Event Name": "Pune (7/25/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
-    "Archived": false
-  },
-  {
     "Event Name": "Auckland (7/28/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=2ac307775bc5725ededa9a48569a645a65864fab9cf4be0cf9f289226ee22985",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -13,7 +7,7 @@
   },
   {
     "Event Name": "Charlotte (7/29/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&?t=eec2ae6e5071151d5d4d62659937c4b280ef47cb757fc55442624a98b977db31",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&t=eec2ae6e5071151d5d4d62659937c4b280ef47cb757fc55442624a98b977db31",
     "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Archived": false
   },
@@ -41,7 +35,7 @@
     "Archived": false
   },
   {
-    "Event Name": "Chennai (8/5/2026)",
+    "Event Name": "Chennai (9/5/2026)",
     "Final URL": null,
     "Archived": false
   },
@@ -368,6 +362,14 @@
     "Badges issued": true,
     "Event Date": "2026-07-22",
     "Issued Date": "2026-07-24",
+    "Archived": true
+  },
+  {
+    "Event Name": "Pune (7/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
+    "Badges issued": false,
+    "Event Date": "2026-07-25",
+    "Issued Date": null,
     "Archived": true
   }
 ]
