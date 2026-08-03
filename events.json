@@ -1,23 +1,5 @@
 [
   {
-    "Event Name": "Pune (7/25/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
-    "Archived": false
-  },
-  {
-    "Event Name": "Charlotte (7/29/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_campaign=CLTNS&t=7089450566e590936ab2a8af96985aa18c5c2d3b91657ea4c6e7cb9abdf9c5af",
-    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Christchurch (7/30/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b14624705f889e3a2e144b89b3d5878fb2eff49f9a1d4ed08c3b82dc2c32123",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
     "Event Name": "Nagpur (8/1/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=b89f77e683c6299a5802a9f5d4041b3f84f2932c5e8c01d385c473dacc137841",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -366,11 +348,35 @@
     "Archived": true
   },
   {
+    "Event Name": "Pune (7/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&t=e492acbe00c7b531fcfa6d8466dd7f1a276546d957386ce1286cc3fda480e412",
+    "Badges issued": true,
+    "Event Date": "2026-07-25",
+    "Issued Date": "2026-08-03",
+    "Archived": true
+  },
+  {
     "Event Name": "Auckland (7/28/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=2ac307775bc5725ededa9a48569a645a65864fab9cf4be0cf9f289226ee22985",
     "Badges issued": true,
     "Event Date": "2026-07-28",
     "Issued Date": "2026-07-30",
+    "Archived": true
+  },
+  {
+    "Event Name": "Charlotte (7/29/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_campaign=CLTNS&t=7089450566e590936ab2a8af96985aa18c5c2d3b91657ea4c6e7cb9abdf9c5af",
+    "Badges issued": true,
+    "Event Date": "2026-07-29",
+    "Issued Date": "2026-08-03",
+    "Archived": true
+  },
+  {
+    "Event Name": "Christchurch (7/30/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-2&utm_source=workshop&utm_campaign=northstar-2026&t=3b14624705f889e3a2e144b89b3d5878fb2eff49f9a1d4ed08c3b82dc2c32123",
+    "Badges issued": true,
+    "Event Date": "2026-07-30",
+    "Issued Date": "2026-08-03",
     "Archived": true
   }
 ]
