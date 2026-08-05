@@ -104,7 +104,6 @@ def is_event_hub_event(event_name: str | None) -> bool:
 
 
 _DEFAULT_HUB_PAGES: dict[str, str] = {
-    "Pune (7/25/2026)": "pages/5_Pune.py",
     "Sydney (8/12/2026)": "pages/6_Sydney.py",
 }
 

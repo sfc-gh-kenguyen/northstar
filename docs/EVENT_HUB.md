@@ -1,7 +1,7 @@
 # Event Hub (large events only)
 
 Configured events get **richer content on Event Page** and may also appear as **dedicated
-sidebar items** for large events (e.g. Pune multi-track day). Add entries to
+sidebar items** for large events (e.g. Sydney multi-track day). Add entries to
 ``event_hubs.json`` (commit + push — **not** the Google Sheet) before a big event.
 Remove entries (or set the file to ``[]``) after the event.
 
@@ -17,22 +17,21 @@ Remove entries (or set the file to ``[]``) after the event.
 Most events only need the **Workshop** column on the Events sheet. Use ``event_hubs.json`` for
 large virtual events that need dedicated sidebar pages or custom intro text.
 
-## Configure Pune (July 2026)
+## Example: Sydney (August 2026)
 
 ```json
 [
   {
-    "event_name": "Pune (7/25/2026)",
-    "nav_title": "Pune (7/25/2026)",
-    "page": "pages/5_Pune.py",
+    "event_name": "Sydney (8/12/2026)",
+    "nav_title": "Sydney (8/12/2026)",
+    "page": "pages/6_Sydney.py",
     "workshops": [
+      "Data Ingestion, Transformation, and Delivery with Snowflake",
+      "Creating Declarative Data Pipelines with Dynamic Tables",
+      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
       "CoCo Foundations: Getting Started with CoCo",
       "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-      "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
-      "Build an End-to-End Application Using CoCo on Snowflake",
-      "Building Intelligence Data Application with Snowflake CoWork",
-      "Data Ingestion, Transformation, and Delivery with Snowflake",
-      "Creating Declarative Data Pipelines with Dynamic Tables"
+      "Build an End-to-End Application Using CoCo on Snowflake"
     ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
@@ -47,17 +46,18 @@ large virtual events that need dedicated sidebar pages or custom intro text.
 | ``workshops`` | One of | List of lab names for multi-track days (must match ``workshops.json``) |
 | ``trial_events`` | No | Extra trial signup event names (defaults to ``event_name`` only) |
 | ``intro`` | No | Optional text below the event heading |
+| ``page`` | No | Dedicated sidebar page path (e.g. ``pages/6_Sydney.py``) |
 
 Guide and answer key URLs come from ``workshops.json`` (Guides & Answer Keys sheet).
 
 ## Attendee flow
 
-**Large events (Pune):** open **Pune (7/25/2026)** in the sidebar,
+**Large events (Sydney):** open **Sydney (8/12/2026)** in the sidebar,
 or use **Event Page** and pick the same event from the dropdown.
 
 **Other events:** open **Event Page**, select the event, follow the checklist.
 
-Deep links still work: ``?event=Pune%20(7%2F25%2F2026)``
+Deep links still work: ``?event=Sydney%20(8%2F12%2F2026)``
 
 ## All mirrors must redeploy
 
@@ -71,7 +71,7 @@ git pull origin main   # pick up sheet-synced events.json if needed
 NORTHSTAR_READ_JSON_FROM_DISK=1 python3 -m streamlit run Home.py
 ```
 
-Open **Event Page** and select **Pune (7/25/2026)**.
+Open **Event Page** and select **Sydney (8/12/2026)**.
 
 ## After the event
 
