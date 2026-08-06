@@ -9,7 +9,7 @@ import streamlit as st
 from events import load_events, load_event_workshops
 from event_hubs import get_event_hub
 from lab_resources_ui import render_lab_resources_for_workshop
-from nav_helpers import external_link_button, nav_button
+from nav_helpers import external_link_button, go_to_auto_grader, nav_button
 from workshops import load_workshop_rows, workshop_has_answer_key
 
 _DEFAULT_INTRO = (
@@ -51,12 +51,6 @@ def _render_workshop_guide(workshop: str, *, key_prefix: str) -> None:
 
 def _grader_workshops(workshops: list[str]) -> list[str]:
     return [w for w in workshops if workshop_has_answer_key(w)]
-
-
-def _go_to_auto_grader(workshop: str) -> None:
-    st.session_state["auto_grader_workshop_preset"] = workshop
-    st.query_params["workshop"] = workshop
-    st.switch_page("pages/3_Auto-Grader.py")
 
 
 def _hub_workshops(hub: dict[str, Any]) -> list[str]:
@@ -183,7 +177,7 @@ def render_event_checklist(event_name: str) -> None:
                     icon="⚙️",
                     key=f"grader_{i}",
                 ):
-                    _go_to_auto_grader(workshop)
+                    go_to_auto_grader(workshop)
 
     st.divider()
 

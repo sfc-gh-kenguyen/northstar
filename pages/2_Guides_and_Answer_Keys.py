@@ -1,8 +1,8 @@
 import streamlit as st
 
 from lab_resources_ui import render_lab_resources_for_workshop
-from nav_helpers import external_link_button
-from workshops import load_workshop_rows
+from nav_helpers import external_link_button, go_to_auto_grader
+from workshops import load_workshop_rows, workshop_has_answer_key
 
 
 st.title("📚 Workshop Guides and Answer Keys")
@@ -34,7 +34,9 @@ if not rows:
 
 for i, r in enumerate(rows):
     st.markdown(f"**{r['workshop']}**")
-    guide_col, key_col = st.columns(2)
+    if not workshop_has_answer_key(r["workshop"]):
+        st.caption("Prerequisite — no auto-grader for this guide.")
+    guide_col, key_col, grader_col = st.columns(3)
     with guide_col:
         guide_url = (r.get("guide_url") or "").strip()
         if guide_url:
@@ -56,6 +58,15 @@ for i, r in enumerate(rows):
             )
         else:
             st.caption(r.get("answer_key_pending_text") or "Coming soon")
+    with grader_col:
+        if workshop_has_answer_key(r["workshop"]):
+            if st.button(
+                "Auto-Grader",
+                type="primary",
+                icon="⚙️",
+                key=f"grader_{i}",
+            ):
+                go_to_auto_grader(r["workshop"])
     render_lab_resources_for_workshop(r["workshop"], key_prefix=f"guides_{i}")
     if i < len(rows) - 1:
         st.divider()

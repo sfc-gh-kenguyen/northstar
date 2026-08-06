@@ -23,6 +23,13 @@ def nav_button(
         st.switch_page(page)
 
 
+def go_to_auto_grader(workshop: str) -> None:
+    """Open Auto-Grader with ``workshop`` pre-selected."""
+    st.session_state["auto_grader_workshop_preset"] = workshop
+    st.query_params["workshop"] = workshop
+    st.switch_page("pages/3_Auto-Grader.py")
+
+
 def external_link_button(
     label: str,
     url: str,
