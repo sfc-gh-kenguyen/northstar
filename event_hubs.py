@@ -103,9 +103,7 @@ def is_event_hub_event(event_name: str | None) -> bool:
     return get_event_hub(event_name) is not None
 
 
-_DEFAULT_HUB_PAGES: dict[str, str] = {
-    "Sydney (8/12/2026)": "pages/6_Sydney.py",
-}
+_DEFAULT_HUB_PAGES: dict[str, str] = {}
 
 
 def hub_page_path(cfg: dict[str, Any]) -> str | None:

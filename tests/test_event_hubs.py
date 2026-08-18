@@ -54,15 +54,12 @@ def test_load_event_hub_configs_parses_multi_workshop(monkeypatch: pytest.Monkey
     ]
 
 
-def test_hub_page_path_default() -> None:
-    cfg = {"event_name": "Sydney (8/12/2026)", "page": ""}
-    assert event_hubs.hub_page_path(cfg) == "pages/6_Sydney.py"
-
+def test_hub_page_path_explicit_page() -> None:
     cfg_explicit = {
-        "event_name": "Sydney (8/12/2026)",
-        "page": "pages/6_Sydney.py",
+        "event_name": "Big Event 2026",
+        "page": "pages/5_Big_Event.py",
     }
-    assert event_hubs.hub_page_path(cfg_explicit) == "pages/6_Sydney.py"
+    assert event_hubs.hub_page_path(cfg_explicit) == "pages/5_Big_Event.py"
 
 
 def test_hub_page_path_unknown_event() -> None:
@@ -70,9 +67,9 @@ def test_hub_page_path_unknown_event() -> None:
     assert event_hubs.hub_page_path(cfg) is None
 
 
-def test_hub_page_path_sydney() -> None:
-    cfg = {"event_name": "Sydney (8/12/2026)", "page": ""}
-    assert event_hubs.hub_page_path(cfg) == "pages/6_Sydney.py"
+def test_hub_page_path_no_default_without_explicit_page() -> None:
+    cfg = {"event_name": "Big Event 2026", "page": ""}
+    assert event_hubs.hub_page_path(cfg) is None
 
 
 def test_get_event_hub_match(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -101,18 +98,18 @@ def test_resolve_event_config_uses_hub_overlay(monkeypatch: pytest.MonkeyPatch) 
         "get_event_hub",
         lambda name: {
             "event_name": name,
-            "nav_title": "Sydney (8/12/2026)",
-            "intro": "Hello Sydney",
+            "nav_title": "Summit Day",
+            "intro": "Hello summit",
             "workshops": ["Lab A", "Lab B"],
             "trial_events": [name],
         }
-        if name == "Sydney (8/12/2026)"
+        if name == "Summit Day"
         else None,
     )
-    cfg = event_page.resolve_event_config("Sydney (8/12/2026)")
-    assert cfg["title"] == "Sydney (8/12/2026)"
+    cfg = event_page.resolve_event_config("Summit Day")
+    assert cfg["title"] == "Summit Day"
     assert cfg["workshops"] == ["Lab A", "Lab B"]
-    assert cfg["intro"] == "Hello Sydney"
+    assert cfg["intro"] == "Hello summit"
 
 
 def test_resolve_event_config_defaults_without_hub(monkeypatch: pytest.MonkeyPatch) -> None:

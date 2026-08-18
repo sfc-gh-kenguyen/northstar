@@ -54,7 +54,7 @@ Same as above, but:
 ``northstar_mirror`` or ``NORTHSTAR2_MIRROR_TOKEN``. After the secret exists, push to ``main``
 or run **Actions → Sync northstar-2 mirror → Run workflow**.
 
-Verify in incognito: sidebar shows **Event Page** and **Sydney (8/12/2026)** (when configured), not
+Verify in incognito: sidebar shows **Event Page** (and any configured event hub pages), not
 **Trial Sign Up**.
 
 ## Before a high-traffic event

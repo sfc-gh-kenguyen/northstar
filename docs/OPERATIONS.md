@@ -11,7 +11,6 @@
 | `Instance5.py` | Traffic mirror **instance 5** — optional extra capacity for very large events. |
 | `Instance6.py` | Traffic mirror **instance 6** — optional extra capacity for very large events. |
 | `pages/1_Event_Page.py` | **Event Page** — select any event for the full checklist. |
-| `pages/6_Sydney.py` | Dedicated sidebar hub for Sydney (8/12/2026). See [EVENT_HUB.md](EVENT_HUB.md). |
 | `LegacyAutograderRedirect.py` | Only for a **separate** Streamlit app still bound to the legacy hostname `northstarautograder.streamlit.app`. It redirects browsers to the canonical `northstar.streamlit.app` (and preserves path/query). **Do not** set this as the main app’s entry if you want the full product. |
 | `home_page.py` | Loaded as a **page** by `Home.py`, not run alone on Community Cloud (except backup / local experiments noted in code comments). |
 
