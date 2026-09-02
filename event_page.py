@@ -76,11 +76,12 @@ def resolve_event_config(event_name: str) -> dict[str, Any]:
     """
     hub = get_event_hub(event_name)
     if hub:
+        workshops = _hub_workshops(hub) or load_event_workshops(event_name)
         return {
             "event_name": hub["event_name"],
             "title": hub.get("nav_title") or hub["event_name"],
             "intro": hub.get("intro") or _DEFAULT_INTRO,
-            "workshops": _hub_workshops(hub),
+            "workshops": workshops,
             "trial_events": _trial_event_names(hub),
         }
     sheet_workshops = load_event_workshops(event_name)

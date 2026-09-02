@@ -66,17 +66,19 @@ def load_event_hub_configs() -> list[dict[str, Any]]:
         workshop = _first_str(row, ("workshop", "Workshop", "workshop_name", "Workshop name"))
         if not workshops and workshop:
             workshops = [workshop]
-        if not event_name or not workshops:
+        page_path = _first_str(row, ("page", "page_path", "Page"))
+        if not event_name:
+            continue
+        if not workshops and not page_path:
             continue
         hub_title = _first_str(row, ("hub_title", "Hub title", "title")) or event_name
         nav_title = _first_str(row, ("nav_title", "Nav title", "sidebar_title")) or hub_title
-        page_path = _first_str(row, ("page", "page_path", "Page"))
         intro = _first_str(row, ("intro", "Intro", "notes")) or ""
         trial_events = _str_list(row, ("trial_events", "trial_event_names", "Trial events"))
         out.append(
             {
                 "event_name": event_name,
-                "workshop": workshops[0],
+                "workshop": workshops[0] if workshops else (workshop or ""),
                 "workshops": workshops,
                 "trial_events": trial_events or [event_name],
                 "hub_title": hub_title,
@@ -103,7 +105,9 @@ def is_event_hub_event(event_name: str | None) -> bool:
     return get_event_hub(event_name) is not None
 
 
-_DEFAULT_HUB_PAGES: dict[str, str] = {}
+_DEFAULT_HUB_PAGES: dict[str, str] = {
+    "Chennai (9/5/2026)": "pages/5_Chennai.py",
+}
 
 
 def hub_page_path(cfg: dict[str, Any]) -> str | None:
