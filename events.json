@@ -7,7 +7,13 @@
   },
   {
     "Event Name": "Chennai (9/5/2026)",
-    "Final URL": null,
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=chennair-0905&t=f7732c2463c99b9a3c5f03b59f6ee1c8ded88a4195f2f01067f370ae0b04ac79",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
+    "Archived": false
+  },
+  {
+    "Event Name": "Toronto (9/22/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=toronto-0922&t=4e7dc494c57dbefbd3da8e19552284c440365abf92d4b9c481c6fd69ae110a0c",
     "Archived": false
   },
   {
