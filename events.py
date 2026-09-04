@@ -29,6 +29,40 @@ def _first_header_str(row: dict[str, Any], keys: tuple[str, ...]) -> str | None:
     return None
 
 
+def _norm_header(raw: Any) -> str:
+    return " ".join(str(raw).replace("\u00a0", " ").split()).lower()
+
+
+BADGE_NAME_HEADERS: tuple[str, ...] = (
+    "Badge",
+    "Badges",
+    "Badge name",
+    "Badge names",
+    "Badge(s)",
+    "Badge title",
+    "Badge titles",
+    "Badge earned",
+    "Badges earned",
+)
+
+
+def _badge_names_str(row: dict[str, Any]) -> str | None:
+    """Badge title cell, matching sheet headers case/space-insensitively.
+
+    Exact-header matching keeps this from picking up ``Badges issued``.
+    """
+    wanted = {_norm_header(h): i for i, h in enumerate(BADGE_NAME_HEADERS)}
+    best: tuple[int, str] | None = None
+    for key, value in row.items():
+        rank = wanted.get(_norm_header(key))
+        if rank is None:
+            continue
+        text = _optional_str(value)
+        if text and (best is None or rank < best[0]):
+            best = (rank, text)
+    return best[1] if best else None
+
+
 def _parse_badges_issued(raw: Any) -> bool | None:
     """Normalize JSON / sheet values to True (issued), False (not yet), or None (unknown)."""
     if raw is None:
@@ -72,6 +106,8 @@ def load_event_records() -> dict[str, dict[str, Any]]:
     Each value includes:
       - ``final_url``: str | None (trial signup link)
       - ``workshops``: list[str] — from optional sheet **Workshop** column
+      - ``badges``: list[str] — from optional sheet **Badge** / **Badges** column
+        (header matched case-insensitively; never ``Badges issued``)
       - ``badges_issued``: bool | None — True if badges sent, False if not yet, None if unset
       - ``archived``: bool — True if row came from the archive tab only (see Apps Script merge)
       - ``event_date``: str | None — optional, from sheet "Event Date"
@@ -109,6 +145,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
                         ),
                     )
                 ),
+                "badges": _workshops_from_value(_badge_names_str(r)),
                 "badges_issued": _parse_badges_issued(r.get("Badges issued")),
                 "archived": archived,
                 "event_date": _first_header_str(
@@ -146,6 +183,19 @@ def load_events() -> dict[str, str | None]:
         for name, rec in load_event_records().items()
         if not rec.get("archived")
     }
+
+
+def event_badge_names(rec: dict[str, Any] | None) -> list[str]:
+    """Badge titles for an event record (explicit Badge column, else workshops)."""
+    if not rec:
+        return []
+    for key in ("badges", "workshops"):
+        names = rec.get(key)
+        if isinstance(names, list):
+            out = [str(n).strip() for n in names if str(n).strip()]
+            if out:
+                return out
+    return []
 
 
 def load_event_workshops(event_name: str | None) -> list[str]:

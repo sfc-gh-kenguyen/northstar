@@ -16,6 +16,7 @@
 //
 // Optional column: "Badges issued" — Yes/TRUE = badges sent; No/FALSE = not yet; blank = unknown (Badge status page).
 // Optional columns (archive tab recommended): "Event Date"; "Issued Date" (or "Date Issued", etc.) — Badge status table (YYYY-MM-DD when parsed as dates).
+// Optional: "Badge" / "Badges" (or "Badge name") — names shown on Badge status; use ";" for multiple. Falls back to Workshop.
 //
 // Archive: set SHEET_ARCHIVE to your archive tab name so expired rows stay in events.json (e.g. badge status).
 // Main tab order is preserved; archived events appear after, only if not already on the main tab.
@@ -398,6 +399,18 @@ function sheetToEvents_(sheet) {
     "Badge issue date",
   ]);
   var workshopCol = findWorkshopCol_(headers);
+  // Exact header match only, so "Badges issued" is never read as a badge title.
+  var badgeNamesCol = findHeaderCol_(headers, [
+    "Badge",
+    "Badges",
+    "Badge name",
+    "Badge names",
+    "Badge(s)",
+    "Badge title",
+    "Badge titles",
+    "Badge earned",
+    "Badges earned",
+  ]);
 
   if (nameCol === -1 || urlCol === -1) {
     throw new Error("Tab \"" + sheet.getName() + "\" must have columns: Event Name, Final URL");
@@ -425,6 +438,12 @@ function sheetToEvents_(sheet) {
       var workshop = String(data[i][workshopCol]).trim();
       if (workshop) {
         row["Workshop"] = workshop;
+      }
+    }
+    if (badgeNamesCol !== -1) {
+      var badgeNames = String(data[i][badgeNamesCol]).trim();
+      if (badgeNames) {
+        row["Badge"] = badgeNames;
       }
     }
     events.push(row);

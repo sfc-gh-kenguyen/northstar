@@ -4,7 +4,7 @@ from datetime import datetime
 
 import streamlit as st
 
-from events import load_event_records
+from events import event_badge_names, load_event_records
 
 st.title("🏅 Badge status")
 
@@ -58,6 +58,7 @@ rows = [
         "Event": name,
         "Event date": _cell(rec.get("event_date")),
         "Issued date": _cell(rec.get("issued_date")),
+        "Badges": _cell("; ".join(event_badge_names(rec))),
         "Badge status": _status_label(rec["badges_issued"]),
     }
     for name, rec in ordered
@@ -71,6 +72,7 @@ st.dataframe(
         "Event": st.column_config.TextColumn("Event", width="large"),
         "Event date": st.column_config.TextColumn("Event date", width="small"),
         "Issued date": st.column_config.TextColumn("Issued date", width="medium"),
+        "Badges": st.column_config.TextColumn("Badges", width="large"),
         "Badge status": st.column_config.TextColumn("Badge status", width="small"),
     },
 )

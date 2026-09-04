@@ -32,7 +32,7 @@ Deploy extra Community Cloud apps from the same repo to split sessions across UR
 ## Data files (`events.json`, `workshops.json`)
 
 - Updated by **Apps Script → GitHub Contents API** (see `apps_script.js`).
-- **Events sheet columns:** `Event Name`, `Final URL` (required). Optional: `Workshop` (lab name for Event Page — must match **Workshop** on the Guides tab exactly), `Badges issued`, `Event Date`, `Issued Date`. Use `;` in **Workshop** for two parallel labs on the same day (workshop titles may contain commas).
+- **Events sheet columns:** `Event Name`, `Final URL` (required). Optional: `Workshop` (lab name for Event Page — must match **Workshop** on the Guides tab exactly), `Badge` / `Badges` (names on Badge status; falls back to Workshop), `Badges issued`, `Event Date`, `Issued Date`. Use `;` in **Workshop** or **Badge** for multiple titles (workshop titles may contain commas).
 - **Apps Script tab names:** Set `SHEET_MAIN` to your **Events** tab (live/upcoming rows). Set `SHEET_ARCHIVE` to your **Archive** tab (past events for badge status). Do **not** point `SHEET_MAIN` at the archive tab — if `SHEET_MAIN` is empty, the script uses whichever tab is active when you push, which is easy to get wrong.
 - The hosted app prefers **raw.githubusercontent.com** (see `repo_json.py`) so JSON changes do not depend on the container’s git checkout staying fresh.
 
