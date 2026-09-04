@@ -316,6 +316,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-08",
     "Issued Date": "2026-07-16",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -324,6 +325,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-15",
     "Issued Date": "2026-07-24",
+    "Badge": "Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": true
   },
   {
@@ -332,6 +334,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-16",
     "Issued Date": "2026-07-24",
+    "Badge": "CoCo Foundations: Getting Started with CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": true
   },
   {
@@ -340,6 +343,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-16",
     "Issued Date": "2026-07-20",
+    "Badge": "Get Started with Snowflake CoCo Desktop; Build an End-to-End Application Using CoCo on Snowflake",
     "Archived": true
   },
   {
@@ -348,6 +352,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-18",
     "Issued Date": "2026-07-20",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -356,6 +361,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-22",
     "Issued Date": "2026-07-24",
+    "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": true
   },
   {
@@ -364,6 +370,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-25",
     "Issued Date": "2026-08-03",
+    "Badge": "CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; Build an End-to-End Application Using CoCo on Snowflake; Building Intelligence Data Application with Snowflake CoWork; Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": true
   },
   {
@@ -372,6 +379,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-28",
     "Issued Date": "2026-07-30",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -380,6 +388,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-29",
     "Issued Date": "2026-08-03",
+    "Badge": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Archived": true
   },
   {
@@ -388,6 +397,7 @@
     "Badges issued": true,
     "Event Date": "2026-07-30",
     "Issued Date": "2026-08-03",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -396,6 +406,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-01",
     "Issued Date": "2026-08-03",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -404,6 +415,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-12",
     "Issued Date": "2026-08-14",
+    "Badge": "Data Ingestion, Transformation, and Delivery with Snowflake; Creating Declarative Data Pipelines with Dynamic Tables; From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; CoCo Foundations: Getting Started with CoCo; Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo; Build an End-to-End Application Using CoCo on Snowflake",
     "Archived": true
   },
   {
@@ -412,6 +424,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-19",
     "Issued Date": "2026-09-03",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
@@ -420,6 +433,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-21",
     "Issued Date": "2026-09-03",
+    "Badge": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Archived": true
   },
   {
@@ -428,6 +442,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-22",
     "Issued Date": "2026-08-25",
+    "Badge": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Archived": true
   },
   {
@@ -436,6 +451,7 @@
     "Badges issued": true,
     "Event Date": "2026-08-27",
     "Issued Date": "2026-09-03",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   }
 ]
