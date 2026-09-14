@@ -44,6 +44,9 @@ Create a thin page file (e.g. ``pages/5_Big_Event.py``) that calls
 | ``workshop`` | One of | Single lab — use for one-workshop events |
 | ``workshops`` | One of | List of lab names for multi-track days (must match ``workshops.json``) |
 | ``trial_events`` | No | Extra trial signup event names (defaults to ``event_name`` only) |
+| ``trial_split_by_instance`` | No | **APAC Virtual only.** If ``true``, rewrite that event's sheet trial URL ``region`` per traffic-mirror instance. Other events always use the sheet ``Final URL``. |
+| ``trial_urls_by_instance`` | No | Full trial signup URL per instance (``"1"`` / ``"northstar"``, ``"2"`` / ``"northstar2"``, …). Overrides region rewriting when set for that instance. |
+| ``trial_regions_by_instance`` | No | Custom ``region=`` value per instance. Overrides the default region map when ``trial_split_by_instance`` is on. |
 | ``intro`` | No | Optional text below the event heading |
 | ``page`` | No | Dedicated sidebar page path (required for a sidebar shortcut) |
 

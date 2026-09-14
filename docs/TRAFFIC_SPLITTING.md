@@ -94,11 +94,30 @@ Verify in incognito: sidebar shows **Event Page** (and any configured event hub 
 5. **Event deep links** work on every mirror, e.g.  
    ``https://northstar5.streamlit.app/?event=Paris%20%286%2F25%2F2026%29``
 
+## APAC Virtual trial signup regions
+
+Dedicated APAC Virtual sidebar tabs (and Event Page when that same APAC day is
+selected) pick a **different trial signup region per mirror**, so student-trial
+provisioning is not all pointed at one Snowflake region. **Every other event**
+still uses the Events sheet ``Final URL`` unchanged.
+
+| App | Trial ``region=`` |
+|-----|-------------------|
+| ``northstar`` | ``ap-northeast-1`` |
+| ``northstar2`` | ``ap-northeast-2`` |
+| ``northstar3`` | ``ap-northeast-3`` |
+| ``northstar4`` | ``ap-south-1`` |
+| ``northstar5`` | ``ap-northeast-1`` |
+| ``northstar6`` | ``ap-northeast-2`` |
+
+To use a completely different signup URL (not just region) on one mirror, set
+``trial_urls_by_instance`` on that event in ``event_hubs.json``. See [EVENT_HUB.md](EVENT_HUB.md).
+
 ## What you do *not* need to change
 
 - Google Sheet or Apps Script
 - ``events.json`` / ``workshops.json`` structure
-- Separate data per mirror
+- Separate data per mirror (except optional per-instance trial URL overrides in ``event_hubs.json``)
 
 ## Optional secrets (usually unnecessary)
 

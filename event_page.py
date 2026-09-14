@@ -7,7 +7,7 @@ from typing import Any
 import streamlit as st
 
 from events import load_events, load_event_workshops
-from event_hubs import get_event_hub
+from event_hubs import get_event_hub, resolve_instance_trial_url
 from lab_resources_ui import render_lab_resources_for_workshop
 from nav_helpers import external_link_button, go_to_auto_grader, nav_button
 from workshops import load_workshop_rows, workshop_has_answer_key
@@ -116,7 +116,13 @@ def render_event_checklist(event_name: str) -> None:
     st.divider()
 
     st.subheader("Step 1 — Snowflake trial")
-    trial_links = [(name, events.get(name)) for name in trial_names]
+    trial_links = [
+        (
+            name,
+            resolve_instance_trial_url(events.get(name), get_event_hub(name)),
+        )
+        for name in trial_names
+    ]
     found = [(name, url) for name, url in trial_links if url]
 
     if found:

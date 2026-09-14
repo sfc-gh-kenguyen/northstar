@@ -77,6 +77,22 @@ def _from_request_host() -> str | None:
     return None
 
 
+def normalize_instance_key(raw: str | None) -> str:
+    """Map host names / env values to a numeric instance key (``"1"`` … ``"6"``).
+
+    ``None``, empty, ``northstar``, and ``primary`` all become ``"1"``.
+    """
+    s = (raw or "").strip().lower()
+    if not s or s in ("northstar", "primary", "northstar1", "northstar-1"):
+        return "1"
+    if s.isdigit():
+        return str(int(s))
+    match = re.search(r"(?:northstar[-_]?)(\d+)$", s)
+    if match:
+        return str(int(match.group(1)))
+    return s
+
+
 def get_instance_label() -> str | None:
     """Return instance id string (e.g. ``"3"``) or None if not configured."""
     env = os.environ.get(_INSTANCE_ENV, "").strip()
