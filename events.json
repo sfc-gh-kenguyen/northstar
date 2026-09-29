@@ -1,22 +1,5 @@
 [
   {
-    "Event Name": "Toronto (9/24/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=toronto-0924&t=ebadd097334704640423cd64ed7de77a5da151f2ced11d230b5b70ace0f687a4",
-    "Archived": false
-  },
-  {
-    "Event Name": "Cochin (9/26/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=cochin-0926&t=cc2e6b413a0bbbd9abc3a4caada4a858754739e6a28c7b8fa80abeacc9a95829",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Jaipur (9/27/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jaipur-0927&t=c98beb5afffad2698d23d6e507b9e81d75483edc11ecfc2d4ab9d9a1a7bd2869",
-    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-    "Archived": false
-  },
-  {
     "Event Name": "Bordeaux (9/30/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=bordeaux-0930&t=507e168530de8f491b0e7b477ef4b713a1a37ea39abb7bb0ad8a1015892508db",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -54,6 +37,36 @@
   {
     "Event Name": "London (11/26/2026)",
     "Final URL": null,
+    "Archived": false
+  },
+  {
+    "Event Name": "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery with Snowflake (10/2/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=swt-apac-bwit-1002&t=9139bde5cc8e2dc989cf2e4c3b82c14525c866d4e6cb01397661e5e5b322ffa7",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake",
+    "Archived": false
+  },
+  {
+    "Event Name": "SWT Virtual APAC - Build an Automated Data Pipeline with Snowpipe Streaming (10/2/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=swt-apac-bwss-1002&t=9139bde5cc8e2dc989cf2e4c3b82c14525c866d4e6cb01397661e5e5b322ffa7",
+    "Workshop": "Build an Automated Data Pipeline with Snowpipe Streaming",
+    "Archived": false
+  },
+  {
+    "Event Name": "SWT Virtual APAC - Building Intelligence Data Application with Snowflake CoWork (10/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=swt-apac-bwsi-1003&t=270f5de2262ed5d194ab2ae85380e261c193efac540caa0f21988d0ba8c8c92c",
+    "Workshop": "Building Intelligence Data Application with Snowflake CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "SWT Virtual APAC - Accelerate App Development with Snowflake CoCo\n (10/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=swt-apac-bwra-1003&t=270f5de2262ed5d194ab2ae85380e261c193efac540caa0f21988d0ba8c8c92c",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Tallinn (10/20/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
   {
@@ -533,6 +546,15 @@
     "Event Date": "2026-09-17",
     "Issued Date": null,
     "Badge": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": true
+  },
+  {
+    "Event Name": "Jaipur (9/27/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jaipur-0927&t=c98beb5afffad2698d23d6e507b9e81d75483edc11ecfc2d4ab9d9a1a7bd2869",
+    "Badges issued": true,
+    "Event Date": "2026-09-27",
+    "Issued Date": "2026-09-29",
+    "Badge": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
     "Archived": true
   }
 ]
