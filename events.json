@@ -6,40 +6,6 @@
     "Archived": false
   },
   {
-    "Event Name": "Philadelphia (10/7/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=philadelphia-1007&t=8fa9ee644319e7102ede9c57c576c2f19f7e2eeec0f9712105db1374d0333caa",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Sao Paulo (10/7/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=sao-paulo-1007&t=e7c4ddc76db2e2ab49262e6e29b86a75090d046b281dfb09242b1712af975d6e",
-    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Jakarta (10/13/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jakarta-1013&t=95ebedf827da93a60b6936326a59117aa2c5b0d9b1f139a5520f49f8432b1b68",
-    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Berlin (10/14/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=berlin-1014&t=b71a7856fb89cd9fef1e20a02093560e1d6a823f23d9e38247981cc5b49c6394",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Hyderabad (10/24/2026)",
-    "Final URL": null,
-    "Archived": false
-  },
-  {
-    "Event Name": "London (11/26/2026)",
-    "Final URL": null,
-    "Archived": false
-  },
-  {
     "Event Name": "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery with Snowflake (10/2/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=swt-apac-bwit-1002&t=9139bde5cc8e2dc989cf2e4c3b82c14525c866d4e6cb01397661e5e5b322ffa7",
     "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake",
@@ -64,9 +30,43 @@
     "Archived": false
   },
   {
+    "Event Name": "Philadelphia (10/7/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=philadelphia-1007&t=8fa9ee644319e7102ede9c57c576c2f19f7e2eeec0f9712105db1374d0333caa",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Sao Paulo (10/7/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=sao-paulo-1007&t=e7c4ddc76db2e2ab49262e6e29b86a75090d046b281dfb09242b1712af975d6e",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Jakarta (10/13/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jakarta-1013&t=95ebedf827da93a60b6936326a59117aa2c5b0d9b1f139a5520f49f8432b1b68",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent; CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Berlin (10/14/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=berlin-1014&t=b71a7856fb89cd9fef1e20a02093560e1d6a823f23d9e38247981cc5b49c6394",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "Tallinn (10/20/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Hyderabad (10/24/2026)",
+    "Final URL": null,
+    "Archived": false
+  },
+  {
+    "Event Name": "London (11/26/2026)",
+    "Final URL": null,
     "Archived": false
   },
   {
