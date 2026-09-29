@@ -61,10 +61,13 @@ def test_load_event_hub_configs_allows_page_only_hub(monkeypatch: pytest.MonkeyP
     payload = json.dumps(
         [
             {
-                "event_name": "APAC Virtual (9/14/2026)",
-                "nav_title": "APAC Virtual — Day 1 (9/14)",
-                "page": "pages/5_APAC_Virtual_Day1.py",
-                "intro": "Hello APAC",
+                "event_name": (
+                    "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery "
+                    "with Snowflake (10/2/2026)"
+                ),
+                "nav_title": "SWT Virtual APAC — Ingestion (10/2)",
+                "page": "pages/5_SWT_Virtual_APAC_Ingestion.py",
+                "intro": "Hello SWT APAC",
             }
         ]
     )
@@ -72,9 +75,9 @@ def test_load_event_hub_configs_allows_page_only_hub(monkeypatch: pytest.MonkeyP
     monkeypatch.setattr(event_hubs, "_event_hubs_json_text", lambda: payload)
     rows = event_hubs.load_event_hub_configs()
     assert len(rows) == 1
-    assert rows[0]["event_name"] == "APAC Virtual (9/14/2026)"
+    assert rows[0]["event_name"].startswith("SWT Virtual APAC")
     assert rows[0]["workshops"] == []
-    assert rows[0]["page"] == "pages/5_APAC_Virtual_Day1.py"
+    assert rows[0]["page"] == "pages/5_SWT_Virtual_APAC_Ingestion.py"
 
 
 def test_load_event_hub_configs_parses_instance_trial_maps(
@@ -83,8 +86,11 @@ def test_load_event_hub_configs_parses_instance_trial_maps(
     payload = json.dumps(
         [
             {
-                "event_name": "APAC Virtual (9/15/2026)",
-                "page": "pages/6_APAC_Virtual_Day2.py",
+                "event_name": (
+                    "SWT Virtual APAC - Build an Automated Data Pipeline with "
+                    "Snowpipe Streaming (10/2/2026)"
+                ),
+                "page": "pages/6_SWT_Virtual_APAC_Snowpipe.py",
                 "trial_split_by_instance": True,
                 "trial_urls_by_instance": {
                     "northstar2": "https://signup.example/two",
@@ -114,7 +120,10 @@ def test_replace_signup_region_keeps_token() -> None:
 
 def test_resolve_instance_trial_url_prefers_full_url() -> None:
     hub = {
-        "event_name": "APAC Virtual (9/15/2026)",
+        "event_name": (
+            "SWT Virtual APAC - Build an Automated Data Pipeline with "
+            "Snowpipe Streaming (10/2/2026)"
+        ),
         "trial_urls_by_instance": {"2": "https://signup.example/ns2"},
         "trial_split_by_instance": True,
     }
@@ -138,7 +147,10 @@ def test_default_instance_trial_regions() -> None:
 
 def test_resolve_instance_trial_url_rewrites_region_when_split() -> None:
     hub = {
-        "event_name": "APAC Virtual (9/15/2026)",
+        "event_name": (
+            "SWT Virtual APAC - Build an Automated Data Pipeline with "
+            "Snowpipe Streaming (10/2/2026)"
+        ),
         "trial_split_by_instance": True,
         "trial_urls_by_instance": {},
     }
@@ -150,7 +162,10 @@ def test_resolve_instance_trial_url_rewrites_region_when_split() -> None:
 
 def test_resolve_instance_trial_url_instance_one_keeps_tokyo() -> None:
     hub = {
-        "event_name": "APAC Virtual (9/14/2026)",
+        "event_name": (
+            "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery "
+            "with Snowflake (10/2/2026)"
+        ),
         "trial_split_by_instance": True,
         "trial_urls_by_instance": {},
     }
@@ -172,6 +187,12 @@ def test_resolve_instance_trial_url_ignores_non_apac_hub() -> None:
         "trial_urls_by_instance": {"2": "https://signup.example/should-not-use"},
     }
     assert event_hubs.resolve_instance_trial_url(sheet, hub, instance_label="2") == sheet
+
+
+def test_allows_instance_trial_split_prefixes() -> None:
+    assert event_hubs._allows_instance_trial_split("SWT Virtual APAC - Foo (10/2/2026)")
+    assert event_hubs._allows_instance_trial_split("APAC Virtual (9/14/2026)")
+    assert not event_hubs._allows_instance_trial_split("Milan (9/17/2026)")
 
 
 def test_hub_page_path_explicit_page() -> None:
@@ -233,25 +254,29 @@ def test_resolve_event_config_uses_hub_overlay(monkeypatch: pytest.MonkeyPatch) 
 
 
 def test_resolve_event_config_hub_falls_back_to_sheet_workshops(monkeypatch: pytest.MonkeyPatch) -> None:
+    swt_name = (
+        "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery "
+        "with Snowflake (10/2/2026)"
+    )
     monkeypatch.setattr(
         event_page,
         "get_event_hub",
         lambda name: {
             "event_name": name,
-            "nav_title": "APAC Virtual — Day 1 (9/14)",
-            "intro": "Hello APAC",
+            "nav_title": "SWT Virtual APAC — Ingestion (10/2)",
+            "intro": "Hello SWT APAC",
             "workshops": [],
             "trial_events": [name],
         }
-        if name == "APAC Virtual (9/14/2026)"
+        if name == swt_name
         else None,
     )
     monkeypatch.setattr(
         event_page,
         "load_event_workshops",
-        lambda name: ["Lab From Sheet"] if name == "APAC Virtual (9/14/2026)" else [],
+        lambda name: ["Lab From Sheet"] if name == swt_name else [],
     )
-    cfg = event_page.resolve_event_config("APAC Virtual (9/14/2026)")
+    cfg = event_page.resolve_event_config(swt_name)
     assert cfg["workshops"] == ["Lab From Sheet"]
 
 

@@ -1,29 +1,29 @@
 [
   {
-    "event_name": "APAC Virtual (9/14/2026)",
-    "nav_title": "APAC Virtual — Day 1 (9/14)",
-    "page": "pages/5_APAC_Virtual_Day1.py",
+    "event_name": "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery with Snowflake (10/2/2026)",
+    "nav_title": "SWT Virtual APAC — Ingestion (10/2)",
+    "page": "pages/5_SWT_Virtual_APAC_Ingestion.py",
     "trial_split_by_instance": true,
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "APAC Virtual (9/15/2026)",
-    "nav_title": "APAC Virtual — Day 2 (9/15)",
-    "page": "pages/6_APAC_Virtual_Day2.py",
+    "event_name": "SWT Virtual APAC - Build an Automated Data Pipeline with Snowpipe Streaming (10/2/2026)",
+    "nav_title": "SWT Virtual APAC — Snowpipe (10/2)",
+    "page": "pages/6_SWT_Virtual_APAC_Snowpipe.py",
     "trial_split_by_instance": true,
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "APAC Virtual (9/16/2026)",
-    "nav_title": "APAC Virtual — Day 3 (9/16)",
-    "page": "pages/7_APAC_Virtual_Day3.py",
+    "event_name": "SWT Virtual APAC - Building Intelligence Data Application with Snowflake CoWork (10/3/2026)",
+    "nav_title": "SWT Virtual APAC — CoWork (10/3)",
+    "page": "pages/7_SWT_Virtual_APAC_CoWork.py",
     "trial_split_by_instance": true,
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "APAC Virtual (9/17/2026)",
-    "nav_title": "APAC Virtual — Day 4 (9/17)",
-    "page": "pages/8_APAC_Virtual_Day4.py",
+    "event_name": "SWT Virtual APAC - Accelerate App Development with Snowflake CoCo\n (10/3/2026)",
+    "nav_title": "SWT Virtual APAC — CoCo (10/3)",
+    "page": "pages/8_SWT_Virtual_APAC_CoCo.py",
     "trial_split_by_instance": true,
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }

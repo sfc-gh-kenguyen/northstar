@@ -79,6 +79,12 @@ def replace_signup_region(url: str, region: str) -> str:
     return urlunparse(parts._replace(query=urlencode(pairs)))
 
 
+def _allows_instance_trial_split(event_name: str) -> bool:
+    """True for dedicated APAC virtual series that may rewrite trial ``region=``."""
+    name = event_name.lower().strip()
+    return name.startswith("apac virtual") or name.startswith("swt virtual apac")
+
+
 def resolve_instance_trial_url(
     sheet_url: str | None,
     hub: dict[str, Any] | None,
@@ -87,10 +93,10 @@ def resolve_instance_trial_url(
 ) -> str | None:
     """Pick a trial signup URL for the current traffic-mirror instance.
 
-    Only **APAC Virtual** hubs may override the sheet link. All other events
-    always return ``sheet_url``.
+    Only **APAC Virtual** / **SWT Virtual APAC** hubs may override the sheet link.
+    All other events always return ``sheet_url``.
 
-    Precedence for APAC Virtual:
+    Precedence for those APAC virtual hubs:
     1. ``trial_urls_by_instance`` for this instance (full URL)
     2. ``trial_regions_by_instance`` (or defaults when ``trial_split_by_instance``)
        applied to the sheet URL's ``region`` query param
@@ -99,9 +105,9 @@ def resolve_instance_trial_url(
     if instance_label is None:
         instance_label = get_instance_label()
     inst = normalize_instance_key(instance_label)
-    # Instance-specific trial links are APAC Virtual only; every other event uses the sheet URL.
+    # Instance-specific trial links are APAC virtual series only; other events use the sheet URL.
     event_name = str((hub or {}).get("event_name") or "")
-    if hub and event_name.lower().startswith("apac virtual"):
+    if hub and _allows_instance_trial_split(event_name):
         urls = hub.get("trial_urls_by_instance")
         if isinstance(urls, dict):
             override = urls.get(inst)
