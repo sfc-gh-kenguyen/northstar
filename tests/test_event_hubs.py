@@ -65,7 +65,7 @@ def test_load_event_hub_configs_allows_page_only_hub(monkeypatch: pytest.MonkeyP
                     "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery "
                     "with Snowflake (10/2/2026)"
                 ),
-                "nav_title": "SWT Virtual APAC — Ingestion (10/2)",
+                "nav_title": "SWT Virtual APAC — Data Engineering (10/2)",
                 "page": "pages/5_SWT_Virtual_APAC_Ingestion.py",
                 "intro": "Hello SWT APAC",
             }
@@ -263,7 +263,7 @@ def test_resolve_event_config_hub_falls_back_to_sheet_workshops(monkeypatch: pyt
         "get_event_hub",
         lambda name: {
             "event_name": name,
-            "nav_title": "SWT Virtual APAC — Ingestion (10/2)",
+            "nav_title": "SWT Virtual APAC — Data Engineering (10/2)",
             "intro": "Hello SWT APAC",
             "workshops": [],
             "trial_events": [name],
