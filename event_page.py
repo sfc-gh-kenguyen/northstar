@@ -32,7 +32,12 @@ def _workshop_row(workshop_title: str) -> dict[str, str] | None:
     return None
 
 
-def _render_workshop_guide(workshop: str, *, key_prefix: str) -> None:
+def _render_workshop_guide(
+    workshop: str,
+    *,
+    key_prefix: str,
+    event_name: str | None = None,
+) -> None:
     """Guide link (and optional lab resources) for one workshop on the event checklist."""
     workshop_row = _workshop_row(workshop)
     st.markdown(f"**{workshop}**")
@@ -46,7 +51,11 @@ def _render_workshop_guide(workshop: str, *, key_prefix: str) -> None:
         )
     else:
         st.info("Guide link coming soon.", icon="🔜")
-    render_lab_resources_for_workshop(workshop, key_prefix=key_prefix)
+    render_lab_resources_for_workshop(
+        workshop,
+        key_prefix=key_prefix,
+        event_name=event_name,
+    )
 
 
 def _grader_workshops(workshops: list[str]) -> list[str]:
@@ -150,11 +159,19 @@ def render_event_checklist(event_name: str) -> None:
         )
         nav_button("pages/2_Guides_and_Answer_Keys.py", "Guides & Answer Keys", icon="📚")
     elif len(workshops) == 1:
-        _render_workshop_guide(workshops[0], key_prefix="event_lab_0")
+        _render_workshop_guide(
+            workshops[0],
+            key_prefix="event_lab_0",
+            event_name=cfg["event_name"],
+        )
     else:
         st.markdown("Complete the guides for this event (prerequisites first, then the main lab):")
         for i, workshop in enumerate(workshops):
-            _render_workshop_guide(workshop, key_prefix=f"event_lab_{i}")
+            _render_workshop_guide(
+                workshop,
+                key_prefix=f"event_lab_{i}",
+                event_name=cfg["event_name"],
+            )
 
     st.divider()
 

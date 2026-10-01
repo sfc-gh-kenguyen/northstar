@@ -103,6 +103,25 @@
           ]
         }
       ]
+    },
+    {
+      "workshop_match": "Building AI Applications with Snowflake Cortex",
+      "event_match": "Sao Paulo (10/7/2026)",
+      "title": "RAG, Text-to-SQL & CoCo lab files (Portuguese)",
+      "note": "Sao Paulo event: download this Portuguese notebook instead of the English workshop notebook. Upload it in Snowsight under Projects > Workspaces.",
+      "groups": [
+        {
+          "title": "Workshop notebook (Portuguese)",
+          "files": [
+            {
+              "name": "accelerate-app-dev-cortex-code-pt.ipynb",
+              "path": "lab_assets/accelerate-app-dev-cortex-code/accelerate-app-dev-cortex-code-pt.ipynb",
+              "help": "Upload in Snowsight: Projects > Workspaces > + Add new > Upload files.",
+              "preview_sql": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }

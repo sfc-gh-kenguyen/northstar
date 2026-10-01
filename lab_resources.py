@@ -31,13 +31,29 @@ def load_lab_resource_bundles(*, root: pathlib.Path | None = None) -> list[dict[
 def find_lab_resource_bundle(
     workshop_title: str,
     *,
+    event_name: str | None = None,
     root: pathlib.Path | None = None,
 ) -> dict[str, Any] | None:
-    """Return the first bundle whose ``workshop_match`` appears in ``workshop_title``."""
+    """Return the lab bundle for ``workshop_title``.
+
+    A bundle with ``event_match`` is used only when ``event_name`` contains that
+    text. Those bundles take precedence over the shared workshop bundle so one
+    event can offer a different download (for example a translated notebook).
+    """
     title = _normalize_match(workshop_title)
     if not title:
         return None
-    for bundle in load_lab_resource_bundles(root=root):
+    event = _normalize_match(event_name or "")
+    bundles = load_lab_resource_bundles(root=root)
+    if event:
+        for bundle in bundles:
+            event_needle = _normalize_match(str(bundle.get("event_match", "")))
+            needle = _normalize_match(str(bundle.get("workshop_match", "")))
+            if event_needle and event_needle in event and needle and needle in title:
+                return bundle
+    for bundle in bundles:
+        if str(bundle.get("event_match") or "").strip():
+            continue
         needle = _normalize_match(str(bundle.get("workshop_match", "")))
         if needle and needle in title:
             return bundle

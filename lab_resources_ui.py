@@ -25,9 +25,17 @@ def _render_sql_preview(name: str, rel_path: str, *, key_prefix: str, file_index
         st.code(sql_text, language="sql")
 
 
-def render_lab_resources_for_workshop(workshop_title: str, *, key_prefix: str) -> None:
-    """Show downloadable lab files when a bundle is configured for ``workshop_title``."""
-    bundle = find_lab_resource_bundle(workshop_title)
+def render_lab_resources_for_workshop(
+    workshop_title: str,
+    *,
+    key_prefix: str,
+    event_name: str | None = None,
+) -> None:
+    """Show downloadable lab files when a bundle is configured for ``workshop_title``.
+
+    ``event_name`` selects an event-specific bundle when one is configured.
+    """
+    bundle = find_lab_resource_bundle(workshop_title, event_name=event_name)
     if not bundle:
         return
 

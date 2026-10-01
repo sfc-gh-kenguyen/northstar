@@ -36,6 +36,18 @@ def test_find_lab_resource_bundle_cortex_rag() -> None:
     )
     assert bundle is not None
     assert "RAG" in bundle["title"]
+    assert "Portuguese" not in bundle["title"]
+
+
+def test_find_lab_resource_bundle_sao_paulo_uses_portuguese_notebook() -> None:
+    workshop = "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo"
+    bundle = find_lab_resource_bundle(workshop, event_name="Sao Paulo (10/7/2026)")
+    assert bundle is not None
+    assert bundle["event_match"] == "Sao Paulo (10/7/2026)"
+    files = bundle["groups"][0]["files"]
+    assert files[0]["name"] == "accelerate-app-dev-cortex-code-pt.ipynb"
+    data = read_lab_file_bytes(files[0]["path"])
+    assert data.startswith(b"{")
 
 
 def test_read_lab_file_text() -> None:
