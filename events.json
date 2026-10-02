@@ -1,7 +1,7 @@
 [
   {
     "Event Name": "Bordeaux (9/30/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=bordeaux-0930&t=507e168530de8f491b0e7b477ef4b713a1a37ea39abb7bb0ad8a1015892508db",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=bordeaux-0930&t=507e168530de8f491b0e7b477ef4b713a1a37ea39abb7bb0ad8a1015892508db",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
@@ -30,6 +30,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Budapest (10/6/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=budapest-1006&t=2768b3fadf993f2ea9aa6a26d681c3fb6a90933d666ffdea3d285c02e29d17c5",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "Philadelphia (10/7/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=philadelphia-1007&t=8fa9ee644319e7102ede9c57c576c2f19f7e2eeec0f9712105db1374d0333caa",
     "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
@@ -54,14 +60,20 @@
     "Archived": false
   },
   {
+    "Event Name": "Edinburgh (10/14/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=edinburgh-1014&t=331ac6f6cf4d7e64c401700e94a4c2fca12b17d5be828ad395e287c84e475e43",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "Berlin (10/14/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=berlin-1014&t=b71a7856fb89cd9fef1e20a02093560e1d6a823f23d9e38247981cc5b49c6394",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=berlin-1014&t=b71a7856fb89cd9fef1e20a02093560e1d6a823f23d9e38247981cc5b49c6394",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
   {
     "Event Name": "Tallinn (10/20/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-west-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
