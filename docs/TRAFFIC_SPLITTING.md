@@ -96,10 +96,10 @@ Verify in incognito: sidebar shows **Event Page** (and any configured event hub 
 
 ## APAC virtual trial signup regions
 
-Dedicated **SWT Virtual APAC** (and legacy APAC Virtual) sidebar tabs — and Event
-Page when that same event is selected — pick a **different trial signup region
-per mirror**, so student-trial provisioning is not all pointed at one Snowflake
-region. **Every other event** still uses the Events sheet ``Final URL`` unchanged.
+This rewrite applies only when an **APAC Virtual** or **SWT Virtual APAC** hub sets
+``trial_split_by_instance``. The current Expedition sidebar tabs do not: each one
+uses its Events sheet ``Final URL`` (already a different region per geography).
+**Every other event** also uses the sheet ``Final URL`` unchanged.
 
 | App | Trial ``region=`` |
 |-----|-------------------|

@@ -1,30 +1,38 @@
 [
   {
-    "event_name": "SWT Virtual APAC - Data Ingestion, Transformation, and Delivery with Snowflake (10/2/2026)",
-    "nav_title": "SWT Virtual APAC — Data Engineering (10/2)",
-    "page": "pages/5_SWT_Virtual_APAC_Ingestion.py",
-    "trial_split_by_instance": true,
+    "event_name": "Expedition Day 2 (NOAM)",
+    "nav_title": "Expedition Day 2 (NOAM)",
+    "page": "pages/5_Expedition_Day2_NOAM.py",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "SWT Virtual APAC - Build an Automated Data Pipeline with Snowpipe Streaming (10/2/2026)",
-    "nav_title": "SWT Virtual APAC — Snowpipe (10/2)",
-    "page": "pages/6_SWT_Virtual_APAC_Snowpipe.py",
-    "trial_split_by_instance": true,
+    "event_name": "Expedition Day 2 (EMEA)",
+    "nav_title": "Expedition Day 2 (EMEA)",
+    "page": "pages/6_Expedition_Day2_EMEA.py",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "SWT Virtual APAC - Building Intelligence Data Application with Snowflake CoWork (10/3/2026)",
-    "nav_title": "SWT Virtual APAC — CoWork (10/3)",
-    "page": "pages/7_SWT_Virtual_APAC_CoWork.py",
-    "trial_split_by_instance": true,
+    "event_name": "Expedition Day 2 (APJ)",
+    "nav_title": "Expedition Day 2 (APJ)",
+    "page": "pages/7_Expedition_Day2_APJ.py",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   },
   {
-    "event_name": "SWT Virtual APAC - Accelerate App Development with Snowflake CoCo\n (10/3/2026)",
-    "nav_title": "SWT Virtual APAC — RAG Apps (10/3)",
-    "page": "pages/8_SWT_Virtual_APAC_CoCo.py",
-    "trial_split_by_instance": true,
+    "event_name": "Expedition Day 3 (NOAM)",
+    "nav_title": "Expedition Day 3 (NOAM)",
+    "page": "pages/8_Expedition_Day3_NOAM.py",
+    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
+  },
+  {
+    "event_name": "Expedition Day 3 (EMEA)",
+    "nav_title": "Expedition Day 3 (EMEA)",
+    "page": "pages/9_Expedition_Day3_EMEA.py",
+    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
+  },
+  {
+    "event_name": "Expedition Day 3 (APJ)",
+    "nav_title": "Expedition Day 3 (APJ)",
+    "page": "pages/10_Expedition_Day3_APJ.py",
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
 ]
