@@ -126,46 +126,16 @@
     {
       "workshop_match": "Campaign Planning",
       "title": "Campaign Planning lab files",
-      "note": "Download these files and upload them to a Snowsight Workspace (Projects > Workspaces > + Add new > Upload files). Keep the folder layout: lab.ipynb at the top, the CSVs in a data/ folder, and streamlit_app.py in a campaign_timeline/ folder.",
+      "note": "Download the zip and upload the folder inside it to a Snowsight Workspace (Projects > Workspaces > + Add new > Upload files). It contains lab.ipynb, the three CSVs in data/, and campaign_timeline/streamlit_app.py.",
       "groups": [
         {
-          "title": "Workshop notebook",
+          "title": "Workshop files",
           "files": [
             {
-              "name": "lab.ipynb",
-              "path": "lab_assets/campaign-planning/lab.ipynb",
-              "help": "Upload to the top level of your Workspace and run the cells in order.",
+              "name": "expedition-2026-day-2-hol.zip",
+              "path": "lab_assets/campaign-planning/expedition-2026-day-2-hol.zip",
+              "help": "Unzip, then upload the expedition-2026-day-2-hol folder to your Workspace.",
               "preview_sql": false
-            }
-          ]
-        },
-        {
-          "title": "Marketing export data (data/ folder)",
-          "files": [
-            {
-              "name": "paid_media_export.csv",
-              "path": "lab_assets/campaign-planning/data/paid_media_export.csv",
-              "help": "Ad platform export — place in data/ next to lab.ipynb."
-            },
-            {
-              "name": "email_sms_export.csv",
-              "path": "lab_assets/campaign-planning/data/email_sms_export.csv",
-              "help": "Email & SMS platform export — place in data/ next to lab.ipynb."
-            },
-            {
-              "name": "crm_campaigns_export.csv",
-              "path": "lab_assets/campaign-planning/data/crm_campaigns_export.csv",
-              "help": "CRM campaign export — place in data/ next to lab.ipynb."
-            }
-          ]
-        },
-        {
-          "title": "Collision heatmap app (campaign_timeline/ folder)",
-          "files": [
-            {
-              "name": "streamlit_app.py",
-              "path": "lab_assets/campaign-planning/campaign_timeline/streamlit_app.py",
-              "help": "Place in campaign_timeline/ — used in the collision heatmap step of the notebook."
             }
           ]
         }
