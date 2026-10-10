@@ -52,12 +52,14 @@
     "Workshop": "Build an End-to-End Application Using CoCo on Snowflake",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/sfguide-build-end-to-end-ai-app-on-snowflake/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/data-intelligence.sql",
+    "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Get Started with Snowflake CoCo Desktop",
-    "Guide URL": "https://www.snowflake.com/en/developers/guides/getting-started-with-coco-desktop/",
-    "Answer Key URL": "",
-    "Guide link text": "View Guide"
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/campaign-planning-with-coco-and-cowork/",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/campaign-planning-coco.sql",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "View Answer Key"
   }
 ]
