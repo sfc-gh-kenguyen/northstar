@@ -1,0 +1,8 @@
+crm_campaign_id,campaign_title,campaign_type,territory,audience_group,start_date,end_date,budgeted_cost,status,source_system
+CRM-7001,Thanksgiving Getaway Sale ,Social Media,N. America,Leisure,"Nov 02, 2026","Nov 22, 2026",65000,Active,Salesforce
+CRM-7002,BLACK FRIDAY MEGA SALE,Social Media,N. America,Rewards Members,"Nov 20, 2026","Nov 30, 2026",90000,Planned,Salesforce
+CRM-7003,Brand Awareness: Meridian Moments,Display Advertising,Worldwide,All,"Nov 01, 2026","Jan 31, 2027",120000,Active,Salesforce
+CRM-7004,Amex Travel Partner Promo,Email Marketing,N. America,Business,"Nov 09, 2026","Nov 23, 2026",0,Planned,Salesforce
+CRM-7005,Holiday Gift Card Push,Email Marketing,N. America,Family Travelers,"Dec 05, 2026","Dec 20, 2026",2500,Planned,Salesforce
+CRM-7006,Veterans Day Weekend Blitz,Social Media,N. America,Leisure,"Nov 06, 2026","Nov 11, 2026",18000,Cancelled,Salesforce
+CRM-7007,Tokyo Business District Launch,Search Engine Marketing,Asia-Pacific,Business,"Jan 11, 2027","Jan 25, 2027",20000,Draft,Salesforce
