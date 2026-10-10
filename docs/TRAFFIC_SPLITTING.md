@@ -97,8 +97,8 @@ Verify in incognito: sidebar shows **Event Page** (and any configured event hub 
 ## APAC virtual trial signup regions
 
 This rewrite applies only when an **APAC Virtual** or **SWT Virtual APAC** hub sets
-``trial_split_by_instance``. The current Expedition sidebar tabs do not: each one
-uses its Events sheet ``Final URL`` (already a different region per geography).
+``trial_split_by_instance``. The current Expedition sidebar pages do not: Day 2 and Day 3 each list the
+NOAM, EMEA, and APJ sheet ``Final URL``s (already a different region per geography).
 **Every other event** also uses the sheet ``Final URL`` unchanged.
 
 | App | Trial ``region=`` |
