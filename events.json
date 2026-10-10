@@ -40,6 +40,42 @@
     "Archived": false
   },
   {
+    "Event Name": "Expedition Day 2 (NOAM)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d2-noam&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Expedition Day 2 (EMEA)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d2-emea&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Expedition Day 2 (APJ)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d2-apj&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Expedition Day 3 (NOAM)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d3-noam&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Expedition Day 3 (EMEA)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d3-emea&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Expedition Day 3 (APJ)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d3-apj&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
+    "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
+    "Archived": false
+  },
+  {
     "Event Name": "Melbourne (04/13/2026)",
     "Final URL": "http://signup.snowflake.com/?k=snowflake-ai-linkedin&t=5a798df87df032d830c164a792c104767dba56c231a2b9bc3f0e434793f629c6",
     "Badges issued": false,
