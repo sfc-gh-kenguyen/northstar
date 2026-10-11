@@ -61,5 +61,12 @@
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/campaign-planning-coco.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
+  },
+  {
+    "Workshop": "Close Faster, Audit Smarter: Build It with CoCo, Ask It with CoWork",
+    "Guide URL": "https://publish-p57963-e462098.adobeaemcloud.com/en/developers/guides/close-faster-with-coco-and-cowork-8e61304c95feed6787a86448eb3b88e48a0a4289/",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/sfc-gh-kenguyen-patch-5/gen-ai/close-faster-coco.sql",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "View Answer Key"
   }
 ]
