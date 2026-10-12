@@ -1,7 +1,7 @@
 [
   {
-    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake",
-    "Guide URL": "https://www.snowflake.com/en/developers/guides/snowflake-northstar-data-engineering/",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/ingestion-transformation-delivery.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
