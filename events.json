@@ -24,6 +24,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Jakarta - From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent (10/15/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jakarta-1015-bwza&t=d48d8c1794eb783a36caa58c5b75c167db2a5719c93e0d08c473cbe08eae13b0",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
     "Event Name": "Tallinn (10/20/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -32,6 +38,54 @@
   {
     "Event Name": "Hyderabad (10/24/2026)",
     "Final URL": null,
+    "Archived": false
+  },
+  {
+    "Event Name": "Dehli (10/24/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=dehli-1024&t=511e75318eca1026d49a97693d69d4314b5ff508a6955464df261f15c8bef941",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Barcelona (10/27/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=barcelona-1027&t=be8147e29fa03badc251b673b5aacbb87204613b62c5dc162638f4edda59b888",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Barcelona (10/29/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=barcelona-1029&t=c537cabc6f673a5c6ed51c1b5b292d893040b004f6581c69da0ffa5d06135203",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Nagpur (10/31/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=nagpur-1031&t=95ec9f7dda04629e802e7553f095ae59090e9574908ec8e8181c3ccbd09019dc",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
+    "Event Name": "Accenture - Singapore (11/2/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-singapore-1102&t=cb27c094bc596b823a26f4dc227b81623ae643ac09ca95867432d71ed05aac1a",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Lille (11/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=lille-1103&t=468d5c2974b33343d58b2bff4411686ad63555fa67169e9dbe254b8d04285094",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Accenture - Kuala Lumpur (11/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-kuala-lumpur-1103&t=5dd7a92cb731d51e91f48065de8f3c4f3f210756b9cf86f21cf62a23290a03d2",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Archived": false
+  },
+  {
+    "Event Name": "Accenture - Jakarta (11/5/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-jakarta-1105&t=292bac1905cbd9562a625acf9accfc8b7d36fbe2ad7f39205775e3c78b0c8d2f",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
     "Archived": false
   },
   {
