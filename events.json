@@ -12,6 +12,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Jakarta - From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent (10/15/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jakarta-1015-bwza&t=d48d8c1794eb783a36caa58c5b75c167db2a5719c93e0d08c473cbe08eae13b0",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
     "Event Name": "Edinburgh (10/14/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=edinburgh-1014&t=331ac6f6cf4d7e64c401700e94a4c2fca12b17d5be828ad395e287c84e475e43",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -21,12 +27,6 @@
     "Event Name": "Berlin (10/14/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=berlin-1014&t=b71a7856fb89cd9fef1e20a02093560e1d6a823f23d9e38247981cc5b49c6394",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Jakarta - From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent (10/15/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=jakarta-1015-bwza&t=d48d8c1794eb783a36caa58c5b75c167db2a5719c93e0d08c473cbe08eae13b0",
-    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": false
   },
   {
@@ -44,12 +44,6 @@
     "Event Name": "Delhi (10/24/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=delhi-1024&t=511e75318eca1026d49a97693d69d4314b5ff508a6955464df261f15c8bef941",
     "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
-    "Archived": false
-  },
-  {
-    "Event Name": "Barcelona (10/27/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=barcelona-1027&t=be8147e29fa03badc251b673b5aacbb87204613b62c5dc162638f4edda59b888",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
   {
