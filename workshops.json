@@ -1,7 +1,7 @@
 [
   {
-    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
-    "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
+    "Workshop": "Data Engineering with Snowflake",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/snowflake-northstar-data-engineering/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/ingestion-transformation-delivery.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
@@ -68,5 +68,12 @@
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/gen-ai/close-faster-coco.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
+  },
+  {
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Guide URL": "",
+    "Answer Key URL": "",
+    "Guide link text": "Coming Soon",
+    "Answer Key link text": "Coming Soon"
   }
 ]
