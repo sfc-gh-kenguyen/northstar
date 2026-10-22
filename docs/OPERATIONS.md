@@ -11,7 +11,8 @@
 | `Instance5.py` | Traffic mirror **instance 5** — optional extra capacity for very large events. |
 | `Instance6.py` | Traffic mirror **instance 6** — optional extra capacity for very large events. |
 | `pages/1_Event_Page.py` | **Event Page** — select any event for the full checklist. |
-| `pages/5_Expedition_Day2.py`, `pages/6_Expedition_Day3.py` | Dedicated sidebar hubs for Expedition Day 2 and Day 3. Each page lists the NOAM, EMEA, and APJ trial links. See [EVENT_HUB.md](EVENT_HUB.md). |
+| `pages/7_Hyderabad_CoCo_Foundations.py` through `pages/12_Hyderabad_End_to_End.py` | Sidebar hubs for the six Hyderabad labs on 10/24/2026. Each page uses that lab's sheet trial link. See [EVENT_HUB.md](EVENT_HUB.md). |
+| `hidden_pages/5_Expedition_Day2.py`, `hidden_pages/6_Expedition_Day3.py` | Kept for November, outside `pages/` so Streamlit does not list them in the sidebar. |
 | `LegacyAutograderRedirect.py` | Only for a **separate** Streamlit app still bound to the legacy hostname `northstarautograder.streamlit.app`. It redirects browsers to the canonical `northstar.streamlit.app` (and preserves path/query). **Do not** set this as the main app’s entry if you want the full product. |
 | `home_page.py` | Loaded as a **page** by `Home.py`, not run alone on Community Cloud (except backup / local experiments noted in code comments). |
 
