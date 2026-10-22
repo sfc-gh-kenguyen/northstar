@@ -102,6 +102,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Cincinnati (11/19/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=cincinnati-1119&t=8ec3ad612ee608d5676507c726a61a89cfd7519992846664bfcff3981c49d45a",
+    "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "UKI Virtual (11/19/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=uki-virtual-1119&t=43895665bfe7594b4d8546e7f4bec077d9860e0d4aa5f09715c199583afb1e6a",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
