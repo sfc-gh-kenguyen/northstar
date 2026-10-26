@@ -1,11 +1,5 @@
 [
   {
-    "Event Name": "Tallinn (10/20/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
     "Event Name": "Hyderabad - CoCo Foundations: Getting Started with CoCo (10/24/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=hyderabad-1024-bwcc&t=d070f63f40511af905b5faa2df2461a55d03022e8d23981766b4878612d44594",
     "Workshop": "CoCo Foundations: Getting Started with CoCo",
@@ -56,7 +50,7 @@
   {
     "Event Name": "Nagpur (10/31/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=nagpur-1031&t=95ec9f7dda04629e802e7553f095ae59090e9574908ec8e8181c3ccbd09019dc",
-    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Workshop": "Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": false
   },
   {
@@ -770,6 +764,15 @@
     "Event Date": "2026-10-15",
     "Issued Date": null,
     "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": true
+  },
+  {
+    "Event Name": "Tallinn (10/20/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
+    "Badges issued": false,
+    "Event Date": "2026-10-20",
+    "Issued Date": null,
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   }
 ]
