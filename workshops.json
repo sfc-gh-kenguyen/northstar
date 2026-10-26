@@ -78,7 +78,9 @@
   },
   {
     "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
-    "Guide URL": "",
-    "Answer Key URL": ""
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/data-itd-coco.sql",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "View Answer Key"
   }
 ]
