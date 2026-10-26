@@ -70,10 +70,15 @@
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
     "Guide URL": "",
     "Answer Key URL": "",
     "Guide link text": "Coming Soon",
     "Answer Key link text": "Coming Soon"
+  },
+  {
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Guide URL": "",
+    "Answer Key URL": ""
   }
 ]
