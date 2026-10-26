@@ -126,6 +126,12 @@
     "Archived": false
   },
   {
+    "Event Name": "RBC (12/1/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=rbc-1201&t=3c1459826ddca61148b69fe7958c43d59876931d8d23a3535421e8ad3616db52",
+    "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Archived": false
+  },
+  {
     "Event Name": "Expedition Day 2 (NOAM)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=expedition-d2-noam&t=14b6605922b012bb098dc58612cda8558038d92f4e0cc62becd40d9813c45b35",
     "Workshop": "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
