@@ -1,7 +1,7 @@
 [
   {
     "event_name": "Expedition Day 2",
-    "nav_title": "Expedition Day 2",
+    "nav_title": "(Day 2) Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork",
     "page": "pages/5_Expedition_Day2.py",
     "workshops": [
       "Campaign Planning, Simplified: Build It with CoCo, Ask It with CoWork"
@@ -15,7 +15,7 @@
   },
   {
     "event_name": "Expedition Day 3",
-    "nav_title": "Expedition Day 3",
+    "nav_title": "(Day 3) Close Faster, Audit Smarter: Build It with CoCo, Ask It with CoWork",
     "page": "pages/6_Expedition_Day3.py",
     "workshops": [
       "Close Faster, Audit Smarter: Build It with CoCo, Ask It with CoWork"
