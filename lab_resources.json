@@ -122,24 +122,6 @@
           ]
         }
       ]
-    },
-    {
-      "workshop_match": "Campaign Planning",
-      "title": "Campaign Planning lab files",
-      "note": "Download the zip and upload the folder inside it to a Snowsight Workspace (Projects > Workspaces > + Add new > Upload files). It contains lab.ipynb, the three CSVs in data/, and campaign_timeline/streamlit_app.py.",
-      "groups": [
-        {
-          "title": "Workshop files",
-          "files": [
-            {
-              "name": "expedition-2026-day-2-hol.zip",
-              "path": "lab_assets/campaign-planning/expedition-2026-day-2-hol.zip",
-              "help": "Unzip, then upload the expedition-2026-day-2-hol folder to your Workspace.",
-              "preview_sql": false
-            }
-          ]
-        }
-      ]
     }
   ]
 }
