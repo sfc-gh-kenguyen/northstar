@@ -34,8 +34,6 @@ if not rows:
 
 for i, r in enumerate(rows):
     st.markdown(f"**{r['workshop']}**")
-    if not workshop_has_answer_key(r["workshop"]):
-        st.caption("Prerequisite — no auto-grader for this guide.")
     guide_col, key_col, grader_col = st.columns(3)
     with guide_col:
         guide_url = (r.get("guide_url") or "").strip()

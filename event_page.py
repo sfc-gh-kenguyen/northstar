@@ -41,8 +41,6 @@ def _render_workshop_guide(
     """Guide link (and optional lab resources) for one workshop on the event checklist."""
     workshop_row = _workshop_row(workshop)
     st.markdown(f"**{workshop}**")
-    if not workshop_has_answer_key(workshop):
-        st.caption("Prerequisite — no auto-grader for this guide.")
     if workshop_row and (workshop_row.get("guide_url") or "").strip():
         external_link_button(
             workshop_row.get("guide_label") or "View Guide",
@@ -192,8 +190,6 @@ def render_event_checklist(event_name: str) -> None:
             )
             if len(grader_workshops) > 1:
                 st.markdown("Open the auto-grader for the main lab you completed:")
-            elif len(workshops) > len(grader_workshops):
-                st.caption("Prerequisite guides at this event do not use the auto-grader.")
             for i, workshop in enumerate(grader_workshops):
                 if st.button(
                     f"Auto-Grader — {workshop}",
