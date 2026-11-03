@@ -79,9 +79,9 @@
   {
     "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
-    "Answer Key URL": "",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/expedition/ai-ready-data-foundation.sql",
     "Guide link text": "View Guide",
-    "Answer Key link text": "Coming Soon"
+    "Answer Key link text": "View Answer Key"
   },
   {
     "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
