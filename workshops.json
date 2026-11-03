@@ -70,17 +70,24 @@
     "Answer Key link text": "View Answer Key"
   },
   {
-    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
-    "Guide URL": "",
-    "Answer Key URL": "",
-    "Guide link text": "Coming Soon",
-    "Answer Key link text": "Coming Soon"
-  },
-  {
     "Workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
     "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/data-eng/data-itd-coco.sql",
     "Guide link text": "View Guide",
     "Answer Key link text": "View Answer Key"
+  },
+  {
+    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/data-ingestion-transformation-delivery-coco/",
+    "Answer Key URL": "",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "Coming Soon"
+  },
+  {
+    "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
+    "Guide URL": "https://www.snowflake.com/en/developers/guides/messy-data-to-instant-answers/",
+    "Answer Key URL": "",
+    "Guide link text": "View Guide",
+    "Answer Key link text": "Coming Soon"
   }
 ]
