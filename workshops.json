@@ -86,8 +86,8 @@
   {
     "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
     "Guide URL": "https://www.snowflake.com/en/developers/guides/messy-data-to-instant-answers/",
-    "Answer Key URL": "",
+    "Answer Key URL": "https://github.com/Snowflake-Labs/builder-workshops/blob/main/expedition/messy-data-to-instant-answers-coco.sql",
     "Guide link text": "View Guide",
-    "Answer Key link text": "Coming Soon"
+    "Answer Key link text": "View Answer Key"
   }
 ]
