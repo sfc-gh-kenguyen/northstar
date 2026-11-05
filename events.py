@@ -5,6 +5,7 @@ from typing import Any
 
 import streamlit as st
 
+from expedition_tokens import current_token, load_tokens, rotate_url
 from repo_json import read_repo_json
 
 
@@ -115,6 +116,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
     """
     try:
         data = json.loads(read_repo_json("events.json"))
+        expedition_token = current_token(load_tokens())
         out: dict[str, dict[str, Any]] = {}
         for r in data:
             name = r.get("Event Name")
@@ -126,7 +128,7 @@ def load_event_records() -> dict[str, dict[str, Any]]:
             archived_raw = r.get("Archived", False)
             archived = archived_raw is True or str(archived_raw).lower() in ("true", "1", "yes")
             out[name] = {
-                "final_url": r.get("Final URL") or None,
+                "final_url": rotate_url(r.get("Final URL") or None, expedition_token),
                 "workshops": _workshops_from_value(
                     _first_header_str(
                         r,
