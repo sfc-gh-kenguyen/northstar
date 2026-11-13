@@ -71,6 +71,24 @@
     "Archived": false
   },
   {
+    "Event Name": "Sao Paulo - Dynamic Tables (11/24/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=sao-paulo-bwdt-1124&t=77eb77626f629795188e6d91adc68c2e9fd4109dd4d1104c0a04f400d7f4fd93",
+    "Workshop": "Creating Declarative Data Pipelines with Dynamic Tables",
+    "Archived": false
+  },
+  {
+    "Event Name": "Sao Paulo - Zero to Agents (11/24/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=sao-paulo-bwza-1124&t=77eb77626f629795188e6d91adc68c2e9fd4109dd4d1104c0a04f400d7f4fd93",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
+    "Event Name": "Sao Paulo - Build an End-to-End Application (11/25/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=sao-paulo-1125&t=f8bf61d483b67242ed46c0ac0d0673fe3f45d67077231bd562cbdb8464938d1e",
+    "Workshop": "Build an End-to-End Application Using CoCo on Snowflake",
+    "Archived": false
+  },
+  {
     "Event Name": "Bangkok - Zero to Agents (11/25/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=bangkok-zero-to-agents-1125&t=6d5dbb3623ad74c2d495892b89e1073b8eff16c09687cc0edba1fb1e64e0060a",
     "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
@@ -146,6 +164,18 @@
     "Event Name": "Perth (12/3/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-perth-1203&t=e3ade76f9cbc2002c779ad7ca6ee8ceef42f87c8d5727f8d9f15eda2c699c613",
     "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
+    "Archived": false
+  },
+  {
+    "Event Name": "Singapore - Zero to Agents (12/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=singapore-bwza-1203&t=e3ade76f9cbc2002c779ad7ca6ee8ceef42f87c8d5727f8d9f15eda2c699c613",
+    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": false
+  },
+  {
+    "Event Name": "Singapore - CoCo Foundations (12/3/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=singapore-bwcc-1203&t=e3ade76f9cbc2002c779ad7ca6ee8ceef42f87c8d5727f8d9f15eda2c699c613",
+    "Workshop": "CoCo Foundations: Getting Started with CoCo",
     "Archived": false
   },
   {
@@ -936,9 +966,9 @@
   {
     "Event Name": "Barcelona (10/29/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=barcelona-1029&t=c537cabc6f673a5c6ed51c1b5b292d893040b004f6581c69da0ffa5d06135203",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-10-29",
-    "Issued Date": null,
+    "Issued Date": "2026-11-02",
     "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
