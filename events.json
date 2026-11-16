@@ -1,11 +1,5 @@
 [
   {
-    "Event Name": "Adelaide (11/12/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-adelaide-1112&t=1c58f024ff6c10f5e91fb7824c2405f4aacc4d7fa1a2a871bc80771435a32e33",
-    "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
-    "Archived": false
-  },
-  {
     "Event Name": "Toronto (11/17/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=toronto-1117&t=feeee4a672f532d3837400f4787bfbb6bdb197b7263d9e1c28e27c09fdb57f96",
     "Archived": false
@@ -975,36 +969,36 @@
   {
     "Event Name": "Nagpur (10/31/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=nagpur-1031&t=95ec9f7dda04629e802e7553f095ae59090e9574908ec8e8181c3ccbd09019dc",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-10-31",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "Creating Declarative Data Pipelines with Dynamic Tables",
     "Archived": true
   },
   {
     "Event Name": "Accenture - Singapore (11/2/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-singapore-1102&t=cb27c094bc596b823a26f4dc227b81623ae643ac09ca95867432d71ed05aac1a",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-02",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
     "Archived": true
   },
   {
     "Event Name": "Lille (11/3/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=lille-1103&t=468d5c2974b33343d58b2bff4411686ad63555fa67169e9dbe254b8d04285094",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-03",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
   {
     "Event Name": "Accenture - Kuala Lumpur (11/3/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-kuala-lumpur-1103&t=5dd7a92cb731d51e91f48065de8f3c4f3f210756b9cf86f21cf62a23290a03d2",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-03",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
     "Archived": true
   },
@@ -1020,28 +1014,37 @@
   {
     "Event Name": "Seoul (11/4/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=seoul-1104&t=074059971e9455a88bdb1076a6b1adc558cf108cdf79cf9d0e2cbbeccbf66f9e",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-04",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": true
   },
   {
     "Event Name": "Seoul (11/5/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=seoul-1105&t=eb62b690a0ee6205100e601946c12abe55d3c6e6d9d812588ba7b87ddc401e6c",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-05",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": true
   },
   {
     "Event Name": "Accenture - Jakarta (11/5/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=accenture-jakarta-1105&t=292bac1905cbd9562a625acf9accfc8b7d36fbe2ad7f39205775e3c78b0c8d2f",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-05",
-    "Issued Date": null,
+    "Issued Date": "2026-11-16",
     "Badge": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "Archived": true
+  },
+  {
+    "Event Name": "Adelaide (11/12/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-adelaide-1112&t=1c58f024ff6c10f5e91fb7824c2405f4aacc4d7fa1a2a871bc80771435a32e33",
+    "Badges issued": true,
+    "Event Date": "2026-11-12",
+    "Issued Date": "2026-11-16",
+    "Badge": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
     "Archived": true
   }
 ]
