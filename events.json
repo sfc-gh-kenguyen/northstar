@@ -6,12 +6,6 @@
     "Archived": false
   },
   {
-    "Event Name": "UKI Virtual (11/19/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=uki-virtual-1119&t=43895665bfe7594b4d8546e7f4bec077d9860e0d4aa5f09715c199583afb1e6a",
-    "Workshop": "CoCo Foundations: Getting Started with CoCo",
-    "Archived": false
-  },
-  {
     "Event Name": "Auckland (11/24/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-auckland-1124&t=77eb77626f629795188e6d91adc68c2e9fd4109dd4d1104c0a04f400d7f4fd93",
     "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
@@ -847,9 +841,9 @@
   {
     "Event Name": "Tallinn (10/20/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=tallinn-1020&t=287338b00a6fc2df155abb330a040905bb42ff0dd238f754079e35c05897eb95",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-10-20",
-    "Issued Date": null,
+    "Issued Date": "2026-11-20",
     "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   },
@@ -1017,18 +1011,18 @@
   {
     "Event Name": "DACH Virtual (11/17/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=dach-virtual-1117&t=d6c09f15b635bde8753c622381ad28a800da701ad03e0034823930d8b46de5a4",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-17",
-    "Issued Date": null,
+    "Issued Date": "2026-11-20",
     "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
     "Archived": true
   },
   {
     "Event Name": "Brisbane (11/17/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-brisbane-1117&t=c0404e41705aa9b7fa6d916f3b6a78ade2c8932b4c2722a8ef42dcd0a78d1349",
-    "Badges issued": false,
+    "Badges issued": true,
     "Event Date": "2026-11-17",
-    "Issued Date": null,
+    "Issued Date": "2026-11-20",
     "Badge": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
     "Archived": true
   },
@@ -1066,6 +1060,15 @@
     "Event Date": "2026-11-18",
     "Issued Date": null,
     "Badge": "Build an AI-Ready Data Foundation with Snowflake",
+    "Archived": true
+  },
+  {
+    "Event Name": "UKI Virtual (11/19/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=uki-virtual-1119&t=43895665bfe7594b4d8546e7f4bec077d9860e0d4aa5f09715c199583afb1e6a",
+    "Badges issued": true,
+    "Event Date": "2026-11-19",
+    "Issued Date": "2026-11-20",
+    "Badge": "CoCo Foundations: Getting Started with CoCo",
     "Archived": true
   }
 ]
