@@ -1,46 +1,5 @@
 [
   {
-    "Event Name": "Toronto (11/17/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=toronto-1117&t=feeee4a672f532d3837400f4787bfbb6bdb197b7263d9e1c28e27c09fdb57f96",
-    "Archived": false
-  },
-  {
-    "Event Name": "DACH Virtual (11/17/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=dach-virtual-1117&t=d6c09f15b635bde8753c622381ad28a800da701ad03e0034823930d8b46de5a4",
-    "Workshop": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
-    "Archived": false
-  },
-  {
-    "Event Name": "Brisbane (11/17/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-brisbane-1117&t=c0404e41705aa9b7fa6d916f3b6a78ade2c8932b4c2722a8ef42dcd0a78d1349",
-    "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
-    "Archived": false
-  },
-  {
-    "Event Name": "Johannesburg (11/18/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-johannesburg-1118&t=62006cd7cab11a2172c3e621c3576c508aaee758cb7fd1cf787fba0a3225038e",
-    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
-    "Archived": false
-  },
-  {
-    "Event Name": "Nashville (11/18/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-nashville-1118&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
-    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
-    "Archived": false
-  },
-  {
-    "Event Name": "Milwaukee (11/18/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-milwaukee-1118&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
-    "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
-    "Archived": false
-  },
-  {
-    "Event Name": "Cape Town (11/18/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-cape-town-1125&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
-    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
-    "Archived": false
-  },
-  {
     "Event Name": "Cincinnati (11/19/2026)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=cincinnati-1119&t=8ec3ad612ee608d5676507c726a61a89cfd7519992846664bfcff3981c49d45a",
     "Workshop": "Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo",
@@ -1045,6 +1004,68 @@
     "Event Date": "2026-11-12",
     "Issued Date": "2026-11-16",
     "Badge": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
+    "Archived": true
+  },
+  {
+    "Event Name": "Toronto (11/17/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=toronto-1117&t=feeee4a672f532d3837400f4787bfbb6bdb197b7263d9e1c28e27c09fdb57f96",
+    "Badges issued": null,
+    "Event Date": "2026-11-17",
+    "Issued Date": null,
+    "Archived": true
+  },
+  {
+    "Event Name": "DACH Virtual (11/17/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=dach-virtual-1117&t=d6c09f15b635bde8753c622381ad28a800da701ad03e0034823930d8b46de5a4",
+    "Badges issued": false,
+    "Event Date": "2026-11-17",
+    "Issued Date": null,
+    "Badge": "From Zero to Agents: Building End-to-End Data Pipeline for an AI Agent",
+    "Archived": true
+  },
+  {
+    "Event Name": "Brisbane (11/17/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-brisbane-1117&t=c0404e41705aa9b7fa6d916f3b6a78ade2c8932b4c2722a8ef42dcd0a78d1349",
+    "Badges issued": false,
+    "Event Date": "2026-11-17",
+    "Issued Date": null,
+    "Badge": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
+    "Archived": true
+  },
+  {
+    "Event Name": "Johannesburg (11/18/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-johannesburg-1118&t=62006cd7cab11a2172c3e621c3576c508aaee758cb7fd1cf787fba0a3225038e",
+    "Badges issued": true,
+    "Event Date": "2026-11-18",
+    "Issued Date": "2026-11-16",
+    "Badge": "Build an AI-Ready Data Foundation with Snowflake",
+    "Archived": true
+  },
+  {
+    "Event Name": "Nashville (11/18/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-nashville-1118&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
+    "Badges issued": false,
+    "Event Date": "2026-11-18",
+    "Issued Date": null,
+    "Badge": "Build an AI-Ready Data Foundation with Snowflake",
+    "Archived": true
+  },
+  {
+    "Event Name": "Milwaukee (11/18/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-milwaukee-1118&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
+    "Badges issued": false,
+    "Event Date": "2026-11-18",
+    "Issued Date": null,
+    "Badge": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
+    "Archived": true
+  },
+  {
+    "Event Name": "Cape Town (11/18/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-cape-town-1125&t=f6085a683d1976c5cd862f78e080fb40b7e2833105b42c0eff21317d84bdf20b",
+    "Badges issued": false,
+    "Event Date": "2026-11-18",
+    "Issued Date": null,
+    "Badge": "Build an AI-Ready Data Foundation with Snowflake",
     "Archived": true
   }
 ]
