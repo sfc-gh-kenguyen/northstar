@@ -61,7 +61,7 @@
   },
   {
     "Event Name": "Paris (11/26/2026)",
-    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-paris-1118&t=0ef1bec556de82f6c641b87232ac616ebb01eb95def15c1c698ab6e27dd87d41",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=eu-central-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-paris-1126&t=0ef1bec556de82f6c641b87232ac616ebb01eb95def15c1c698ab6e27dd87d41",
     "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
     "Archived": false
   },
@@ -180,6 +180,12 @@
     "Archived": false
   },
   {
+    "Event Name": "Tokyo (12/23/2026)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-tokyo-1223&t=153c2354968a398ecaddf59c6933c09b0c68b29580a25ff17a223078a7cfcef5",
+    "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
+    "Archived": false
+  },
+  {
     "Event Name": "Mumbai (1/9/2027)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-mumbai-0109&t=9988e5392763e3e76cd98e137890ba711011277e6e876e93c421b521c42dd5cf",
     "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
@@ -189,6 +195,12 @@
     "Event Name": "Jaipur (1/9/2027)",
     "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=ap-northeast-1&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-jaipur-0109&t=9988e5392763e3e76cd98e137890ba711011277e6e876e93c421b521c42dd5cf",
     "Workshop": "Build an AI-Ready Data Foundation with Snowflake",
+    "Archived": false
+  },
+  {
+    "Event Name": "Raleigh (1/12/2027)",
+    "Final URL": "https://signup.snowflake.com/?trial=student&cloud=aws&region=us-east-2&utm_source=workshop&utm_campaign=northstar-2026&utm_content=exp-raleigh-0112&t=20e359110ea19a6e4439c993b77b6eccc3f0d4f07ef6da6dc176c55c34398e16",
+    "Workshop": "From Messy Data to Instant Answers with Snowflake CoCo and CoWork",
     "Archived": false
   },
   {
