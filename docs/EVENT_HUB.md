@@ -48,6 +48,8 @@ Create a thin page file (e.g. ``pages/5_Big_Event.py``) that calls
 | ``trial_urls_by_instance`` | No | Full trial signup URL per instance (``"1"`` / ``"northstar"``, ``"2"`` / ``"northstar2"``, …). Overrides region rewriting when set for that instance. |
 | ``trial_regions_by_instance`` | No | Custom ``region=`` value per instance. Overrides the default region map when ``trial_split_by_instance`` is on. |
 | ``intro`` | No | Optional text below the event heading |
+| ``hide_trial_warning`` | No | If ``true``, hides the "Create a trial account using AI Data Cloud" warning on this event's page |
+| ``trial_note`` | No | Optional note shown at the top of Step 1 (for example when the trial link activates) |
 | ``page`` | No | Dedicated sidebar page path (required for a sidebar shortcut) |
 
 Guide and answer key URLs come from ``workshops.json`` (Guides & Answer Keys sheet).

@@ -32,6 +32,8 @@
     "nav_title": "RBC (12/1/2026)",
     "page": "pages/7_RBC.py",
     "workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
-    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
+    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader.",
+    "hide_trial_warning": true,
+    "trial_note": "The trial signup link will be active on 11/30."
   }
 ]

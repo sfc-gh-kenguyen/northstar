@@ -292,3 +292,23 @@ def test_resolve_event_config_defaults_without_hub(monkeypatch: pytest.MonkeyPat
     assert cfg["workshops"] == ["Lab From Sheet"]
     assert cfg["trial_events"] == ["Seoul (6/23/2026)"]
     assert cfg["intro"]
+
+
+def test_load_event_hub_configs_trial_warning_and_note(monkeypatch) -> None:
+    payload = json.dumps(
+        [
+            {
+                "event_name": "RBC (12/1/2026)",
+                "workshop": "Lab A",
+                "hide_trial_warning": True,
+                "trial_note": "The trial signup link will be active on 11/30.",
+            },
+            {"event_name": "Other (12/2/2026)", "workshop": "Lab B"},
+        ]
+    )
+    monkeypatch.setattr(event_hubs, "_event_hubs_json_text", lambda: payload)
+    rows = event_hubs.load_event_hub_configs()
+    assert rows[0]["hide_trial_warning"] is True
+    assert rows[0]["trial_note"] == "The trial signup link will be active on 11/30."
+    assert rows[1]["hide_trial_warning"] is False
+    assert rows[1]["trial_note"] == ""

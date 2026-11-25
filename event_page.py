@@ -88,6 +88,8 @@ def resolve_event_config(event_name: str) -> dict[str, Any]:
             "event_name": hub["event_name"],
             "title": hub.get("nav_title") or hub["event_name"],
             "intro": hub.get("intro") or _DEFAULT_INTRO,
+            "hide_trial_warning": bool(hub.get("hide_trial_warning")),
+            "trial_note": hub.get("trial_note") or "",
             "workshops": workshops,
             "trial_events": _trial_event_names(hub),
         }
@@ -111,11 +113,12 @@ def render_event_checklist(event_name: str) -> None:
     if cfg.get("intro"):
         st.markdown(cfg["intro"])
 
-    st.warning(
-        "Create a trial account using **AI Data Cloud**, not **Cortex Code CLI** — "
-        "even if using the CLI in the hands-on lab.",
-        icon="⚠️",
-    )
+    if not cfg.get("hide_trial_warning"):
+        st.warning(
+            "Create a trial account using **AI Data Cloud**, not **Cortex Code CLI** — "
+            "even if using the CLI in the hands-on lab.",
+            icon="⚠️",
+        )
 
     events = load_events()
     trial_names = cfg["trial_events"]
@@ -123,6 +126,8 @@ def render_event_checklist(event_name: str) -> None:
     st.divider()
 
     st.subheader("Step 1 — Snowflake trial")
+    if cfg.get("trial_note"):
+        st.info(cfg["trial_note"], icon="📅")
     trial_links = [
         (
             name,

@@ -176,6 +176,11 @@ def load_event_hub_configs() -> list[dict[str, Any]]:
             "1",
             "yes",
         )
+        hide_warning_raw = row.get("hide_trial_warning")
+        hide_trial_warning = hide_warning_raw is True or str(
+            hide_warning_raw
+        ).strip().lower() in ("true", "1", "yes")
+        trial_note = _first_str(row, ("trial_note", "Trial note")) or ""
         out.append(
             {
                 "event_name": event_name,
@@ -189,6 +194,8 @@ def load_event_hub_configs() -> list[dict[str, Any]]:
                 "nav_title": nav_title,
                 "page": page_path or "",
                 "intro": intro,
+                "hide_trial_warning": hide_trial_warning,
+                "trial_note": trial_note,
             }
         )
     return out
