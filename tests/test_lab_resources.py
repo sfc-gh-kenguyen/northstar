@@ -50,6 +50,18 @@ def test_find_lab_resource_bundle_sao_paulo_uses_portuguese_notebook() -> None:
     assert data.startswith(b"{")
 
 
+def test_find_lab_resource_bundle_rbc_notebook() -> None:
+    workshop = "Data Ingestion, Transformation, and Delivery with Snowflake CoCo"
+    bundle = find_lab_resource_bundle(workshop, event_name="RBC (12/1/2026)")
+    assert bundle is not None
+    assert bundle["event_match"] == "RBC (12/1/2026)"
+    files = bundle["groups"][0]["files"]
+    assert files[0]["name"] == "data-eng-coco-rbc.ipynb"
+    assert read_lab_file_bytes(files[0]["path"]).startswith(b"{")
+    # Other events running the same workshop do not get the RBC notebook.
+    assert find_lab_resource_bundle(workshop, event_name="Accenture - Jakarta (11/5/2026)") is None
+
+
 def test_read_lab_file_text() -> None:
     text = read_lab_file_text("lab_assets/dynamic-tables/setup.sql")
     assert "compute_wh" in text.lower()

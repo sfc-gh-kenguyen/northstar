@@ -122,6 +122,25 @@
           ]
         }
       ]
+    },
+    {
+      "workshop_match": "Data Ingestion, Transformation, and Delivery",
+      "event_match": "RBC (12/1/2026)",
+      "title": "Data Ingestion, Transformation & Delivery lab files (RBC)",
+      "note": "Download the lab notebook here and upload it in Snowsight under Projects > Workspaces.",
+      "groups": [
+        {
+          "title": "Workshop notebook",
+          "files": [
+            {
+              "name": "data-eng-coco-rbc.ipynb",
+              "path": "lab_assets/data-eng-coco-rbc/data-eng-coco-rbc.ipynb",
+              "help": "Upload in Snowsight: Projects > Workspaces > + Add new > Upload files.",
+              "preview_sql": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
