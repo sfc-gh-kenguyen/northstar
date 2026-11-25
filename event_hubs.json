@@ -26,5 +26,12 @@
       "Expedition Day 3 (APJ)"
     ],
     "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader. Pick the trial signup link for your region."
+  },
+  {
+    "event_name": "RBC (12/1/2026)",
+    "nav_title": "RBC (12/1/2026)",
+    "page": "pages/7_RBC.py",
+    "workshop": "Data Ingestion, Transformation, and Delivery with Snowflake CoCo",
+    "intro": "Follow the steps below in order. Use the same email for trial signup and the auto-grader."
   }
 ]
